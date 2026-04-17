@@ -437,7 +437,10 @@ p {
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  overflow-x: hidden;
   padding-top: var(--nav-height);
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .hero__bg-pattern {
@@ -452,8 +455,9 @@ p {
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  padding: 0 clamp(16px, 4vw, 40px);
+  max-width: min(900px, 100%);
+  width: 100%;
+  padding: 0;
 }
 
 .hero__logo-wrap {
@@ -463,21 +467,28 @@ p {
 }
 
 .hero__main-title {
-  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-size: clamp(2rem, 6vw, 4.5rem) !important;
   font-weight: 900;
   color: var(--color-text);
   line-height: 1.05;
   margin-bottom: 12px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  white-space: normal !important;
+  word-break: normal;
+  text-align: center;
+  max-width: 100%;
 }
 
 .hero__arabic-title {
   font-family: var(--font-arabic);
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem) !important;
   color: var(--color-gold);
   display: block;
   margin-bottom: 24px;
   direction: rtl;
+  text-align: center;
+  max-width: 100%;
+  padding: 0 16px;
 }
 
 .hero__subtitle {
