@@ -702,6 +702,14 @@ p {
   position: relative;
 }
 
+.scholars-list li .arabic-dua {
+  font-family: 'Noto Naskh Arabic', serif;
+  color: var(--color-gold);
+  font-size: 0.9em;
+  margin-left: 6px;
+  opacity: 0.9;
+}
+
 .scholars-grid li::before {
   content: '◆';
   position: absolute;
