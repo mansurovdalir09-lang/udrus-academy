@@ -1393,10 +1393,14 @@ p {
   align-items: flex-start;
 }
 
-.footer__brand-arabic {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  margin-top: 4px;
+.footer__arabic-subtitle {
+  font-family: 'Amiri', 'Noto Naskh Arabic', serif;
+  color: var(--color-gold) !important;
+  font-size: 1.2rem !important;
+  font-style: italic;
+  margin-top: 8px;
+  opacity: 0.85;
+  direction: rtl;
 }
 
 .footer__logo-text {
