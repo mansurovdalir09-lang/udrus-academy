@@ -415,6 +415,17 @@ p {
   justify-content: center;
 }
 
+.nav__mobile .btn-primary {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #1A0F0A !important;
+  font-weight: 700;
+  padding: 16px 24px;
+  min-height: 56px;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
 /* ============================
    HERO SECTION
    ============================ */
