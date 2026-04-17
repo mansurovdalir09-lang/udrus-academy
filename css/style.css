@@ -1583,6 +1583,11 @@ p {
   flex-shrink: 0;
 }
 
+.archive-full-card__icon-wrap {
+  display: block;
+  margin-bottom: 12px;
+}
+
 .archive-full-card__arabic {
   font-family: var(--font-arabic);
   font-size: 1.1rem;
@@ -1671,6 +1676,8 @@ p {
 .direction-card__icon {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .direction-card__title {
