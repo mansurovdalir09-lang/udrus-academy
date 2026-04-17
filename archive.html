@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Архив лекций — UDRUS ACADEMY</title>
+  <meta name="description" content="Архив лекций Академии UDRUS — фикх, акыда, нахву, мусталях аль-хадис, усуль аль-фикх и другие дисциплины. Все уроки доступны в Telegram.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="page-enter archive-page">
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ============================
+       NAVIGATION
+       ============================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="images/logo-udrus.svg" alt="UDRUS Academy" class="nav__logo-img">
+        <div class="nav__logo-text">
+          <span class="brand">UDRUS ACADEMY</span>
+          <span class="tagline">Онлайн академия</span>
+        </div>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="index.html#lessons">Уроки</a></li>
+        <li><a href="index.html#schedule">Расписание</a></li>
+        <li><a href="archive.html" class="active">Архив</a></li>
+        <li><a href="hifz.html">Школа Хафизов</a></li>
+        <li><a href="index.html#contacts">Контакты</a></li>
+      </ul>
+
+      <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary nav__cta">
+        Telegram канал →
+      </a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="index.html#lessons">Уроки</a>
+    <a href="index.html#schedule">Расписание</a>
+    <a href="archive.html" class="active">Архив</a>
+    <a href="hifz.html">Школа Хафизов</a>
+    <a href="index.html#contacts">Контакты</a>
+    <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary">Telegram канал →</a>
+  </div>
+
+  <main>
+
+    <!-- ============================
+         HERO
+         ============================ -->
+    <section class="archive-hero">
+      <div class="container">
+        <div class="section-header fade-up" style="margin-bottom:0;">
+          <h1 style="font-size: clamp(2.5rem, 7vw, 5rem); margin-bottom:8px;">АРХИВ ЛЕКЦИЙ</h1>
+          <span class="arabic-subtitle" style="font-size: clamp(1.8rem, 4vw, 3rem);">أرشيف الدروس</span>
+          <p style="margin-top: 20px; max-width: 560px; margin-left: auto; margin-right: auto;">
+            Все записи уроков Академии UDRUS. Фильтруйте по дисциплине и переходите в архив Telegram.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         ARCHIVE CONTENT
+         ============================ -->
+    <section class="section" style="background: var(--color-bg);">
+      <div class="container">
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs fade-up">
+          <button class="filter-tab active" data-filter="all">Все дисциплины</button>
+          <button class="filter-tab" data-filter="aqeedah">Акыда</button>
+          <button class="filter-tab" data-filter="fiqh">Фикх</button>
+          <button class="filter-tab" data-filter="arabic">Арабский язык</button>
+          <button class="filter-tab" data-filter="hadith">Хадис</button>
+          <button class="filter-tab" data-filter="usul">Усуль</button>
+          <button class="filter-tab" data-filter="other">Другое</button>
+        </div>
+
+        <!-- Archive Grid -->
+        <div class="archive-full-grid">
+
+          <!-- 1. Акыда -->
+          <div class="archive-full-card fade-up" data-category="aqeedah">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Акыда</div>
+              <span class="archive-full-card__count">13 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">العقيدة</span>
+            <p class="archive-full-card__teacher">Устаз: Муслим Шанкыти</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 2. Усуль аль-Фикх -->
+          <div class="archive-full-card fade-up fade-up-delay-1" data-category="usul">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Усуль аль-Фикх</div>
+              <span class="archive-full-card__count">15 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">أصول الفقه</span>
+            <p class="archive-full-card__teacher">Устаз: Абу Муаз ад-Дагестани</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 3. Нахву -->
+          <div class="archive-full-card fade-up fade-up-delay-2" data-category="arabic">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Нахву</div>
+              <span class="archive-full-card__count">12 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">النحو</span>
+            <p class="archive-full-card__teacher">Устаз: Мухаммад Шамгоди</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 4. Адаб -->
+          <div class="archive-full-card fade-up fade-up-delay-3" data-category="other">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Адаб</div>
+              <span class="archive-full-card__count">13 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">الأدب</span>
+            <p class="archive-full-card__teacher">Устаз: Хасан Абу Марьям</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 5. Запретные сделки -->
+          <div class="archive-full-card fade-up" data-category="fiqh">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Запретные сделки</div>
+              <span class="archive-full-card__count">5 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">المعاملات المحرمة</span>
+            <p class="archive-full-card__teacher">Устаз: Курбан Абу Бакр</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 6. Ханбалитский Фикх -->
+          <div class="archive-full-card fade-up fade-up-delay-1" data-category="fiqh">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Ханбалитский Фикх</div>
+              <span class="archive-full-card__count">12 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">الفقه الحنبلي</span>
+            <p class="archive-full-card__teacher">Устаз: Рашид Кумукий</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 7. Остальные уроки -->
+          <div class="archive-full-card fade-up fade-up-delay-2" data-category="other">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Отдельные темы</div>
+              <span class="archive-full-card__count">7 тем</span>
+            </div>
+            <span class="archive-full-card__arabic">دروس متنوعة</span>
+            <p class="archive-full-card__teacher" style="margin-bottom:8px;">Разные устазы</p>
+            <ul style="font-size:0.8rem; color: var(--color-text-muted); margin-bottom:20px; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:6px;">
+              <li style="background:rgba(201,169,110,0.08); border:1px solid rgba(201,169,110,0.15); padding:2px 8px; border-radius:4px;">Пороки сердца</li>
+              <li style="background:rgba(201,169,110,0.08); border:1px solid rgba(201,169,110,0.15); padding:2px 8px; border-radius:4px;">Тафсир</li>
+              <li style="background:rgba(201,169,110,0.08); border:1px solid rgba(201,169,110,0.15); padding:2px 8px; border-radius:4px;">Книга Аллаха</li>
+              <li style="background:rgba(201,169,110,0.08); border:1px solid rgba(201,169,110,0.15); padding:2px 8px; border-radius:4px;">Как полюбить Коран</li>
+              <li style="background:rgba(201,169,110,0.08); border:1px solid rgba(201,169,110,0.15); padding:2px 8px; border-radius:4px;">Подготовка к ахира</li>
+              <li style="background:rgba(201,169,110,0.08); border:1px solid rgba(201,169,110,0.15); padding:2px 8px; border-radius:4px;">Судный день</li>
+            </ul>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 8. Провизия Рамадана -->
+          <div class="archive-full-card fade-up fade-up-delay-3" data-category="other">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Провизия Рамадана</div>
+              <span class="archive-full-card__count">6 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">زاد رمضان</span>
+            <p class="archive-full-card__teacher">Устаз: Мухаммад Шамгоди</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 9. Основы веры -->
+          <div class="archive-full-card fade-up" data-category="aqeedah">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Основы веры</div>
+              <span class="archive-full-card__count">6 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">أصول الإيمان</span>
+            <p class="archive-full-card__teacher">Устаз: Файзудин Казанищенский</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 10. Ключи к успеху -->
+          <div class="archive-full-card fade-up fade-up-delay-1" data-category="other">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Ключи к успеху требующего знания</div>
+              <span class="archive-full-card__count">6 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">مفاتيح النجاح لطالب العلم</span>
+            <p class="archive-full-card__teacher">Устаз: Файзудин Казанищенский</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+          <!-- 11. Мусталях -->
+          <div class="archive-full-card fade-up fade-up-delay-2" data-category="hadith">
+            <div class="archive-full-card__header">
+              <div class="archive-full-card__title">Мусталях аль-Хадис</div>
+              <span class="archive-full-card__count">6 уроков</span>
+            </div>
+            <span class="archive-full-card__arabic">مصطلح الحديث</span>
+            <p class="archive-full-card__teacher">Устаз: Курбан Абу Бакр</p>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-section__inner fade-up">
+          <h2 class="cta-section__title">ПРИСОЕДИНЯЙСЯ К КАНАЛУ</h2>
+          <p class="cta-section__subtitle">
+            Все записи уроков доступны в Telegram-канале Академии UDRUS бесплатно.
+          </p>
+          <div class="cta-section__buttons">
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-telegram btn-pulse">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
+              Перейти в Telegram
+            </a>
+            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener" class="btn btn-youtube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="text-decoration:none;">
+            <img src="images/logo-udrus.svg" alt="UDRUS Academy" class="nav__logo-img">
+            <div class="nav__logo-text">
+              <span class="brand">UDRUS ACADEMY</span>
+              <span class="tagline">Онлайн академия</span>
+            </div>
+          </a>
+          <div class="footer__brand-arabic">أكاديمية أدروس</div>
+          <p>Онлайн-академия шариатских наук для русскоязычных мусульман</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-title">Навигация</div>
+          <a href="index.html">Главная</a>
+          <a href="archive.html">Архив лекций</a>
+          <a href="hifz.html">Школа Хафизов</a>
+          <a href="index.html#lessons">Уроки</a>
+          <a href="index.html#schedule">Расписание</a>
+        </nav>
+
+        <div class="footer__social">
+          <div class="footer__social-title">Социальные сети</div>
+          <div class="footer__social-links">
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
+            </a>
+            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/udrus_academy" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024–2026 UDRUS ACADEMY. Все права защищены.</p>
+        <span class="footer__bismillah">بسم الله الرحمن الرحيم</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

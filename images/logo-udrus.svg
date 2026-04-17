@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="90" stroke="#C9A96E" stroke-width="8" fill="transparent"/>
+
+  <!-- Letter U (two vertical bars + bottom arc) -->
+  <line x1="72" y1="52" x2="72" y2="108" stroke="#C9A96E" stroke-width="14" stroke-linecap="round"/>
+  <line x1="128" y1="52" x2="128" y2="108" stroke="#C9A96E" stroke-width="14" stroke-linecap="round"/>
+  <path d="M72 108 Q72 138 100 138 Q128 138 128 108" stroke="#C9A96E" stroke-width="14" stroke-linecap="round" fill="none"/>
+
+  <!-- Open book (wings / pages spreading from centre) -->
+  <!-- Left wing -->
+  <path d="M100 158 Q82 148 66 155" stroke="#C9A96E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M100 158 Q78 144 58 153" stroke="#C9A96E" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M100 158 Q74 140 52 151" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <!-- Right wing -->
+  <path d="M100 158 Q118 148 134 155" stroke="#C9A96E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M100 158 Q122 144 142 153" stroke="#C9A96E" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M100 158 Q126 140 148 151" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <!-- Centre spine dot -->
+  <circle cx="100" cy="158" r="3.5" fill="#C9A96E"/>
+</svg>
