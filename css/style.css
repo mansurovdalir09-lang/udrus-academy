@@ -767,6 +767,9 @@ p {
   border-radius: var(--radius-md);
   padding: 28px;
   transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
 }
 
 .lesson-card:hover {
@@ -833,8 +836,9 @@ p {
 .lesson-card__desc {
   font-size: 0.875rem;
   color: var(--color-text-muted);
-  margin-bottom: 20px;
   line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 0;
 }
 
 .lesson-card__footer {
@@ -842,6 +846,40 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(201,169,110,0.15);
+}
+
+.lesson-card__schedule-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: rgba(201,169,110,0.1);
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 999px;
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lesson-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.lesson-card__cta:hover {
+  gap: 10px;
 }
 
 .lesson-card__tag {
