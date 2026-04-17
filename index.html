@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UDRUS ACADEMY — Онлайн-академия шариатских наук</title>
+  <meta name="description" content="Академия UDRUS — онлайн-академия шариатских наук для студентов Саудовской Аравии. Изучайте фикх, акыду, нахву, хадис и другие дисциплины.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="page-enter">
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ============================
+       NAVIGATION
+       ============================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <!-- Logo SVG -->
+        <svg class="nav__logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="21" stroke="#C9A96E" stroke-width="1.5"/>
+          <text x="22" y="19" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="13" font-weight="900" fill="#C9A96E" letter-spacing="0.5">U</text>
+          <path d="M10 26 Q22 34 34 26" stroke="#C9A96E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M10 26 L10 30 Q22 38 34 30 L34 26" stroke="none" fill="rgba(201,169,110,0.08)"/>
+          <line x1="22" y1="26" x2="22" y2="34" stroke="#C9A96E" stroke-width="1" opacity="0.6"/>
+        </svg>
+        <div class="nav__logo-text">
+          <span class="brand">UDRUS ACADEMY</span>
+          <span class="tagline">Онлайн академия</span>
+        </div>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html" class="active">Главная</a></li>
+        <li><a href="#lessons">Уроки</a></li>
+        <li><a href="#schedule">Расписание</a></li>
+        <li><a href="archive.html">Архив</a></li>
+        <li><a href="hifz.html">Школа Хафизов</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+
+      <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary nav__cta">
+        Telegram канал →
+      </a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="index.html" class="active">Главная</a>
+    <a href="#lessons">Уроки</a>
+    <a href="#schedule">Расписание</a>
+    <a href="archive.html">Архив</a>
+    <a href="hifz.html">Школа Хафизов</a>
+    <a href="#contacts">Контакты</a>
+    <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary">Telegram канал →</a>
+  </div>
+
+  <main>
+
+    <!-- ============================
+         SECTION 1 — HERO
+         ============================ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-pattern" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__logo-wrap">
+          <!-- Hero Logo SVG -->
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UDRUS ACADEMY logo">
+            <circle cx="60" cy="60" r="58" stroke="#C9A96E" stroke-width="1.5" opacity="0.4"/>
+            <circle cx="60" cy="60" r="50" stroke="#C9A96E" stroke-width="0.8" opacity="0.2"/>
+            <!-- U letter -->
+            <text x="60" y="54" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="36" font-weight="900" fill="#C9A96E" letter-spacing="1">U</text>
+            <!-- Book pages -->
+            <path d="M28 72 Q60 86 92 72" stroke="#C9A96E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M28 72 L28 80 Q60 94 92 80 L92 72" fill="rgba(201,169,110,0.1)" stroke="none"/>
+            <line x1="60" y1="72" x2="60" y2="94" stroke="#C9A96E" stroke-width="1.5" opacity="0.7"/>
+            <!-- Decorative dots -->
+            <circle cx="60" cy="18" r="2.5" fill="#C9A96E" opacity="0.6"/>
+            <circle cx="102" cy="60" r="2" fill="#C9A96E" opacity="0.4"/>
+            <circle cx="18" cy="60" r="2" fill="#C9A96E" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <h1 class="hero__main-title kinetic-text" id="heroTitle" data-text="АКАДЕМИЯ UDRUS">
+          АКАДЕМИЯ UDRUS
+        </h1>
+
+        <span class="hero__arabic-title arabic-float">أكاديمية أدروس</span>
+
+        <p class="hero__subtitle">
+          Онлайн-академия шариатских наук — студенты Саудовской Аравии
+        </p>
+
+        <span class="hero__greeting">‏السلام عليكم ورحمة الله وبركاته</span>
+
+        <div class="btn-group hero__cta">
+          <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary btn-telegram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
+            Перейти в Telegram →
+          </a>
+          <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Смотреть на YouTube
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator">
+        <span>Scroll</span>
+        <div class="hero__scroll-arrow"></div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 2 — О ПРОЕКТЕ
+         ============================ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>О ПРОЕКТЕ</h2>
+          <span class="arabic-subtitle">عن المشروع</span>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Wide — About -->
+          <div class="bento-card bento-card--wide fade-up">
+            <div class="bento-card__title">АКАДЕМИЯ UDRUS</div>
+            <p class="bento-card__text" style="font-family: var(--font-arabic); direction: rtl; color: var(--color-gold); font-style: italic; margin-bottom: 12px;">‏السلام عليكم ورحمة الله وبركاته</p>
+            <p class="bento-card__text">
+              Добро пожаловать в онлайн-академию «UDRUS» — «УЧИСЬ»!
+            </p>
+            <p class="bento-card__text" style="margin-top: 10px;">
+              Это образовательный проект студентов из Саудовской Аравии.
+            </p>
+            <p class="bento-card__text" style="margin-top: 10px;">
+              С помощью Аллаха мы стремимся реализовать большие планы и полезные идеи: проводим
+              онлайн-уроки по различным шариатским наукам, ведём прямые эфиры, организуем семинары,
+              отвечаем на вопросы и регулярно делимся полезной информацией.
+            </p>
+            <p class="bento-card__text" style="margin-top: 10px;">
+              Просим Аллаха даровать нам успех в этом благословенном деле.
+            </p>
+          </div>
+
+          <!-- Card 2: Online lessons -->
+          <div class="bento-card fade-up fade-up-delay-1">
+            <div class="bento-card__icon">📚</div>
+            <div class="bento-card__title">Онлайн-уроки</div>
+            <p class="bento-card__text">
+              Регулярные занятия в прямом эфире по классическим текстам ислама. Запись уроков доступна в архиве.
+            </p>
+          </div>
+
+          <!-- Card 3: Live broadcasts -->
+          <div class="bento-card fade-up fade-up-delay-2">
+            <div class="bento-card__icon">🎙️</div>
+            <div class="bento-card__title">Прямые эфиры</div>
+            <p class="bento-card__text">
+              Трансляции в Telegram и YouTube. Задавайте вопросы устазам в прямом эфире.
+            </p>
+          </div>
+
+          <!-- Card 4: Seminars -->
+          <div class="bento-card fade-up fade-up-delay-3">
+            <div class="bento-card__icon">🎓</div>
+            <div class="bento-card__title">Семинары и сертификаты</div>
+            <p class="bento-card__text">
+              По завершении курсов студенты проходят аттестацию и получают сертификаты от академии.
+            </p>
+          </div>
+
+          <!-- Card 5: Arabic quote -->
+          <div class="bento-card bento-card--wide fade-up fade-up-delay-4">
+            <p class="bento-card__arabic-quote">
+              «طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ»
+            </p>
+            <p class="bento-card__text" style="text-align:center; margin-top:12px; font-size:0.85rem;">
+              «Стремление к знанию — обязанность каждого мусульманина» (Ибн Маджа)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 3 — НАША АКЫДА
+         ============================ -->
+    <section class="section aqeedah" id="aqeedah">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>НАША АКЫДА</h2>
+          <span class="arabic-subtitle">عقيدتنا</span>
+        </div>
+
+        <div class="aqeedah__inner">
+          <div class="aqeedah__frame fade-up">
+            <p class="aqeedah__text">
+              Мы исповедуем акыду праведных предшественников (саляф ас-салих) — сподвижников, таби'инов
+              и тех, кто последовал за ними в благом. Мы утверждаем Аллаху Его прекрасные имена и
+              высочайшие атрибуты так, как они пришли в Коране и достоверной Сунне, без искажения
+              смысла (тахриф), без отрицания (та'тиль), без уподобления творениям (ташбих) и без
+              описания образа (такйиф).
+            </p>
+            <p class="aqeedah__text">
+              Мы убеждены, что Коран — это речь Аллаха, ниспосланная, а не сотворённая. Мы верим в
+              предопределение — хорошее и плохое. Мы любим сподвижников Пророка ﷺ и не порочим никого
+              из них. Мы признаём законность халифата праведных халифов в порядке их достоинства.
+            </p>
+            <p class="aqeedah__text">
+              Мы придерживаемся Сунны и общины, избегаем нововведений и разногласий. Наш путь — это
+              путь срединности (васатыййя): без крайностей такфира и без попустительства в вопросах
+              религии.
+            </p>
+            <p class="aqeedah__text">
+              Мы следуем методу учёных Ахлю-Сунна валь-Джама'а в понимании текстов Корана и Сунны,
+              опираясь на иджму и методологию факихов и мухаддисов.
+            </p>
+
+            <div class="aqeedah__scholars-title">Учёные, на которых мы опираемся:</div>
+            <ul class="scholars-grid">
+              <li>Шейх Ибн Баз (رحمه الله)</li>
+              <li>Шейх Ибн 'Усаймин (رحمه الله)</li>
+              <li>Шейх аль-Альбани (رحمه الله)</li>
+              <li>Шейх Салих аль-Фаузан (حفظه الله)</li>
+              <li>Шейх Раби' аль-Мадхали (حفظه الله)</li>
+              <li>Шейх 'Убайд аль-Джабири (رحمه الله)</li>
+              <li>Шейх Ибн Джибрин (رحمه الله)</li>
+              <li>Шейх Мухаммад ибн Хади (حفظه الله)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 4 — УРОКИ (Horizontal scroll)
+         ============================ -->
+    <section class="section lessons" id="lessons">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>ДИСЦИПЛИНЫ</h2>
+          <span class="arabic-subtitle">المواد الدراسية</span>
+        </div>
+      </div>
+
+      <div class="lessons__scroll-wrapper">
+        <div class="lessons__track" id="lessonsTrack">
+
+          <!-- Card 1: Adab -->
+          <div class="lesson-card">
+            <div class="lesson-card__arabic">الأدب</div>
+            <div class="lesson-card__title">Адаб</div>
+            <div class="lesson-card__teacher">
+              <div class="lesson-card__avatar">
+                <img src="images/avatar-placeholder.svg" alt="Хасан Абу Марьям">
+              </div>
+              <div>
+                <div class="lesson-card__teacher-name">Хасан Абу Марьям</div>
+                <div class="lesson-card__teacher-label">Устаз</div>
+              </div>
+            </div>
+            <p class="lesson-card__desc">
+              Изучение исламского этикета и нравственности по классическим текстам. Воспитание характера
+              и поведения согласно Сунне Пророка ﷺ.
+            </p>
+            <div class="lesson-card__footer">
+              <span class="lesson-card__tag">Четверг 16:00</span>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Смотреть →</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Fiqh -->
+          <div class="lesson-card">
+            <div class="lesson-card__arabic">الفقه</div>
+            <div class="lesson-card__title">Фикх</div>
+            <div class="lesson-card__teacher">
+              <div class="lesson-card__avatar">
+                <img src="images/avatar-placeholder.svg" alt="Рашид Кумукий">
+              </div>
+              <div>
+                <div class="lesson-card__teacher-name">Рашид Кумукий</div>
+                <div class="lesson-card__teacher-label">Устаз</div>
+              </div>
+            </div>
+            <p class="lesson-card__desc">
+              Ханбалитский фикх по классическим матнам. Изучение поклонения и сделок согласно мазхабу
+              Имама Ахмада ибн Ханбала.
+            </p>
+            <div class="lesson-card__footer">
+              <span class="lesson-card__tag">Четверг 16:15</span>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Смотреть →</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Mustalah -->
+          <div class="lesson-card">
+            <div class="lesson-card__arabic">مصطلح الحديث</div>
+            <div class="lesson-card__title">Мусталях аль-Хадис</div>
+            <div class="lesson-card__teacher">
+              <div class="lesson-card__avatar">
+                <img src="images/avatar-placeholder.svg" alt="Курбан Абу Бакр">
+              </div>
+              <div>
+                <div class="lesson-card__teacher-name">Курбан Абу Бакр</div>
+                <div class="lesson-card__teacher-label">Устаз</div>
+              </div>
+            </div>
+            <p class="lesson-card__desc">
+              Наука о терминологии хадисов: виды хадисов, их достоверность, цепочки передатчиков
+              и методология мухаддисов.
+            </p>
+            <div class="lesson-card__footer">
+              <span class="lesson-card__tag">Четверг</span>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Смотреть →</a>
+            </div>
+          </div>
+
+          <!-- Card 4: Aqeedah -->
+          <div class="lesson-card">
+            <div class="lesson-card__arabic">العقيدة</div>
+            <div class="lesson-card__title">Акыда</div>
+            <div class="lesson-card__teacher">
+              <div class="lesson-card__avatar">
+                <img src="images/avatar-placeholder.svg" alt="Муслим Шанкыти">
+              </div>
+              <div>
+                <div class="lesson-card__teacher-name">Муслим Шанкыти</div>
+                <div class="lesson-card__teacher-label">Устаз</div>
+              </div>
+            </div>
+            <p class="lesson-card__desc">
+              Акыда Ахлю-Сунна валь-Джама'а по классическим матнам. Имена и атрибуты Аллаха,
+              основы веры, опровержение заблуждений.
+            </p>
+            <div class="lesson-card__footer">
+              <span class="lesson-card__tag">Четверг 17:15</span>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Смотреть →</a>
+            </div>
+          </div>
+
+          <!-- Card 5: Nahw -->
+          <div class="lesson-card">
+            <div class="lesson-card__arabic">النحو</div>
+            <div class="lesson-card__title">Нахву</div>
+            <div class="lesson-card__teacher">
+              <div class="lesson-card__avatar">
+                <img src="images/avatar-placeholder.svg" alt="Мухаммад Шамгоди">
+              </div>
+              <div>
+                <div class="lesson-card__teacher-name">Мухаммад Шамгоди</div>
+                <div class="lesson-card__teacher-label">Устаз</div>
+              </div>
+            </div>
+            <p class="lesson-card__desc">
+              Арабская грамматика — синтаксис. Изучение классических текстов по нахву:
+              Аджуррумийя и другие труды.
+            </p>
+            <div class="lesson-card__footer">
+              <span class="lesson-card__tag">Суббота 16:00</span>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Смотреть →</a>
+            </div>
+          </div>
+
+          <!-- Card 6: Usul al-Fiqh -->
+          <div class="lesson-card">
+            <div class="lesson-card__arabic">أصول الفقه</div>
+            <div class="lesson-card__title">Усуль аль-Фикх</div>
+            <div class="lesson-card__teacher">
+              <div class="lesson-card__avatar">
+                <img src="images/avatar-placeholder.svg" alt="Абу Муаз ад-Дагестани">
+              </div>
+              <div>
+                <div class="lesson-card__teacher-name">Абу Муаз ад-Дагестани</div>
+                <div class="lesson-card__teacher-label">Устаз</div>
+              </div>
+            </div>
+            <p class="lesson-card__desc">
+              Основы исламского права: методология извлечения правовых решений из Корана и Сунны,
+              иджтихад, виды доказательств.
+            </p>
+            <div class="lesson-card__footer">
+              <span class="lesson-card__tag">Суббота 17:00</span>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-outline">Смотреть →</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lessons__nav container">
+          <button class="lessons__nav-btn" id="lessonsLeft" aria-label="Назад">←</button>
+          <button class="lessons__nav-btn" id="lessonsRight" aria-label="Вперёд">→</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 5 — РАСПИСАНИЕ
+         ============================ -->
+    <section class="section schedule" id="schedule">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>РАСПИСАНИЕ УРОКОВ</h2>
+          <span class="arabic-subtitle">جدول الدروس</span>
+        </div>
+
+        <div class="schedule__days fade-up">
+
+          <!-- Thursday -->
+          <div class="schedule__day-card">
+            <div class="schedule__day-header">Четверг</div>
+            <div class="schedule__day-body">
+              <div class="schedule__lesson">
+                <span class="schedule__time">16:00</span>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Адаб (الأدب)</div>
+                  <div class="schedule__teacher">Хасан Абу Марьям</div>
+                </div>
+              </div>
+              <div class="schedule__lesson">
+                <span class="schedule__time">16:15</span>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Фикх (الفقه)</div>
+                  <div class="schedule__teacher">Рашид Кумукий</div>
+                </div>
+              </div>
+              <div class="schedule__lesson">
+                <span class="schedule__time">17:00</span>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Мусталях аль-Хадис</div>
+                  <div class="schedule__teacher">Курбан Абу Бакр</div>
+                </div>
+              </div>
+              <div class="schedule__lesson">
+                <span class="schedule__time">17:15</span>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Акыда (العقيدة)</div>
+                  <div class="schedule__teacher">Муслим Шанкыти</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Friday -->
+          <div class="schedule__day-card">
+            <div class="schedule__day-header">Пятница</div>
+            <div class="schedule__day-body">
+              <div class="schedule__lesson">
+                <span class="schedule__time">По расп.</span>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Специальные уроки</div>
+                  <div class="schedule__teacher">Разные устазы</div>
+                </div>
+              </div>
+              <div class="schedule__lesson">
+                <span class="schedule__time">По расп.</span>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Основы веры</div>
+                  <div class="schedule__teacher">Файзудин Казанищенский</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Saturday -->
+          <div class="schedule__day-card">
+            <div class="schedule__day-header">Суббота</div>
+            <div class="schedule__day-body">
+              <div class="schedule__lesson">
+                <span class="schedule__time">16:00</span>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Нахву (النحو)</div>
+                  <div class="schedule__teacher">Мухаммад Шамгоди</div>
+                </div>
+              </div>
+              <div class="schedule__lesson">
+                <span class="schedule__time">17:00</span>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Усуль аль-Фикх</div>
+                  <div class="schedule__teacher">Абу Муаз ад-Дагестани</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="schedule__cta fade-up">
+          <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary">
+            На канале Академии UDRUS →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 6 — ПРЕПОДАВАТЕЛИ
+         ============================ -->
+    <section class="section teachers" id="teachers">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>НАШИ УСТАЗЫ</h2>
+          <span class="arabic-subtitle">أساتذتنا</span>
+        </div>
+
+        <div class="teachers__grid">
+
+          <div class="teacher-card fade-up">
+            <div class="teacher-card__photo">
+              <img src="images/avatar-placeholder.svg" alt="Рашид Кумукий">
+            </div>
+            <div class="teacher-card__name">Рашид Кумукий</div>
+            <span class="teacher-card__badge">Фикх ханбалитский</span>
+          </div>
+
+          <div class="teacher-card fade-up fade-up-delay-1">
+            <div class="teacher-card__photo">
+              <img src="images/avatar-placeholder.svg" alt="Мухаммад Шамгоди">
+            </div>
+            <div class="teacher-card__name">Мухаммад Шамгоди</div>
+            <span class="teacher-card__badge">Нахву · Фикх шафиитский</span>
+          </div>
+
+          <div class="teacher-card fade-up fade-up-delay-2">
+            <div class="teacher-card__photo">
+              <img src="images/avatar-placeholder.svg" alt="Муслим Шанкыти">
+            </div>
+            <div class="teacher-card__name">Муслим Шанкыти</div>
+            <span class="teacher-card__badge">Акыда</span>
+          </div>
+
+          <div class="teacher-card fade-up fade-up-delay-3">
+            <div class="teacher-card__photo">
+              <img src="images/avatar-placeholder.svg" alt="Курбан Абу Бакр">
+            </div>
+            <div class="teacher-card__name">Курбан Абу Бакр</div>
+            <span class="teacher-card__badge">Мусталях · Сделки</span>
+          </div>
+
+          <div class="teacher-card fade-up fade-up-delay-4">
+            <div class="teacher-card__photo">
+              <img src="images/avatar-placeholder.svg" alt="Хасан Абу Марьям">
+            </div>
+            <div class="teacher-card__name">Хасан Абу Марьям</div>
+            <span class="teacher-card__badge">Адаб</span>
+          </div>
+
+          <div class="teacher-card fade-up fade-up-delay-5">
+            <div class="teacher-card__photo">
+              <img src="images/avatar-placeholder.svg" alt="Абу Муаз ад-Дагестани">
+            </div>
+            <div class="teacher-card__name">Абу Муаз ад-Дагестани</div>
+            <span class="teacher-card__badge">Усуль аль-Фикх</span>
+          </div>
+
+          <div class="teacher-card fade-up">
+            <div class="teacher-card__photo">
+              <img src="images/avatar-placeholder.svg" alt="Файзудин Казанищенский">
+            </div>
+            <div class="teacher-card__name">Файзудин Казанищенский</div>
+            <span class="teacher-card__badge">Основы веры</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 7 — ШКОЛА ПРОВИЗИИ ХАФИЗА
+         ============================ -->
+    <section class="section hifz-preview" id="hifz">
+      <div class="container">
+        <div class="hifz-preview__inner">
+          <div class="hifz-preview__content fade-left">
+            <span class="section-tag">Отдельная школа</span>
+            <h2 class="gold-shimmer">Онлайн-школа<br>«Провизия Хафиза»</h2>
+            <span style="font-family: var(--font-arabic); font-size: 1.5rem; color: var(--color-gold); direction: rtl; display: block; margin-bottom: 16px;">زاد الحافظ</span>
+            <p>
+              Специализированная школа для изучения арабского языка, чтения Корана и заучивания матнов.
+              Индивидуальный и групповой форматы обучения.
+            </p>
+            <a href="hifz.html" class="btn btn-primary" style="margin-top: 12px;">Подробнее о школе →</a>
+          </div>
+
+          <div class="hifz-cards fade-right">
+            <div class="hifz-card">
+              <div class="hifz-card__icon">📖</div>
+              <div>
+                <div class="hifz-card__title">Обучение чтению Корана</div>
+                <p class="hifz-card__text">Таджвид, правильное произношение, исправление ошибок</p>
+              </div>
+            </div>
+            <div class="hifz-card">
+              <div class="hifz-card__icon">🤲</div>
+              <div>
+                <div class="hifz-card__title">Чтение Корана + исправление</div>
+                <p class="hifz-card__text">Индивидуальные занятия с разбором ошибок чтения</p>
+              </div>
+            </div>
+            <div class="hifz-card">
+              <div class="hifz-card__icon">🌙</div>
+              <div>
+                <div class="hifz-card__title">Арабский язык с нуля</div>
+                <p class="hifz-card__text">Систематическое изучение арабского от алфавита до грамматики</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 8 — АРХИВ ЛЕКЦИЙ (превью)
+         ============================ -->
+    <section class="section archive-preview" id="archive-preview">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>АРХИВ ЛЕКЦИЙ</h2>
+          <span class="arabic-subtitle">أرشيف الدروس</span>
+        </div>
+
+        <div class="archive-grid">
+          <div class="archive-card fade-up">
+            <div class="archive-card__icon">📜</div>
+            <div class="archive-card__info">
+              <div class="archive-card__title">Акыда</div>
+              <div class="archive-card__count">13 уроков</div>
+              <div class="archive-card__teacher">Муслим Шанкыти</div>
+            </div>
+          </div>
+          <div class="archive-card fade-up fade-up-delay-1">
+            <div class="archive-card__icon">⚖️</div>
+            <div class="archive-card__info">
+              <div class="archive-card__title">Усуль аль-Фикх</div>
+              <div class="archive-card__count">15 уроков</div>
+              <div class="archive-card__teacher">Абу Муаз ад-Дагестани</div>
+            </div>
+          </div>
+          <div class="archive-card fade-up fade-up-delay-2">
+            <div class="archive-card__icon">✏️</div>
+            <div class="archive-card__info">
+              <div class="archive-card__title">Нахву</div>
+              <div class="archive-card__count">12 уроков</div>
+              <div class="archive-card__teacher">Мухаммад Шамгоди</div>
+            </div>
+          </div>
+          <div class="archive-card fade-up fade-up-delay-3">
+            <div class="archive-card__icon">🌸</div>
+            <div class="archive-card__info">
+              <div class="archive-card__title">Адаб</div>
+              <div class="archive-card__count">13 уроков</div>
+              <div class="archive-card__teacher">Хасан Абу Марьям</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="archive-preview__cta fade-up">
+          <a href="archive.html" class="btn btn-outline">Весь архив →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 9 — СЕРТИФИКАТЫ
+         ============================ -->
+    <section class="section certificates" id="certificates">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>СЕРТИФИКАТЫ</h2>
+          <span class="arabic-subtitle">الشهادات</span>
+        </div>
+
+        <div class="certificates__inner">
+          <div class="certificates__content fade-left">
+            <p>
+              По завершении каждого курса студенты проходят итоговую аттестацию. Успешно сдавшие
+              получают официальный сертификат от Академии UDRUS с подписью преподавателя.
+            </p>
+            <p>
+              Сертификат подтверждает прохождение курса и усвоение основных знаний по дисциплине.
+              Он является свидетельством вашего труда и стремления к исламским знаниям.
+            </p>
+            <div class="certificates__arabic">
+              «وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا»
+            </div>
+          </div>
+
+          <div class="certificate-mock fade-right">
+            <div class="certificate-mock__badge">🏅</div>
+            <div class="certificate-mock__title">UDRUS ACADEMY</div>
+            <div class="certificate-mock__subtitle">Академия шариатских наук</div>
+            <div class="certificate-mock__divider"></div>
+            <div class="certificate-mock__name">
+              شهادة إتمام الدورة
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- ============================
+         SECTION 10 — CTA / КОНТАКТЫ
+         ============================ -->
+    <section class="section cta-section" id="contacts">
+      <div class="container">
+        <div class="cta-section__inner fade-up">
+          <h2 class="cta-section__title">ПРИСОЕДИНЯЙСЯ К<br>АКАДЕМИИ UDRUS</h2>
+          <p class="cta-section__subtitle">
+            Изучай шариатские науки вместе с нами. Все уроки бесплатны и доступны в архиве.
+          </p>
+          <div class="cta-section__buttons">
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-telegram btn-pulse">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
+              Telegram
+            </a>
+            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener" class="btn btn-youtube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+            <a href="https://www.instagram.com/udrus_academy" target="_blank" rel="noopener" class="btn btn-instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="text-decoration:none;">
+            <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+              <circle cx="22" cy="22" r="21" stroke="#C9A96E" stroke-width="1.5"/>
+              <text x="22" y="19" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="900" fill="#C9A96E">U</text>
+              <path d="M10 26 Q22 34 34 26" stroke="#C9A96E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <line x1="22" y1="26" x2="22" y2="34" stroke="#C9A96E" stroke-width="1" opacity="0.6"/>
+            </svg>
+            <div class="nav__logo-text">
+              <span class="brand">UDRUS ACADEMY</span>
+              <span class="tagline">Онлайн академия</span>
+            </div>
+          </a>
+          <div class="footer__brand-arabic">أكاديمية أدروس</div>
+          <p>Онлайн-академия шариатских наук для русскоязычных мусульман</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-title">Навигация</div>
+          <a href="index.html">Главная</a>
+          <a href="archive.html">Архив лекций</a>
+          <a href="hifz.html">Школа Хафизов</a>
+          <a href="#lessons">Уроки</a>
+          <a href="#schedule">Расписание</a>
+        </nav>
+
+        <div class="footer__social">
+          <div class="footer__social-title">Социальные сети</div>
+          <div class="footer__social-links">
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
+            </a>
+            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/udrus_academy" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024–2026 UDRUS ACADEMY. Все права защищены.</p>
+        <span class="footer__bismillah">بسم الله الرحمن الرحيم</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
