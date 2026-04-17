@@ -441,6 +441,11 @@ p {
   padding-top: var(--nav-height);
   padding-left: 24px;
   padding-right: 24px;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201,169,110,0.15), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(139,90,43,0.1), transparent 70%),
+    radial-gradient(ellipse 50% 60% at 10% 80%, rgba(201,169,110,0.08), transparent 70%),
+    var(--color-bg);
 }
 
 .hero__bg-pattern {
@@ -1735,6 +1740,47 @@ p {
 /* ============================
    RESPONSIVE
    ============================ */
+
+/* ============================
+   AWWWARDS ENHANCEMENTS
+   ============================ */
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9997;
+  mix-blend-mode: overlay;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #C9A96E, #E8C98A, #C9A96E);
+  z-index: 10000;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(201,169,110,0.5);
+}
+
+/* Decorative waves overlay */
+.section-decor-waves {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/decor-waves.svg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
 
 /* Tablet */
 @media (max-width: 1199px) {
