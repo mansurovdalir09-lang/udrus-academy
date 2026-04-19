@@ -475,9 +475,15 @@ p {
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: min(900px, 100%);
+  max-width: min(1100px, 100%);
   width: 100%;
   padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .hero__logo-wrap {
@@ -537,7 +543,12 @@ p {
 }
 
 .hero__cta {
+  display: flex;
   justify-content: center;
+  gap: 16px;
+  width: 100%;
+  margin-top: 32px;
+  flex-wrap: wrap;
 }
 
 .hero__scroll-indicator {
