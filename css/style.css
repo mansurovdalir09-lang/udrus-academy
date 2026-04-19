@@ -455,6 +455,7 @@ p {
   padding-top: var(--nav-height);
   padding-left: 24px;
   padding-right: 24px;
+  padding-bottom: 80px;
   background:
     radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201,169,110,0.15), transparent 70%),
     radial-gradient(ellipse 60% 50% at 80% 50%, rgba(139,90,43,0.1), transparent 70%),
@@ -548,7 +549,13 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  opacity: 0.5;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
   animation: scrollBounce 2s ease-in-out infinite;
 }
 
@@ -565,6 +572,17 @@ p {
   border-right: 2px solid var(--color-gold);
   border-bottom: 2px solid var(--color-gold);
   transform: rotate(45deg);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
+
+@media (max-width: 767px) {
+  .hero__scroll-indicator {
+    display: none;
+  }
 }
 
 /* ============================
