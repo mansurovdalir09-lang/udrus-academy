@@ -1126,6 +1126,11 @@ p {
   background: var(--color-surface);
 }
 
+.hifz-logo-img {
+  width: clamp(180px, 22vw, 300px);
+  height: auto;
+}
+
 .hifz-preview__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
