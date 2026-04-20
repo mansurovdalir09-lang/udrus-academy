@@ -1131,6 +1131,19 @@ p {
   height: auto;
 }
 
+.hifz-preview__arabic-deco {
+  font-family: var(--font-arabic-deco);
+  font-size: clamp(4rem, 10vw, 9rem);
+  color: var(--color-gold);
+  opacity: 0.1;
+  direction: rtl;
+  line-height: 1;
+  margin: 8px 0 12px;
+  pointer-events: none;
+  user-select: none;
+  font-style: italic;
+}
+
 .hifz-preview__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
