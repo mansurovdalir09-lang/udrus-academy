@@ -1801,6 +1801,13 @@ p {
   z-index: 1;
 }
 
+.hifz-hero__logo {
+  width: clamp(240px, 32vw, 420px);
+  height: auto;
+  margin: 0 auto 24px;
+  display: block;
+}
+
 .hifz-about {
   background: var(--color-bg-2);
 }
