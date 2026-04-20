@@ -1,0 +1,195 @@
+/* ============================
+   UDRUS ACADEMY — animations.css
+   ============================ */
+
+/* --- 1. Fade Up (IntersectionObserver) --- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-delay-1 { transition-delay: 0.1s; }
+.fade-up-delay-2 { transition-delay: 0.2s; }
+.fade-up-delay-3 { transition-delay: 0.3s; }
+.fade-up-delay-4 { transition-delay: 0.4s; }
+.fade-up-delay-5 { transition-delay: 0.5s; }
+
+/* --- 2. Gold Shimmer on headings --- */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 0%,
+    var(--color-gold-light) 30%,
+    #fff8e7 50%,
+    var(--color-gold-light) 70%,
+    var(--color-gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* --- 3. Card Hover (used via JS/CSS) --- */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 64px rgba(201, 169, 110, 0.18);
+}
+
+/* --- 4. Kinetic Text (hero letters) --- */
+.kinetic-text .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px) rotate(6deg);
+  animation: charIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes charIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* --- 5. Arabic Float --- */
+.arabic-float {
+  animation: arabicFloat 6s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes arabicFloat {
+  0%, 100% { transform: translateY(0px); }
+  33%       { transform: translateY(-6px); }
+  66%       { transform: translateY(3px); }
+}
+
+/* --- 6. Islamic Pattern Background Rotation --- */
+@keyframes patternRotate {
+  from { transform: rotate(0deg) scale(1.05); }
+  to   { transform: rotate(360deg) scale(1.05); }
+}
+
+/* --- 7. Scroll Bounce (scroll indicator) --- */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+  50%       { transform: translateX(-50%) translateY(8px); opacity: 0.9; }
+}
+
+/* --- 8. Page Fade In (on load) --- */
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.page-enter {
+  animation: pageFadeIn 0.5s ease forwards;
+}
+
+/* --- 9. Pulse glow for CTA buttons --- */
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 169, 110, 0); }
+  50%       { box-shadow: 0 0 0 10px rgba(201, 169, 110, 0); }
+}
+
+.btn-pulse {
+  animation: pulseGold 2.5s ease-in-out infinite;
+}
+
+/* --- 10. Fade Left (for stats/info blocks) --- */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- 11. Hero content stagger --- */
+.hero__content > * {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroItemIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero__logo-wrap     { animation-delay: 0.1s; }
+.hero__main-title    { animation-delay: 0.3s; }
+.hero__arabic-title  { animation-delay: 0.5s; }
+.hero__subtitle      { animation-delay: 0.65s; }
+.hero__greeting      { animation-delay: 0.75s; }
+.hero__cta           { animation-delay: 0.9s; }
+.hero__scroll-indicator { animation-delay: 1.2s; }
+
+@keyframes heroItemIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- 12. Gold border animate on load --- */
+@keyframes borderDraw {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+.border-draw {
+  animation: borderDraw 1s ease forwards;
+}
+
+/* --- 13. Scale In for bento cards --- */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- No animations on mobile for performance --- */
+@media (max-width: 767px) {
+  .card-hover:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .arabic-float {
+    animation: none;
+  }
+
+  .hero__bg-pattern {
+    animation: none;
+  }
+}
