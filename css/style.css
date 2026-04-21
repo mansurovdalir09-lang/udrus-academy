@@ -505,13 +505,11 @@ p {
   max-width: 100%;
 }
 
-@media (max-width: 767px) {
-  .hero__main-title {
-    font-size: clamp(1.8rem, 8vw, 3rem) !important;
-    white-space: normal !important;
-    letter-spacing: -0.02em;
-  }
+.hero__main-title .char {
+  display: inline-block;
+  white-space: pre-wrap;
 }
+
 
 .hero__arabic-title {
   font-family: var(--font-arabic);
@@ -2064,20 +2062,6 @@ body::before {
     grid-template-columns: 1fr;
   }
 
-  .certificates__inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .certificates__content {
-    order: 2;
-  }
-
-  .certificate-mock {
-    order: 1;
-    padding: 32px 24px;
-  }
-
   .footer__inner {
     grid-template-columns: 1fr;
   }
@@ -2125,12 +2109,57 @@ body::before {
     flex-direction: column;
     align-items: center;
   }
+
+  .hero__logo-wrap {
+    margin-bottom: 20px;
+  }
+
+  .hero__logo-wrap img {
+    width: 110px !important;
+    height: auto !important;
+  }
+
+  /* Problem 2: Disciplines — ensure track has breathing room */
+  .lessons__scroll-wrapper {
+    overflow-x: auto;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .lessons__track {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    scroll-snap-align: start;
+  }
+
+  .seminar-cta .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }
 
 /* Small mobile */
 @media (max-width: 480px) {
   .teachers__grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Certificates: compact on very small screens */
+  .certificate-mock {
+    min-height: auto;
+    padding: 24px 16px;
+  }
+
+  .certificates__arabic {
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+  }
+
+  /* Hero: tighter spacing on 375px */
+  .hero__subtitle {
+    font-size: 0.9rem;
+    padding: 0 8px;
   }
 }
 
@@ -2139,7 +2168,7 @@ body::before {
    ============================================================ */
 
 /* Hero */
-.seminar-hero {
+.seminar-page-hero {
   background: linear-gradient(135deg, #2C1A10 0%, #3a2418 100%);
   min-height: 60vh;
   display: flex;
@@ -2149,11 +2178,11 @@ body::before {
   padding: 120px 24px 80px;
 }
 
-.seminar-hero__inner {
+.seminar-page-hero__inner {
   max-width: 800px;
 }
 
-.seminar-hero__arabic {
+.seminar-page-hero__arabic {
   font-family: 'Amiri', serif;
   font-style: italic;
   font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -2163,7 +2192,7 @@ body::before {
   direction: rtl;
 }
 
-.seminar-hero__title {
+.seminar-page-hero__title {
   font-size: 2.5rem;
   font-weight: 900;
   color: #ffffff;
@@ -2172,7 +2201,7 @@ body::before {
   line-height: 1.2;
 }
 
-.seminar-hero__sub {
+.seminar-page-hero__sub {
   font-size: 1.05rem;
   color: #e0d5c7;
   letter-spacing: 0.5px;
@@ -2348,7 +2377,7 @@ body::before {
 
 /* Seminar page responsive */
 @media (max-width: 768px) {
-  .seminar-hero__title {
+  .seminar-page-hero__title {
     font-size: 1.8rem;
   }
 
@@ -2358,5 +2387,156 @@ body::before {
 
   .seminar-about__card {
     padding: 20px;
+  }
+}
+
+/* ============================================================
+   SEMINAR BANNER — Афиша на главной странице
+   ============================================================ */
+
+.seminar-hero {
+  background: linear-gradient(135deg, #2C1A10 0%, #3a2418 100%);
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 2px solid #C9A96E;
+  border-bottom: 2px solid #C9A96E;
+  margin: 40px 0;
+}
+
+.seminar-badge {
+  display: inline-block;
+  background: rgba(201, 169, 110, 0.2);
+  border: 1px solid #C9A96E;
+  color: #C9A96E;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.seminar-title-ar {
+  font-family: 'Amiri', serif;
+  font-style: italic;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  color: #C9A96E;
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+.seminar-title-ru {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  color: white;
+  margin: 15px 0 30px 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.seminar-info {
+  max-width: 600px;
+  margin: 30px auto;
+  color: #e0d5c7;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.seminar-info p {
+  margin: 10px 0;
+}
+
+.seminar-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .seminar-cta {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  /* HERO */
+  .hero {
+    padding: 70px 16px 50px 16px;
+  }
+  .hero__content {
+    padding: 0;
+    gap: 16px;
+  }
+  .hero__main-title {
+    font-size: 1.9rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .hero__main-title .char {
+    display: inline !important;
+    white-space: normal !important;
+  }
+  .hero__arabic-title {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: -40px !important;
+  }
+  .hero__subtitle {
+    margin-bottom: 0;
+  }
+
+  /* СЕМИНАР */
+  .seminar-hero {
+    padding: 40px 15px;
+    margin: 20px 0;
+    border-top: 2px solid #C9A96E;
+    border-bottom: 2px solid #C9A96E;
+  }
+  .seminar-cta {
+    flex-direction: column;
+  }
+  .seminar-cta .btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* ДИСЦИПЛИНЫ */
+  .lessons__scroll-wrapper {
+    overflow-x: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* СЕРТИФИКАТЫ */
+  .certificates__inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .certificate-mock {
+    order: -1;
+    min-height: 280px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .certificates__content {
+    order: 1;
+    text-align: left;
   }
 }

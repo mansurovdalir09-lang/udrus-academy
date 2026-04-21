@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     text.split('').forEach((char, i) => {
       const span = document.createElement('span');
       span.className = 'char';
-      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.textContent = char;
       span.style.animationDelay = (0.35 + i * 0.045) + 's';
       kineticEl.appendChild(span);
     });
