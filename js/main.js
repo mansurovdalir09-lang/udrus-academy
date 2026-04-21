@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   const banner = document.getElementById('cookieBanner');
   const btn = document.getElementById('cookieAccept');
   if (!banner || !btn) return;
@@ -299,4 +299,4 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('cookieAccepted', '1');
     banner.classList.add('hidden');
   });
-})();
+});
