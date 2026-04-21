@@ -2133,3 +2133,230 @@ body::before {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   SEMINAR PAGE — Нравы обладателей Корана
+   ============================================================ */
+
+/* Hero */
+.seminar-hero {
+  background: linear-gradient(135deg, #2C1A10 0%, #3a2418 100%);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+}
+
+.seminar-hero__inner {
+  max-width: 800px;
+}
+
+.seminar-hero__arabic {
+  font-family: 'Amiri', serif;
+  font-style: italic;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  color: #C9A96E;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  direction: rtl;
+}
+
+.seminar-hero__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.seminar-hero__sub {
+  font-size: 1.05rem;
+  color: #e0d5c7;
+  letter-spacing: 0.5px;
+}
+
+/* Section title */
+.seminar-section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #C9A96E;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* About */
+.seminar-about {
+  padding: 80px 0;
+  background: var(--color-bg);
+}
+
+.seminar-about__card {
+  background: rgba(201, 169, 110, 0.08);
+  border-left: 4px solid #C9A96E;
+  padding: 30px;
+  border-radius: 0 12px 12px 0;
+  max-width: 720px;
+}
+
+.seminar-about__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.seminar-about__list li {
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.seminar-about__label {
+  color: #C9A96E;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+/* Lessons grid */
+.seminar-lessons {
+  padding: 80px 0;
+  background: var(--color-surface);
+}
+
+.seminar-lessons__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Lesson card */
+.seminar-lesson-card {
+  background: rgba(201, 169, 110, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  border-left: 4px solid #C9A96E;
+  border-radius: 0 12px 12px 0;
+  padding: 28px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.seminar-lesson-card:hover {
+  border-color: #C9A96E;
+  box-shadow: 0 0 20px rgba(201, 169, 110, 0.2);
+  transform: translateY(-4px);
+}
+
+.seminar-lesson-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lesson-number {
+  color: #C9A96E;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.lesson-link {
+  font-size: 0.85rem;
+  color: #C9A96E;
+  text-decoration: none;
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  padding: 5px 12px;
+  border-radius: 20px;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.lesson-link:hover {
+  background: rgba(201, 169, 110, 0.15);
+  color: #e0c87a;
+}
+
+.lesson-timestamps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lesson-timestamps li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.lesson-timestamps .time {
+  font-family: monospace;
+  font-weight: 700;
+  color: #C9A96E;
+  font-size: 0.9rem;
+  min-width: 54px;
+  flex-shrink: 0;
+}
+
+.lesson-timestamps .desc {
+  color: #e0d5c7;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Locked card */
+.seminar-lesson-card--locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.seminar-lesson-card--locked:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.seminar-lesson-card__locked-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 30px 0;
+}
+
+.lock-icon {
+  color: #C9A96E;
+  opacity: 0.7;
+}
+
+.seminar-lesson-card__soon {
+  font-size: 1.1rem;
+  color: #e0d5c7;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Seminar page responsive */
+@media (max-width: 768px) {
+  .seminar-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .seminar-lessons__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seminar-about__card {
+    padding: 20px;
+  }
+}
