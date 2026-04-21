@@ -859,6 +859,15 @@ p {
   object-fit: cover;
 }
 
+.lesson-card__teacher-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  background: transparent;
+}
+
 .lesson-card__teacher-name {
   font-size: 0.9rem;
   font-weight: 600;
