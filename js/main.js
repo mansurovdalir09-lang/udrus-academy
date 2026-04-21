@@ -287,3 +287,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.split-reveal').forEach(el => splitObserver.observe(el));
 
 });
+
+(function() {
+  const banner = document.getElementById('cookieBanner');
+  const btn = document.getElementById('cookieAccept');
+  if (!banner || !btn) return;
+  if (localStorage.getItem('cookieAccepted')) {
+    banner.classList.add('hidden');
+  }
+  btn.addEventListener('click', function() {
+    localStorage.setItem('cookieAccepted', '1');
+    banner.classList.add('hidden');
+  });
+})();
