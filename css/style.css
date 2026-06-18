@@ -2281,8 +2281,10 @@ body::before {
   border: 1px solid rgba(201, 169, 110, 0.2);
   border-left: 4px solid #C9A96E;
   border-radius: 0 12px 12px 0;
-  padding: 28px;
+  padding: 32px 28px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .seminar-lesson-card:hover {
@@ -2705,10 +2707,17 @@ body::before {
 .fiqh-lesson-topic {
   font-size: 0.95rem;
   color: var(--color-text-muted);
-  line-height: 1.6;
-  margin: 8px 0 14px;
-  padding: 10px 12px;
+  line-height: 1.65;
+  margin: 12px 0 0;
+  padding: 12px 14px;
   background: rgba(201,169,110,0.06);
   border-left: 2px solid rgba(201,169,110,0.4);
   border-radius: 0 6px 6px 0;
+  flex: 1;
+}
+
+.seminar-lesson-card audio {
+  margin-top: 20px;
+  width: 100%;
+  accent-color: #C9A96E;
 }
