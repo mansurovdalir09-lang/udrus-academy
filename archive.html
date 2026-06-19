@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <noscript><style>
+    body{cursor:auto!important}
     .fade-up,.fade-left,.fade-right,.scale-in{opacity:1!important;transform:none!important;transition:none!important}
     .kinetic-text .char,.hero__content>*{opacity:1!important;transform:none!important;animation:none!important}
     .page-enter{animation:none!important}
@@ -103,14 +104,14 @@
       <div class="container">
 
         <!-- Filter Tabs -->
-        <div class="filter-tabs fade-up">
-          <button class="filter-tab active" data-filter="all">Все дисциплины</button>
-          <button class="filter-tab" data-filter="aqeedah">Акыда</button>
-          <button class="filter-tab" data-filter="fiqh">Фикх</button>
-          <button class="filter-tab" data-filter="arabic">Арабский язык</button>
-          <button class="filter-tab" data-filter="hadith">Хадис</button>
-          <button class="filter-tab" data-filter="usul">Усуль</button>
-          <button class="filter-tab" data-filter="other">Другое</button>
+        <div class="filter-tabs fade-up" role="group" aria-label="Фильтр по дисциплинам">
+          <button class="filter-tab active" data-filter="all" aria-pressed="true">Все дисциплины</button>
+          <button class="filter-tab" data-filter="aqeedah" aria-pressed="false">Акыда</button>
+          <button class="filter-tab" data-filter="fiqh" aria-pressed="false">Фикх</button>
+          <button class="filter-tab" data-filter="arabic" aria-pressed="false">Арабский язык</button>
+          <button class="filter-tab" data-filter="hadith" aria-pressed="false">Хадис</button>
+          <button class="filter-tab" data-filter="usul" aria-pressed="false">Усуль</button>
+          <button class="filter-tab" data-filter="other" aria-pressed="false">Другое</button>
         </div>
 
         <!-- Archive Grid -->
@@ -125,7 +126,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
             <span class="archive-full-card__arabic">العقيدة</span>
             <p class="archive-full-card__teacher">Устаз: Муслим Шанкыти</p>
-            <a href="https://t.me/udrus_arhiv/2" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
+            <a href="aqeedah.html" class="btn btn-outline">Слушать уроки →</a>
           </div>
 
           <!-- 2. Усуль аль-Фикх -->
