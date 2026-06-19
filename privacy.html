@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo-udrus-icon-gold.png">
+  <meta name="theme-color" content="#1A0F0A">
   <title>Политика конфиденциальности — UDRUS ACADEMY</title>
   <meta name="description" content="Политика конфиденциальности академии UDRUS.">
+  <meta name="robots" content="noindex, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UDRUS ACADEMY">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://academy-udrus.ru/privacy.html">
+  <meta property="og:title" content="Политика конфиденциальности — UDRUS ACADEMY">
+  <meta property="og:description" content="Политика конфиденциальности академии UDRUS.">
+  <meta property="og:image" content="https://academy-udrus.ru/images/logo-udrus-horizontal-gold.png">
+  <link rel="canonical" href="https://academy-udrus.ru/privacy.html">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -30,12 +41,12 @@
         <li><a href="archive.html">Архив</a></li>
         <li><a href="hifz.html">Школа Хифза</a></li>
         <li><a href="index.html#contacts">Контакты</a></li>
-        <li><a href="seminar.html" class="nav__link nav__link--seminar">Семинар <span class="pulse-dot"></span></a></li>
+        <li><a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a></li>
       </ul>
-      <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary nav__cta">
+      <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav__cta">
         Telegram канал →
       </a>
-      <button class="nav__hamburger" id="hamburger" aria-label="Меню">
+      <button class="nav__hamburger" id="hamburger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -48,8 +59,8 @@
     <a href="archive.html">Архив</a>
     <a href="hifz.html">Школа Хифза</a>
     <a href="index.html#contacts">Контакты</a>
-    <a href="seminar.html" class="nav__link nav__link--seminar">Семинар <span class="pulse-dot"></span></a>
-    <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary">Telegram канал →</a>
+    <a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a>
+    <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Telegram канал →</a>
   </div>
 
   <main>
@@ -74,7 +85,7 @@
           <p>Сайт содержит ссылки на Telegram, YouTube и Instagram. Мы не несём ответственности за политику конфиденциальности этих сервисов.</p>
 
           <h2 style="color: var(--color-gold); font-size: 1.2rem; margin: 32px 0 12px;">5. Контакты</h2>
-          <p>По вопросам, связанным с обработкой данных, обращайтесь: <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" style="color: var(--color-gold);">@udrus_academy</a></p>
+          <p>По вопросам, связанным с обработкой данных, обращайтесь: <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold);">@udrus_academy</a></p>
         </div>
       </div>
     </section>
@@ -106,7 +117,7 @@
         <div class="footer__social">
           <div class="footer__social-title">Социальные сети</div>
           <div class="footer__social-links">
-            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" aria-label="Telegram">
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
             </a>
           </div>
@@ -117,9 +128,9 @@
         <p class="footer__copyright">© 2024–2026 UDRUS ACADEMY. Все права защищены.</p>
         <div class="footer__developer">
           <span>Создание сайтов:</span>
-          <a href="https://t.me/Dalir37" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://t.me/Dalir37" target="_blank" rel="noopener noreferrer">Telegram</a>
           <span>·</span>
-          <a href="https://www.instagram.com/mansurov.dalir2018/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.instagram.com/mansurov.dalir2018/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
         <div class="footer__legal">
           <a href="privacy.html">Политика конфиденциальности</a>
@@ -132,11 +143,9 @@
 
   <script src="js/main.js"></script>
   <div class="cookie-banner" id="cookieBanner">
-    <p>На нашем сайте используются cookie-файлы, в том числе сервис веб-аналитики
-    Яндекс.Метрика. Используя сайт, вы соглашаетесь на обработку персональных данных
-    при помощи cookie-файлов. Подробнее об обработке персональных данных вы можете
-    узнать в <a href="privacy.html">Политике конфиденциальности</a>.
-    Если вы не согласны — измените настройки браузера или не используйте наш сайт.</p>
+    <p>На нашем сайте используются cookie-файлы для корректной работы сайта.
+    Используя сайт, вы соглашаетесь с использованием файлов cookie.
+    Подробнее — в <a href="privacy.html">Политике конфиденциальности</a>.</p>
     <button class="cookie-banner__btn" id="cookieAccept">Принять</button>
   </div>
 </body>

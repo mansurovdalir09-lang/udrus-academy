@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://academy-udrus.ru/sitemap.xml

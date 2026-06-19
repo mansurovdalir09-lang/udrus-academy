@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo-udrus-icon-gold.png">
+  <meta name="theme-color" content="#1A0F0A">
   <title>Архив лекций — UDRUS ACADEMY</title>
-  <meta name="description" content="Архив лекций Академии UDRUS — фикх, акыда, нахву, мусталях аль-хадис, усуль аль-фикх и другие дисциплины. Все уроки доступны в Telegram.">
+  <meta name="description" content="Архив лекций Академии UDRUS — фикх, акыда, нахву, хадис и другие дисциплины. Часть курсов доступна для прослушивания прямо на сайте.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UDRUS ACADEMY">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://academy-udrus.ru/archive.html">
+  <meta property="og:title" content="Архив лекций — UDRUS ACADEMY">
+  <meta property="og:description" content="Архив лекций Академии UDRUS — фикх, акыда, нахву, хадис и другие дисциплины.">
+  <meta property="og:image" content="https://academy-udrus.ru/images/logo-udrus-horizontal-gold.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://academy-udrus.ru/archive.html">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -36,13 +47,14 @@
         <li><a href="archive.html" class="active">Архив</a></li>
         <li><a href="hifz.html">Школа Хифза</a></li>
         <li><a href="index.html#contacts">Контакты</a></li>
+        <li><a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a></li>
       </ul>
 
-      <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary nav__cta">
+      <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav__cta">
         Telegram канал →
       </a>
 
-      <button class="nav__hamburger" id="hamburger" aria-label="Меню">
+      <button class="nav__hamburger" id="hamburger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -58,7 +70,8 @@
     <a href="archive.html" class="active">Архив</a>
     <a href="hifz.html">Школа Хифза</a>
     <a href="index.html#contacts">Контакты</a>
-    <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-primary">Telegram канал →</a>
+    <a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a>
+    <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Telegram канал →</a>
   </div>
 
   <main>
@@ -107,7 +120,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
             <span class="archive-full-card__arabic">العقيدة</span>
             <p class="archive-full-card__teacher">Устаз: Муслим Шанкыти</p>
-            <a href="https://t.me/udrus_arhiv/2" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/2" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 2. Усуль аль-Фикх -->
@@ -119,7 +132,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9"/><path d="M16 8l4-4m0 0h-4m4 0v4"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
             <span class="archive-full-card__arabic">أصول الفقه</span>
             <p class="archive-full-card__teacher">Устаз: Абу Муаз ад-Дагестани</p>
-            <a href="https://t.me/udrus_arhiv/5" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/5" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 3. Нахву -->
@@ -131,7 +144,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
             <span class="archive-full-card__arabic">النحو</span>
             <p class="archive-full-card__teacher">Устаз: Мухаммад Шамгоди</p>
-            <a href="https://t.me/udrus_arhiv/4" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/4" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 4. Адаб -->
@@ -143,7 +156,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 3"/><circle cx="18.5" cy="5.5" r="2.5"/><path d="M21 3l-5 5"/></svg></span>
             <span class="archive-full-card__arabic">الأدب</span>
             <p class="archive-full-card__teacher">Устаз: Хасан Абу Марьям</p>
-            <a href="https://t.me/udrus_arhiv/6" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/6" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 5. Запретные сделки -->
@@ -155,7 +168,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></span>
             <span class="archive-full-card__arabic">المعاملات المحرمة</span>
             <p class="archive-full-card__teacher">Устаз: Курбан Абу Бакр</p>
-            <a href="https://t.me/udrus_arhiv/78" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/78" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 6. Ханбалитский Фикх -->
@@ -187,7 +200,7 @@
               <li style="background:rgba(201,169,110,0.08); border:1px solid rgba(201,169,110,0.15); padding:2px 8px; border-radius:4px;">Подготовка к ахира</li>
               <li style="background:rgba(201,169,110,0.08); border:1px solid rgba(201,169,110,0.15); padding:2px 8px; border-radius:4px;">Судный день</li>
             </ul>
-            <a href="https://t.me/udrus_arhiv/8" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/8" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 8. Провизия Рамадана -->
@@ -199,7 +212,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
             <span class="archive-full-card__arabic">زاد رمضان</span>
             <p class="archive-full-card__teacher">Устаз: Мухаммад Шамгоди</p>
-            <a href="https://t.me/udrus_arhiv/94" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/94" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 9. Основы веры -->
@@ -211,7 +224,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
             <span class="archive-full-card__arabic">أصول الإيمان</span>
             <p class="archive-full-card__teacher">Устаз: Файзудин Казанищенский</p>
-            <a href="https://t.me/udrus_arhiv/96" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/96" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 10. Ключи к успеху -->
@@ -223,7 +236,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></span>
             <span class="archive-full-card__arabic">مفاتيح النجاح لطالب العلم</span>
             <p class="archive-full-card__teacher">Устаз: Файзудин Казанищенский</p>
-            <a href="https://t.me/udrus_arhiv/97" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/97" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
           <!-- 11. Мусталях -->
@@ -235,7 +248,7 @@
             <span class="archive-full-card__icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
             <span class="archive-full-card__arabic">مصطلح الحديث</span>
             <p class="archive-full-card__teacher">Устаз: Курбан Абу Бакр</p>
-            <a href="https://t.me/udrus_arhiv/7" target="_blank" rel="noopener" class="btn btn-outline">Перейти в архив →</a>
+            <a href="https://t.me/udrus_arhiv/7" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Перейти в архив →</a>
           </div>
 
         </div>
@@ -252,14 +265,14 @@
             Подпишись чтобы не пропускать новые уроки
           </p>
           <div class="cta-section__buttons">
-            <a href="https://t.me/udrus_arhiv" target="_blank" rel="noopener" class="btn btn-primary btn-pulse">
+            <a href="https://t.me/udrus_arhiv" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pulse">
               Открыть архив UDRUS →
             </a>
-            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" class="btn btn-telegram">
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-telegram">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
               Канал Академии
             </a>
-            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener" class="btn btn-youtube">
+            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-youtube">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
               YouTube
             </a>
@@ -284,7 +297,7 @@
               <span class="tagline">Онлайн академия</span>
             </div>
           </a>
-          <div class="footer__brand-arabic footer__arabic-subtitle">أكاديمية أدروس</div>
+          <div class="footer__brand-arabic footer__arabic-subtitle">أكاديمية ادرس</div>
           <p>Онлайн-академия шариатских наук для русскоязычных мусульман</p>
         </div>
 
@@ -293,6 +306,7 @@
           <a href="index.html">Главная</a>
           <a href="archive.html">Архив лекций</a>
           <a href="hifz.html">Школа Хифза</a>
+          <a href="seminar.html">Семинар</a>
           <a href="index.html#lessons">Уроки</a>
           <a href="index.html#schedule">Расписание</a>
         </nav>
@@ -300,13 +314,13 @@
         <div class="footer__social">
           <div class="footer__social-title">Социальные сети</div>
           <div class="footer__social-links">
-            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener" aria-label="Telegram">
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
             </a>
-            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener" aria-label="YouTube">
+            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
-            <a href="https://www.instagram.com/udrus_academy" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://www.instagram.com/udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
             </a>
           </div>
@@ -321,5 +335,11 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <div class="cookie-banner" id="cookieBanner">
+    <p>На нашем сайте используются cookie-файлы для корректной работы сайта.
+    Используя сайт, вы соглашаетесь с использованием файлов cookie.
+    Подробнее — в <a href="privacy.html">Политике конфиденциальности</a>.</p>
+    <button class="cookie-banner__btn" id="cookieAccept">Принять</button>
+  </div>
 </body>
 </html>

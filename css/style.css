@@ -364,9 +364,11 @@ p {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  padding: 8px;
+  padding: 14px 10px;
   background: none;
   border: none;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .nav__hamburger span {
@@ -2720,4 +2722,22 @@ body::before {
   margin-top: 20px;
   width: 100%;
   accent-color: #C9A96E;
+}
+
+/* ============================
+   BREADCRUMB BAR
+   ============================ */
+.breadcrumb-bar {
+  padding: 14px 0;
+  margin-top: 72px;
+  border-bottom: 1px solid rgba(201,169,110,0.15);
+}
+.breadcrumb-link {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb-link:hover {
+  color: var(--color-gold);
 }

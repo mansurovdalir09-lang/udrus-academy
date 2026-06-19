@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.addEventListener('click', () => {
       const isOpen = hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
     });
@@ -77,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!nav.contains(e.target) && !mobileMenu.contains(e.target)) {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       }
     });
