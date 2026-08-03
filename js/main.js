@@ -4,6 +4,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // ============================
   // 1. Custom Cursor
   // ============================
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseY = e.clientY;
       cursorDot.style.left = mouseX + 'px';
       cursorDot.style.top = mouseY + 'px';
-    });
+    }, { passive: true });
 
     const animateGlow = () => {
       glowX += (mouseX - glowX) * 0.12;
@@ -64,6 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (isOpen) {
+        const firstLink = mobileMenu.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
     });
 
     mobileMenu.querySelectorAll('a').forEach(link => {
@@ -81,6 +87,28 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
+      }
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && hamburger.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+
+      if (e.key === 'Tab' && hamburger.classList.contains('open')) {
+        const menuLinks = Array.from(mobileMenu.querySelectorAll('a'));
+        const lastLink = menuLinks[menuLinks.length - 1];
+        if (e.shiftKey && document.activeElement === hamburger) {
+          e.preventDefault();
+          lastLink.focus();
+        } else if (!e.shiftKey && document.activeElement === lastLink) {
+          e.preventDefault();
+          hamburger.focus();
+        }
       }
     });
   }
@@ -138,19 +166,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     btnRight.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth(), behavior: 'smooth' });
+      track.scrollBy({ left: cardWidth(), behavior: reducedMotion ? 'auto' : 'smooth' });
     });
 
     btnLeft.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth(), behavior: 'smooth' });
+      track.scrollBy({ left: -cardWidth(), behavior: reducedMotion ? 'auto' : 'smooth' });
     });
 
     let startX = 0;
     let scrollStart = 0;
     let isDragging = false;
+    let hasDragged = false;
 
     track.addEventListener('mousedown', e => {
       isDragging = true;
+      hasDragged = false;
       startX = e.pageX;
       scrollStart = track.scrollLeft;
       track.style.cursor = 'grabbing';
@@ -158,13 +188,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('mousemove', e => {
       if (!isDragging) return;
-      track.scrollLeft = scrollStart - (e.pageX - startX);
-    });
+      const dx = e.pageX - startX;
+      if (Math.abs(dx) > 5) hasDragged = true;
+      track.scrollLeft = scrollStart - dx;
+    }, { passive: true });
 
     document.addEventListener('mouseup', () => {
       isDragging = false;
       track.style.cursor = '';
     });
+
+    track.addEventListener('click', e => {
+      if (hasDragged) e.preventDefault();
+    }, true);
   }
 
   // ============================
@@ -174,23 +210,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const archiveCards = document.querySelectorAll('.archive-full-card');
 
   if (filterTabs.length && archiveCards.length) {
+    const cardTimers = new WeakMap();
+
     filterTabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        filterTabs.forEach(t => t.classList.remove('active'));
+        filterTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
         tab.classList.add('active');
+        tab.setAttribute('aria-pressed', 'true');
 
         const filter = tab.dataset.filter;
 
+        let visibleCount = 0;
         archiveCards.forEach(card => {
+          clearTimeout(cardTimers.get(card));
           if (filter === 'all' || card.dataset.category === filter) {
             card.style.display = '';
-            setTimeout(() => { card.style.opacity = '1'; card.style.transform = ''; }, 10);
+            const tid = setTimeout(() => { card.style.opacity = '1'; card.style.transform = ''; }, 10);
+            cardTimers.set(card, tid);
+            visibleCount++;
           } else {
             card.style.opacity = '0';
             card.style.transform = 'scale(0.95)';
-            setTimeout(() => { card.style.display = 'none'; }, 300);
+            const tid = setTimeout(() => { card.style.display = 'none'; }, 300);
+            cardTimers.set(card, tid);
           }
         });
+
+        const liveRegion = document.getElementById('filterStatus');
+        if (liveRegion) {
+          const suffix = visibleCount === 1 ? 'курс' : (visibleCount >= 2 && visibleCount <= 4) ? 'курса' : 'курсов';
+          liveRegion.textContent = `Показано ${visibleCount} ${suffix}`;
+        }
       });
     });
   }
@@ -206,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const navHeight = document.getElementById('mainNav')?.offsetHeight || 72;
         const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
-        window.scrollTo({ top, behavior: 'smooth' });
+        window.scrollTo({ top, behavior: reducedMotion ? 'auto' : 'smooth' });
       }
     });
   });
@@ -247,9 +297,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================
-  // 11. Magnetic Hover (desktop only)
+  // 11. Scroll-to-top Button
   // ============================
-  if (window.matchMedia('(pointer: fine)').matches) {
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+      scrollTopBtn.setAttribute('aria-hidden', window.scrollY <= 400 ? 'true' : 'false');
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+    });
+  }
+
+  // ============================
+  // 12. Magnetic Hover — desktop only
+  // ============================
+  if (window.matchMedia('(pointer: fine)').matches && !reducedMotion) {
     document.querySelectorAll('.btn, .lesson-card, .teacher-card, .archive-full-card').forEach(el => {
       el.addEventListener('mousemove', e => {
         const rect = el.getBoundingClientRect();
@@ -266,28 +330,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================
-  // 12. Split Text Reveal
+  // 13. Split Text Reveal
   // ============================
-  document.querySelectorAll('.split-reveal').forEach(el => {
-    const words = el.textContent.trim().split(' ');
-    el.innerHTML = words.map((word, i) =>
-      `<span style="display:inline-block;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.08}s,transform 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.08}s">${word}</span>`
-    ).join(' ');
-  });
-
-  const splitObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('span').forEach(span => {
-          span.style.opacity = '1';
-          span.style.transform = 'translateY(0)';
-        });
-        splitObserver.unobserve(entry.target);
-      }
+  if (!reducedMotion) {
+    document.querySelectorAll('.split-reveal').forEach(el => {
+      const words = el.textContent.trim().split(' ');
+      el.innerHTML = words.map((word, i) =>
+        `<span style="display:inline-block;opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.08}s,transform 0.6s cubic-bezier(0.22,1,0.36,1) ${i * 0.08}s">${word}</span>`
+      ).join(' ');
     });
-  }, { threshold: 0.3 });
 
-  document.querySelectorAll('.split-reveal').forEach(el => splitObserver.observe(el));
+    const splitObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('span').forEach(span => {
+            span.style.opacity = '1';
+            span.style.transform = 'translateY(0)';
+          });
+          splitObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.split-reveal').forEach(el => splitObserver.observe(el));
+  }
 
 });
 

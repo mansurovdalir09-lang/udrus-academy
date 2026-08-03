@@ -2,8 +2,6 @@
    UDRUS ACADEMY — style.css
    ============================ */
 
-/* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* --- CSS Variables --- */
 :root {
@@ -55,7 +53,12 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none;
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
 }
 
 img {
@@ -71,6 +74,46 @@ a {
 
 ul {
   list-style: none;
+}
+
+/* --- Keyboard Focus (WCAG 2.4.7) --- */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Visually hidden but accessible (screen readers) --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --- Skip Link (WCAG 2.4.1) --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 10px 20px;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 10000;
+  border-radius: 0 0 var(--radius-sm) 0;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0;
+  outline: none;
 }
 
 /* --- Custom Cursor --- */
@@ -186,7 +229,7 @@ p {
   text-transform: uppercase;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
   min-height: 48px;
 }
 
@@ -376,7 +419,7 @@ p {
   width: 24px;
   height: 2px;
   background: var(--color-gold);
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
   transform-origin: center;
 }
 
@@ -407,7 +450,7 @@ p {
   z-index: 999;
   transform: translateY(-10px);
   opacity: 0;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .nav__mobile.open {
@@ -625,7 +668,7 @@ p {
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-lg);
   padding: clamp(24px, 3vw, 36px);
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .bento-card:hover {
@@ -812,7 +855,7 @@ p {
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-md);
   padding: 28px;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
   display: flex;
   flex-direction: column;
   min-height: 420px;
@@ -972,7 +1015,7 @@ p {
   color: var(--color-gold);
   font-size: 1.2rem;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1084,7 +1127,7 @@ p {
   border-radius: var(--radius-md);
   padding: 32px 24px;
   text-align: center;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .teacher-card:hover {
@@ -1122,7 +1165,7 @@ p {
   font-size: 1rem;
   font-weight: 800;
   color: var(--color-text);
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -1210,7 +1253,7 @@ p {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .hifz-card:hover {
@@ -1263,7 +1306,7 @@ p {
   display: flex;
   align-items: center;
   gap: 20px;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .archive-card:hover {
@@ -1642,7 +1685,7 @@ p {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .footer__social-links a:hover {
@@ -1698,6 +1741,7 @@ p {
 
 .filter-tab {
   padding: 8px 20px;
+  min-height: 44px;
   border-radius: 100px;
   border: 1px solid rgba(201,169,110,0.25);
   background: transparent;
@@ -1708,7 +1752,7 @@ p {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .filter-tab:hover,
@@ -1729,7 +1773,7 @@ p {
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   padding: 28px;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .archive-full-card:hover {
@@ -1753,6 +1797,7 @@ p {
   color: var(--color-text);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  margin: 0;
 }
 
 .archive-full-card__count {
@@ -1855,7 +1900,7 @@ p {
   border-radius: var(--radius-md);
   padding: 32px 24px;
   text-align: center;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .direction-card:hover {
@@ -2025,10 +2070,6 @@ body::before {
 
 /* Mobile */
 @media (max-width: 767px) {
-  body {
-    cursor: auto;
-  }
-
   .cursor-dot,
   .cursor-glow {
     display: none;
@@ -2309,6 +2350,7 @@ body::before {
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 1px;
+  margin: 0;
 }
 
 .lesson-link {
@@ -2635,6 +2677,7 @@ body::before {
   border: none;
   border-radius: 8px;
   padding: 8px 20px;
+  min-height: 44px;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
@@ -2686,6 +2729,56 @@ body::before {
 .breadcrumb-link:hover {
   color: var(--color-gold);
 }
+
+/* ============================
+   SCROLL-TO-TOP BUTTON
+   ============================ */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(201,169,110,0.35);
+}
+.scroll-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.scroll-top-btn:hover {
+  background: #e0be86;
+}
+
+/* ============================
+   REDUCED MOTION
+   ============================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ============================
    LESSONS PREVIEW (YOUTUBE)
    ============================ */

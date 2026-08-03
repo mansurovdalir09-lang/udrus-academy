@@ -193,3 +193,38 @@
     animation: none;
   }
 }
+
+/* --- Respect user's Reduce Motion preference --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .fade-up, .fade-left, .fade-right, .scale-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .kinetic-text .char {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .hero__content > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .page-enter {
+    animation: none;
+  }
+
+  html, * {
+    scroll-behavior: auto !important;
+  }
+}

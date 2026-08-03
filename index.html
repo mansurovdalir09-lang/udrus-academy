@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="images/logo-udrus-icon-gold.png">
+  <link rel="apple-touch-icon" href="images/logo-udrus-icon-gold.png">
   <meta name="theme-color" content="#1A0F0A">
   <title>UDRUS ACADEMY — Онлайн-академия шариатских наук</title>
   <meta name="description" content="Академия UDRUS — онлайн-академия шариатских наук для студентов Саудовской Аравии. Изучайте фикх, акыду, нахву, хадис и другие дисциплины.">
@@ -14,34 +15,66 @@
   <meta property="og:title" content="UDRUS ACADEMY — Онлайн-академия шариатских наук">
   <meta property="og:description" content="Академия UDRUS — онлайн-академия шариатских наук. Изучайте фикх, акыду, нахву, хадис и другие дисциплины.">
   <meta property="og:image" content="https://academy-udrus.ru/images/logo-udrus-horizontal-gold.png">
+  <meta property="og:image:width" content="722">
+  <meta property="og:image:height" content="287">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://academy-udrus.ru/">
+  <link rel="alternate" hreflang="ru" href="https://academy-udrus.ru/">
+  <link rel="preload" href="images/logo-udrus-icon-gold.png" as="image" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <script src="js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "UDRUS ACADEMY",
+    "alternateName": "أكاديمية ادرس",
+    "url": "https://academy-udrus.ru",
+    "logo": "https://academy-udrus.ru/images/logo-udrus-horizontal-gold.png",
+    "description": "Онлайн-академия шариатских наук для русскоязычных мусульман",
+    "sameAs": [
+      "https://t.me/udrus_academy",
+      "https://youtube.com/@udrus_academy",
+      "https://www.instagram.com/udrus_academy"
+    ]
+  }
+  </script>
+  <noscript><style>
+    body{cursor:auto!important}
+    .fade-up,.fade-left,.fade-right,.scale-in{opacity:1!important;transform:none!important;transition:none!important}
+    .kinetic-text .char,.hero__content>*{opacity:1!important;transform:none!important;animation:none!important}
+    .page-enter{animation:none!important}
+  </style></noscript>
 </head>
 <body class="page-enter">
 
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <!-- Custom Cursor -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <a href="#main-content" class="skip-link">Перейти к содержимому</a>
 
   <!-- ============================
        NAVIGATION
        ============================ -->
-  <nav class="nav" id="mainNav">
+  <nav class="nav" id="mainNav" aria-label="Основная навигация">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
-        <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img">
+        <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img" width="52" height="52">
         <div class="nav__logo-text">
           <span class="brand">UDRUS ACADEMY</span>
           <span class="tagline">Онлайн академия</span>
         </div>
       </a>
 
-      <ul class="nav__links">
-        <li><a href="index.html" class="active">Главная</a></li>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="active" aria-current="page">Главная</a></li>
         <li><a href="#lessons">Уроки</a></li>
         <li><a href="#schedule">Расписание</a></li>
         <li><a href="archive.html">Архив</a></li>
@@ -54,7 +87,7 @@
         Telegram канал →
       </a>
 
-      <button class="nav__hamburger" id="hamburger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
+      <button type="button" class="nav__hamburger" id="hamburger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -63,8 +96,8 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="nav__mobile" id="mobileMenu">
-    <a href="index.html" class="active">Главная</a>
+  <nav class="nav__mobile" id="mobileMenu" aria-label="Мобильное меню">
+    <a href="index.html" class="active" aria-current="page">Главная</a>
     <a href="#lessons">Уроки</a>
     <a href="#schedule">Расписание</a>
     <a href="archive.html">Архив</a>
@@ -72,41 +105,41 @@
     <a href="#contacts">Контакты</a>
     <a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a>
     <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Telegram канал →</a>
-  </div>
+  </nav>
 
-  <main>
+  <main id="main-content">
 
     <!-- ============================
          SECTION 1 — HERO
          ============================ -->
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
       <div class="hero__bg-pattern" aria-hidden="true"></div>
       <div class="section-decor-waves" aria-hidden="true"></div>
 
       <div class="hero__content">
         <div class="hero__logo-wrap">
-          <img src="images/logo-udrus-icon-gold.png" alt="UDRUS ACADEMY" width="160" height="auto" style="width:160px;height:auto;">
+          <img src="images/logo-udrus-icon-gold.png" alt="UDRUS ACADEMY" width="160" height="157" style="width:160px;height:auto;">
         </div>
 
         <h1 class="hero__main-title kinetic-text" id="heroTitle" data-text="АКАДЕМИЯ UDRUS">
           АКАДЕМИЯ UDRUS
         </h1>
 
-        <span class="hero__arabic-title arabic-float">أكاديمية ادرس</span>
+        <span lang="ar" class="hero__arabic-title arabic-float">أكاديمية ادرس</span>
 
         <p class="hero__subtitle">
           Онлайн-академия шариатских наук — студенты Саудовской Аравии
         </p>
 
-        <span class="hero__greeting">‏السلام عليكم ورحمة الله وبركاته</span>
+        <span lang="ar" class="hero__greeting">‏السلام عليكم ورحمة الله وبركاته</span>
 
         <div class="btn-group hero__cta">
           <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-telegram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
             Перейти в Telegram →
           </a>
           <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             Смотреть на YouTube
           </a>
         </div>
@@ -173,18 +206,18 @@
     <!-- ============================
          SECTION 2 — О ПРОЕКТЕ
          ============================ -->
-    <section class="section about" id="about">
+    <section class="section about" aria-labelledby="heading-about" id="about">
       <div class="container">
         <div class="section-header fade-up">
-          <h2 class="split-reveal">О ПРОЕКТЕ</h2>
-          <span class="arabic-subtitle">عن المشروع</span>
+          <h2 id="heading-about" class="split-reveal">О ПРОЕКТЕ</h2>
+          <span lang="ar" class="arabic-subtitle">عن المشروع</span>
         </div>
 
         <div class="bento-grid">
           <!-- Card 1: Wide — About -->
           <div class="bento-card bento-card--wide fade-up">
             <div class="bento-card__title">АКАДЕМИЯ UDRUS</div>
-            <p class="bento-card__text" style="font-family: var(--font-arabic); direction: rtl; color: var(--color-gold); font-style: italic; margin-bottom: 12px;">‏السلام عليكم ورحمة الله وبركاته</p>
+            <p lang="ar" class="bento-card__text" style="font-family: var(--font-arabic); direction: rtl; color: var(--color-gold); font-style: italic; margin-bottom: 12px;">‏السلام عليكم ورحمة الله وبركاته</p>
             <p class="bento-card__text">
               Добро пожаловать в онлайн-академию UDRUS!
             </p>
@@ -201,7 +234,7 @@
 
           <!-- Card 2: Online lessons -->
           <div class="bento-card fade-up fade-up-delay-1">
-            <div class="bento-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <div class="bento-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
             <div class="bento-card__title">Онлайн-уроки</div>
             <p class="bento-card__text">
               Онлайн-трансляции по классическим книгам шариатских наук в Telegram-канале академии. Записи всех занятий доступны в архиве.
@@ -210,7 +243,7 @@
 
           <!-- Card 3: Live broadcasts -->
           <div class="bento-card fade-up fade-up-delay-2">
-            <div class="bento-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+            <div class="bento-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
             <div class="bento-card__title">Прямые эфиры</div>
             <p class="bento-card__text">
               Трансляции в Telegram и YouTube. Задавайте вопросы устазам в прямом эфире.
@@ -219,7 +252,7 @@
 
           <!-- Card 4: Seminars -->
           <div class="bento-card fade-up fade-up-delay-3">
-            <div class="bento-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div class="bento-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
             <div class="bento-card__title">Семинары и сертификаты</div>
             <p class="bento-card__text">
               По завершении курсов студенты проходят аттестацию и получают сертификаты от академии.
@@ -228,7 +261,7 @@
 
           <!-- Card 5: Arabic quote -->
           <div class="bento-card bento-card--wide fade-up fade-up-delay-4">
-            <p class="bento-card__arabic-quote">
+            <p lang="ar" class="bento-card__arabic-quote">
               «طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ»
             </p>
             <p class="bento-card__text" style="text-align:center; margin-top:12px; font-size:0.85rem;">
@@ -244,11 +277,11 @@
     <!-- ============================
          SECTION 3 — НАША АКЫДА
          ============================ -->
-    <section class="section aqeedah" id="aqeedah">
+    <section class="section aqeedah" aria-labelledby="heading-aqeedah" id="aqeedah">
       <div class="container">
         <div class="section-header fade-up">
-          <h2 class="split-reveal">НАШЕ ВЕРОУБЕЖДЕНИЕ</h2>
-          <span class="arabic-subtitle">عقيدتنا</span>
+          <h2 id="heading-aqeedah" class="split-reveal">НАШЕ ВЕРОУБЕЖДЕНИЕ</h2>
+          <span lang="ar" class="arabic-subtitle">عقيدتنا</span>
         </div>
 
         <div class="aqeedah__inner">
@@ -274,23 +307,23 @@
               Из учёных, которые ушли из жизни, мы извлекаем знания из трудов и фатв:
             </p>
             <div class="aqeedah__scholars-title">Учёные, которые ушли из жизни:</div>
-            <ul class="scholars-grid scholars-list">
-              <li>Шейх Ибн Баз <span class="arabic-dua">رحمه الله</span></li>
-              <li>Шейх Ибн Усеймин <span class="arabic-dua">رحمه الله</span></li>
-              <li>Шейх аль-Альбани <span class="arabic-dua">رحمه الله</span></li>
+            <ul class="scholars-grid scholars-list" role="list">
+              <li>Шейх Ибн Баз <span lang="ar" class="arabic-dua">رحمه الله</span></li>
+              <li>Шейх Ибн Усеймин <span lang="ar" class="arabic-dua">رحمه الله</span></li>
+              <li>Шейх аль-Альбани <span lang="ar" class="arabic-dua">رحمه الله</span></li>
             </ul>
 
             <div class="aqeedah__scholars-title" style="margin-top: 24px;">Из живущих учёных:</div>
-            <ul class="scholars-grid scholars-list">
-              <li>Салих аль-Фаузан <span class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуррахман аль-Баррак <span class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуль-Азиз ар-Раджихи <span class="arabic-dua">حفظه الله</span></li>
-              <li>Салих Али Шейх <span class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуль-Карим аль-Худейр <span class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуль-Мухсин аль-Аббад <span class="arabic-dua">حفظه الله</span></li>
-              <li>Абдурраззак аль-Бадр <span class="arabic-dua">حفظه الله</span></li>
-              <li>Салих ас-Синди <span class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуссалам аш-Шувей'ир <span class="arabic-dua">حفظه الله</span></li>
+            <ul class="scholars-grid scholars-list" role="list">
+              <li>Салих аль-Фаузан <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуррахман аль-Баррак <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуль-Азиз ар-Раджихи <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Салих Али Шейх <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуль-Карим аль-Худейр <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуль-Мухсин аль-Аббад <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдурраззак аль-Бадр <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Салих ас-Синди <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуссалам аш-Шувей'ир <span lang="ar" class="arabic-dua">حفظه الله</span></li>
             </ul>
 
             <p class="aqeedah__text" style="margin-top: 24px; font-style: italic;">
@@ -307,11 +340,11 @@
     <!-- ============================
          SECTION 4 — УРОКИ (Horizontal scroll)
          ============================ -->
-    <section class="section lessons" id="lessons">
+    <section class="section lessons" aria-labelledby="heading-lessons" id="lessons">
       <div class="container">
         <div class="section-header fade-up">
-          <h2 class="split-reveal">ДИСЦИПЛИНЫ</h2>
-          <span class="arabic-subtitle">المواد الدراسية</span>
+          <h2 id="heading-lessons" class="split-reveal">ДИСЦИПЛИНЫ</h2>
+          <span lang="ar" class="arabic-subtitle">المواد الدراسية</span>
         </div>
       </div>
 
@@ -320,11 +353,11 @@
 
           <!-- Card 1: Adab -->
           <div class="lesson-card">
-            <div class="lesson-card__arabic">الأدب</div>
+            <div lang="ar" class="lesson-card__arabic">الأدب</div>
             <div class="lesson-card__title">Адаб</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" src="images/teachers/hasan.png" alt="Хасан Абу Марьям" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/hasan.png" alt="Хасан Абу Марьям" onerror="this.src='images/teachers/avatar-placeholder.png'">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Хасан Абу Марьям</div>
@@ -337,17 +370,17 @@
             </p>
             <div class="lesson-card__footer">
               <span class="lesson-card__schedule-tag">Четверг 16:00</span>
-              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta">Смотреть →</a>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta" aria-label="Смотреть уроки по Адабу в Telegram">Смотреть →</a>
             </div>
           </div>
 
           <!-- Card 2: Fiqh -->
           <div class="lesson-card">
-            <div class="lesson-card__arabic">الفقه</div>
+            <div lang="ar" class="lesson-card__arabic">الفقه</div>
             <div class="lesson-card__title">Фикх</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" src="images/teachers/rashid.png" alt="Рашид Кумукий" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/rashid.png" alt="Рашид Кумукий" onerror="this.src='images/teachers/avatar-placeholder.png'">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Рашид Кумукий</div>
@@ -360,17 +393,17 @@
             </p>
             <div class="lesson-card__footer">
               <span class="lesson-card__schedule-tag">Четверг 16:15</span>
-              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta">Смотреть →</a>
+              <a href="fiqh.html" class="lesson-card__cta" aria-label="Слушать уроки по Фикху">Слушать уроки →</a>
             </div>
           </div>
 
           <!-- Card 3: Mustalah -->
           <div class="lesson-card">
-            <div class="lesson-card__arabic">مصطلح الحديث</div>
+            <div lang="ar" class="lesson-card__arabic">مصطلح الحديث</div>
             <div class="lesson-card__title">Мусталях аль-Хадис</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" src="images/teachers/qurban.png" alt="Курбан Абу Бакр" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/qurban.png" alt="Курбан Абу Бакр" onerror="this.src='images/teachers/avatar-placeholder.png'">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Курбан Абу Бакр</div>
@@ -383,17 +416,17 @@
             </p>
             <div class="lesson-card__footer">
               <span class="lesson-card__schedule-tag">Четверг</span>
-              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta">Смотреть →</a>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta" aria-label="Смотреть уроки по Мусталях аль-Хадис в Telegram">Смотреть →</a>
             </div>
           </div>
 
           <!-- Card 4: Aqeedah -->
           <div class="lesson-card">
-            <div class="lesson-card__arabic">العقيدة</div>
+            <div lang="ar" class="lesson-card__arabic">العقيدة</div>
             <div class="lesson-card__title">Акыда</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" src="images/teachers/shankiti.png" alt="Муслим Шанкыти" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/shankiti.png" alt="Муслим Шанкыти" onerror="this.src='images/teachers/avatar-placeholder.png'">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Муслим Шанкыти</div>
@@ -406,17 +439,17 @@
             </p>
             <div class="lesson-card__footer">
               <span class="lesson-card__schedule-tag">Четверг 17:15</span>
-              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta">Смотреть →</a>
+              <a href="aqeedah.html" class="lesson-card__cta" aria-label="Слушать уроки по Акыде">Слушать уроки →</a>
             </div>
           </div>
 
           <!-- Card 5: Nahw -->
           <div class="lesson-card">
-            <div class="lesson-card__arabic">النحو</div>
+            <div lang="ar" class="lesson-card__arabic">النحو</div>
             <div class="lesson-card__title">Нахву</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" src="images/teachers/shamgodi.png" alt="Мухаммад Шамгоди" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/shamgodi.png" alt="Мухаммад Шамгоди" onerror="this.src='images/teachers/avatar-placeholder.png'">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Мухаммад Шамгоди</div>
@@ -429,17 +462,17 @@
             </p>
             <div class="lesson-card__footer">
               <span class="lesson-card__schedule-tag">Суббота 16:00</span>
-              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta">Смотреть →</a>
+              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta" aria-label="Смотреть уроки по Нахву в Telegram">Смотреть →</a>
             </div>
           </div>
 
           <!-- Card 6: Usul al-Fiqh -->
           <div class="lesson-card">
-            <div class="lesson-card__arabic">أصول الفقه</div>
+            <div lang="ar" class="lesson-card__arabic">أصول الفقه</div>
             <div class="lesson-card__title">Усуль аль-Фикх</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" src="images/teachers/abumuaz.png" alt="Абу Муаз ад-Дагестани" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/abumuaz.png" alt="Абу Муаз ад-Дагестани" onerror="this.src='images/teachers/avatar-placeholder.png'">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Абу Муаз ад-Дагестани</div>
@@ -452,15 +485,15 @@
             </p>
             <div class="lesson-card__footer">
               <span class="lesson-card__schedule-tag">Суббота 17:00</span>
-              <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta">Смотреть →</a>
+              <a href="usul-fiqh.html" class="lesson-card__cta" aria-label="Слушать уроки по Усуль аль-Фикху">Слушать уроки →</a>
             </div>
           </div>
 
         </div>
 
         <div class="lessons__nav container">
-          <button class="lessons__nav-btn" id="lessonsLeft" aria-label="Назад">←</button>
-          <button class="lessons__nav-btn" id="lessonsRight" aria-label="Вперёд">→</button>
+          <button type="button" class="lessons__nav-btn" id="lessonsLeft" aria-label="Предыдущие уроки">←</button>
+          <button type="button" class="lessons__nav-btn" id="lessonsRight" aria-label="Следующие уроки">→</button>
         </div>
       </div>
     </section>
@@ -470,11 +503,11 @@
     <!-- ============================
          SECTION 5 — РАСПИСАНИЕ
          ============================ -->
-    <section class="section schedule" id="schedule">
+    <section class="section schedule" aria-labelledby="heading-schedule" id="schedule">
       <div class="container">
         <div class="section-header fade-up">
-          <h2 class="split-reveal">РАСПИСАНИЕ УРОКОВ</h2>
-          <span class="arabic-subtitle">جدول الدروس</span>
+          <h2 id="heading-schedule" class="split-reveal">РАСПИСАНИЕ УРОКОВ</h2>
+          <span lang="ar" class="arabic-subtitle">جدول الدروس</span>
         </div>
 
         <div class="schedule__days fade-up">
@@ -484,14 +517,14 @@
             <div class="schedule__day-header">Четверг</div>
             <div class="schedule__day-body">
               <div class="schedule__lesson">
-                <span class="schedule__time">16:30</span>
+                <time class="schedule__time" datetime="16:30">16:30</time>
                 <div class="schedule__lesson-info">
                   <div class="schedule__lesson-name">Ханбалитский Фикх</div>
                   <div class="schedule__teacher">Рашид Кумукий</div>
                 </div>
               </div>
               <div class="schedule__lesson">
-                <span class="schedule__time">17:30</span>
+                <time class="schedule__time" datetime="17:30">17:30</time>
                 <div class="schedule__lesson-info">
                   <div class="schedule__lesson-name">Акыда</div>
                   <div class="schedule__teacher">Муслим Шанкыти</div>
@@ -505,14 +538,14 @@
             <div class="schedule__day-header">Пятница</div>
             <div class="schedule__day-body">
               <div class="schedule__lesson">
-                <span class="schedule__time">13:30</span>
+                <time class="schedule__time" datetime="13:30">13:30</time>
                 <div class="schedule__lesson-info">
                   <div class="schedule__lesson-name">Шафиитский Фикх</div>
                   <div class="schedule__teacher">Мухаммад Шамгоди</div>
                 </div>
               </div>
               <div class="schedule__lesson">
-                <span class="schedule__time">17:30</span>
+                <time class="schedule__time" datetime="17:30">17:30</time>
                 <div class="schedule__lesson-info">
                   <div class="schedule__lesson-name">Адаб</div>
                   <div class="schedule__teacher">Хасан Абу Марьям</div>
@@ -526,21 +559,21 @@
             <div class="schedule__day-header">Суббота</div>
             <div class="schedule__day-body">
               <div class="schedule__lesson">
-                <span class="schedule__time">13:30</span>
+                <time class="schedule__time" datetime="13:30">13:30</time>
                 <div class="schedule__lesson-info">
                   <div class="schedule__lesson-name">Шафиитский Фикх</div>
                   <div class="schedule__teacher">Мухаммад Шамгоди</div>
                 </div>
               </div>
               <div class="schedule__lesson">
-                <span class="schedule__time">16:30</span>
+                <time class="schedule__time" datetime="16:30">16:30</time>
                 <div class="schedule__lesson-info">
                   <div class="schedule__lesson-name">Нахву</div>
                   <div class="schedule__teacher">Мухаммад Шамгоди</div>
                 </div>
               </div>
               <div class="schedule__lesson">
-                <span class="schedule__time">17:30</span>
+                <time class="schedule__time" datetime="17:30">17:30</time>
                 <div class="schedule__lesson-info">
                   <div class="schedule__lesson-name">Усуль Фикх</div>
                   <div class="schedule__teacher">Абу Муаз ад-Дагестани</div>
@@ -568,68 +601,68 @@
     <!-- ============================
          SECTION 6 — ПРЕПОДАВАТЕЛИ
          ============================ -->
-    <section class="section teachers" id="teachers">
+    <section class="section teachers" aria-labelledby="heading-teachers" id="teachers">
       <div class="container">
         <div class="section-header fade-up">
-          <h2 class="split-reveal">НАШИ УСТАЗЫ</h2>
-          <span class="arabic-subtitle">أساتذتنا</span>
+          <h2 id="heading-teachers" class="split-reveal">НАШИ УСТАЗЫ</h2>
+          <span lang="ar" class="arabic-subtitle">أساتذتنا</span>
         </div>
 
         <div class="teachers__grid">
 
           <div class="teacher-card fade-up">
             <div class="teacher-card__photo">
-              <img src="images/teachers/rashid.png" alt="Рашид Кумукий" loading="lazy" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/rashid.png" alt="Рашид Кумукий" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
             </div>
-            <div class="teacher-card__name">Рашид Кумукий</div>
+            <h3 class="teacher-card__name">Рашид Кумукий</h3>
             <span class="teacher-card__badge">Фикх ханбалитский</span>
           </div>
 
           <div class="teacher-card fade-up fade-up-delay-1">
             <div class="teacher-card__photo">
-              <img src="images/teachers/shamgodi.png" alt="Мухаммад Шамгоди" loading="lazy" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/shamgodi.png" alt="Мухаммад Шамгоди" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
             </div>
-            <div class="teacher-card__name">Мухаммад Шамгоди</div>
+            <h3 class="teacher-card__name">Мухаммад Шамгоди</h3>
             <span class="teacher-card__badge">Нахву · Фикх шафиитский</span>
           </div>
 
           <div class="teacher-card fade-up fade-up-delay-2">
             <div class="teacher-card__photo">
-              <img src="images/teachers/shankiti.png" alt="Муслим Шанкыти" loading="lazy" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/shankiti.png" alt="Муслим Шанкыти" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
             </div>
-            <div class="teacher-card__name">Муслим Шанкыти</div>
+            <h3 class="teacher-card__name">Муслим Шанкыти</h3>
             <span class="teacher-card__badge">Акыда</span>
           </div>
 
           <div class="teacher-card fade-up fade-up-delay-3">
             <div class="teacher-card__photo">
-              <img src="images/teachers/qurban.png" alt="Курбан Абу Бакр" loading="lazy" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/qurban.png" alt="Курбан Абу Бакр" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
             </div>
-            <div class="teacher-card__name">Курбан Абу Бакр</div>
+            <h3 class="teacher-card__name">Курбан Абу Бакр</h3>
             <span class="teacher-card__badge">Мусталях · Сделки</span>
           </div>
 
           <div class="teacher-card fade-up fade-up-delay-4">
             <div class="teacher-card__photo">
-              <img src="images/teachers/hasan.png" alt="Хасан Абу Марьям" loading="lazy" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/hasan.png" alt="Хасан Абу Марьям" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
             </div>
-            <div class="teacher-card__name">Хасан Абу Марьям</div>
+            <h3 class="teacher-card__name">Хасан Абу Марьям</h3>
             <span class="teacher-card__badge">Адаб</span>
           </div>
 
           <div class="teacher-card fade-up fade-up-delay-5">
             <div class="teacher-card__photo">
-              <img src="images/teachers/abumuaz.png" alt="Абу Муаз ад-Дагестани" loading="lazy" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/abumuaz.png" alt="Абу Муаз ад-Дагестани" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
             </div>
-            <div class="teacher-card__name">Абу Муаз ад-Дагестани</div>
+            <h3 class="teacher-card__name">Абу Муаз ад-Дагестани</h3>
             <span class="teacher-card__badge">Усуль аль-Фикх</span>
           </div>
 
           <div class="teacher-card fade-up">
             <div class="teacher-card__photo">
-              <img src="images/teachers/faizudin.png" alt="Файзудин Казанищенский" loading="lazy" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/faizudin.png" alt="Файзудин Казанищенский" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
             </div>
-            <div class="teacher-card__name">Файзудин Казанищенский</div>
+            <h3 class="teacher-card__name">Файзудин Казанищенский</h3>
             <span class="teacher-card__badge">Основы веры</span>
           </div>
 
@@ -642,38 +675,38 @@
     <!-- ============================
          SECTION 7 — ШКОЛА ПРОВИЗИИ ХАФИЗА
          ============================ -->
-    <section class="section hifz-preview" id="hifz">
+    <section class="section hifz-preview" id="hifz" aria-labelledby="heading-hifz-preview">
       <div class="container">
         <div class="hifz-preview__inner">
           <div class="hifz-preview__content fade-left">
             <span class="section-tag">Отдельная школа</span>
-            <div class="hifz-preview__arabic-deco" aria-hidden="true">التحفيظ</div>
-            <h2 class="gold-shimmer">ШКОЛА ХИФЗА UDRUS</h2>
-            <span style="font-family: var(--font-arabic); font-size: 1.5rem; color: var(--color-gold); direction: rtl; display: block; margin-bottom: 16px;">مدرسة التحفيظ</span>
+            <div lang="ar" class="hifz-preview__arabic-deco" aria-hidden="true">التحفيظ</div>
+            <h2 id="heading-hifz-preview" class="gold-shimmer">ШКОЛА ХИФЗА UDRUS</h2>
+            <span lang="ar" style="font-family: var(--font-arabic); font-size: 1.5rem; color: var(--color-gold); direction: rtl; display: block; margin-bottom: 16px;">مدرسة التحفيظ</span>
             <p>
               Специализированная школа для изучения арабского языка, чтения Корана и заучивания матнов.
               Индивидуальный и групповой форматы обучения.
             </p>
-            <a href="hifz.html" class="btn btn-primary" style="margin-top: 12px;">Подробнее о школе →</a>
+            <a href="hifz.html" class="btn btn-primary" style="margin-top: 12px;" aria-label="Подробнее о Школе Хифза UDRUS">Подробнее о школе →</a>
           </div>
 
           <div class="hifz-cards fade-right">
             <div class="hifz-card">
-              <div class="hifz-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+              <div class="hifz-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
               <div>
                 <div class="hifz-card__title">Обучение чтению Корана</div>
                 <p class="hifz-card__text">Таджвид, правильное произношение, исправление ошибок</p>
               </div>
             </div>
             <div class="hifz-card">
-              <div class="hifz-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
+              <div class="hifz-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
               <div>
                 <div class="hifz-card__title">Чтение Корана + исправление</div>
                 <p class="hifz-card__text">Индивидуальные занятия с разбором ошибок чтения</p>
               </div>
             </div>
             <div class="hifz-card">
-              <div class="hifz-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+              <div class="hifz-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
               <div>
                 <div class="hifz-card__title">Арабский язык с нуля</div>
                 <p class="hifz-card__text">Систематическое изучение арабского от алфавита до грамматики</p>
@@ -689,16 +722,16 @@
     <!-- ============================
          SECTION 8 — АРХИВ ЛЕКЦИЙ (превью)
          ============================ -->
-    <section class="section archive-preview" id="archive-preview">
+    <section class="section archive-preview" aria-labelledby="heading-archive" id="archive-preview">
       <div class="container">
         <div class="section-header fade-up">
-          <h2 class="split-reveal">АРХИВ ЛЕКЦИЙ</h2>
-          <span class="arabic-subtitle">أرشيف الدروس</span>
+          <h2 id="heading-archive" class="split-reveal">АРХИВ ЛЕКЦИЙ</h2>
+          <span lang="ar" class="arabic-subtitle">أرشيف الدروس</span>
         </div>
 
         <div class="archive-grid">
           <a href="https://t.me/udrus_arhiv/2" target="_blank" rel="noopener noreferrer" class="archive-card fade-up">
-            <div class="archive-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="archive-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <div class="archive-card__info">
               <div class="archive-card__title">Акыда</div>
               <div class="archive-card__count">13 уроков</div>
@@ -706,7 +739,7 @@
             </div>
           </a>
           <a href="https://t.me/udrus_arhiv/5" target="_blank" rel="noopener noreferrer" class="archive-card fade-up fade-up-delay-1">
-            <div class="archive-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M6 9L3 6l3-3"/><path d="M18 9l3-3-3-3"/><path d="M5 18H3a2 2 0 0 0-2 2v1h8v-1a2 2 0 0 0-2-2H5z"/><path d="M19 18h-2a2 2 0 0 0-2 2v1h8v-1a2 2 0 0 0-2-2h-2z"/></svg></div>
+            <div class="archive-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M6 9L3 6l3-3"/><path d="M18 9l3-3-3-3"/><path d="M5 18H3a2 2 0 0 0-2 2v1h8v-1a2 2 0 0 0-2-2H5z"/><path d="M19 18h-2a2 2 0 0 0-2 2v1h8v-1a2 2 0 0 0-2-2h-2z"/></svg></div>
             <div class="archive-card__info">
               <div class="archive-card__title">Усуль аль-Фикх</div>
               <div class="archive-card__count">15 уроков</div>
@@ -714,7 +747,7 @@
             </div>
           </a>
           <a href="https://t.me/udrus_arhiv/4" target="_blank" rel="noopener noreferrer" class="archive-card fade-up fade-up-delay-2">
-            <div class="archive-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+            <div class="archive-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
             <div class="archive-card__info">
               <div class="archive-card__title">Нахву</div>
               <div class="archive-card__count">12 уроков</div>
@@ -722,7 +755,7 @@
             </div>
           </a>
           <a href="https://t.me/udrus_arhiv/6" target="_blank" rel="noopener noreferrer" class="archive-card fade-up fade-up-delay-3">
-            <div class="archive-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 22V12M12 12C12 12 7 9.5 7 6a5 5 0 0 1 10 0c0 3.5-5 6-5 6z"/><path d="M12 12c0 0-5 2.5-5 6a5 5 0 0 0 10 0c0-3.5-5-6-5-6z"/></svg></div>
+            <div class="archive-card__icon"><svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold)"><path d="M12 22V12M12 12C12 12 7 9.5 7 6a5 5 0 0 1 10 0c0 3.5-5 6-5 6z"/><path d="M12 12c0 0-5 2.5-5 6a5 5 0 0 0 10 0c0-3.5-5-6-5-6z"/></svg></div>
             <div class="archive-card__info">
               <div class="archive-card__title">Адаб</div>
               <div class="archive-card__count">13 уроков</div>
@@ -742,11 +775,11 @@
     <!-- ============================
          SECTION 9 — СЕРТИФИКАТЫ
          ============================ -->
-    <section class="section certificates" id="certificates">
+    <section class="section certificates" aria-labelledby="heading-certificates" id="certificates">
       <div class="container">
         <div class="section-header fade-up">
-          <h2>СЕРТИФИКАТЫ</h2>
-          <span class="arabic-subtitle">شهادات</span>
+          <h2 id="heading-certificates">СЕРТИФИКАТЫ</h2>
+          <span lang="ar" class="arabic-subtitle">شهادات</span>
         </div>
 
         <div class="certificates__inner">
@@ -754,17 +787,17 @@
             <p>
               По завершении курсов студенты академии получают именные сертификаты, подтверждающие пройденное обучение.
             </p>
-            <ul class="certificates__features" style="list-style:none; padding:0; margin: 24px 0; display:flex; flex-direction:column; gap:14px;">
+            <ul class="certificates__features" role="list" style="list-style:none; padding:0; margin: 24px 0; display:flex; flex-direction:column; gap:14px;">
               <li style="display:flex; align-items:center; gap:12px;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
                 <span>Именной сертификат UDRUS</span>
               </li>
               <li style="display:flex; align-items:center; gap:12px;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 <span>Подтверждение пройденных тем</span>
               </li>
               <li style="display:flex; align-items:center; gap:12px;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                 <span>Список изученных книг и матнов</span>
               </li>
             </ul>
@@ -774,7 +807,7 @@
           </div>
 
           <div class="certificate-mock fade-right">
-            <div class="certificate-mock__badge"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A0F0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <div class="certificate-mock__badge"><svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A0F0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
             <div class="certificate-mock__title">UDRUS ACADEMY</div>
             <div class="certificate-mock__subtitle">Академия шариатских наук</div>
             <div class="certificate-mock__divider"></div>
@@ -791,24 +824,24 @@
     <!-- ============================
          SECTION 10 — CTA / КОНТАКТЫ
          ============================ -->
-    <section class="section cta-section" id="contacts">
+    <section class="section cta-section" id="contacts" aria-labelledby="heading-cta-contacts">
       <div class="container">
         <div class="cta-section__inner fade-up">
-          <h2 class="cta-section__title">ПРИСОЕДИНЯЙСЯ К<br>АКАДЕМИИ UDRUS</h2>
+          <h2 id="heading-cta-contacts" class="cta-section__title">ПРИСОЕДИНЯЙСЯ К<br>АКАДЕМИИ UDRUS</h2>
           <p class="cta-section__subtitle">
             Изучай шариатские науки вместе с нами. Все уроки бесплатны и доступны в архиве.
           </p>
           <div class="cta-section__buttons">
             <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-telegram btn-pulse">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
               Telegram
             </a>
             <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-youtube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
               YouTube
             </a>
             <a href="https://www.instagram.com/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
               Instagram
             </a>
           </div>
@@ -826,17 +859,17 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <a href="index.html" class="nav__logo" style="text-decoration:none;">
-            <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img">
+            <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img" loading="lazy" width="52" height="52">
             <div class="nav__logo-text">
               <span class="brand">UDRUS ACADEMY</span>
               <span class="tagline">Онлайн академия</span>
             </div>
           </a>
-          <div class="footer__brand-arabic footer__arabic-subtitle">أكاديمية ادرس</div>
+          <div class="footer__brand-arabic footer__arabic-subtitle" lang="ar">أكاديمية ادرس</div>
           <p>Онлайн-академия шариатских наук для русскоязычных мусульман</p>
         </div>
 
-        <nav class="footer__nav" aria-label="Footer navigation">
+        <nav class="footer__nav" aria-label="Навигация сайта">
           <div class="footer__nav-title">Навигация</div>
           <a href="index.html">Главная</a>
           <a href="archive.html">Архив лекций</a>
@@ -849,14 +882,14 @@
         <div class="footer__social">
           <div class="footer__social-title">Социальные сети</div>
           <div class="footer__social-links">
-            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
+            <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="Канал UDRUS в Telegram">
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.01 9.468c-.146.658-.537.818-1.084.508l-3-2.21-1.448 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.874.753z"/></svg>
             </a>
-            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <a href="https://youtube.com/@udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="Канал UDRUS на YouTube">
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
-            <a href="https://www.instagram.com/udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            <a href="https://www.instagram.com/udrus_academy" target="_blank" rel="noopener noreferrer" aria-label="UDRUS ACADEMY в Instagram">
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
             </a>
           </div>
         </div>
@@ -879,12 +912,12 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Уведомление о файлах cookie">
     <p>На нашем сайте используются cookie-файлы для корректной работы сайта.
     Используя сайт, вы соглашаетесь с использованием файлов cookie.
     Подробнее — в <a href="privacy.html">Политике конфиденциальности</a>.</p>
-    <button class="cookie-banner__btn" id="cookieAccept">Принять</button>
+    <button class="cookie-banner__btn" id="cookieAccept" type="button">Принять</button>
   </div>
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх" aria-hidden="true">↑</button>
 </body>
 </html>
