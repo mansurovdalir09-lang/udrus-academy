@@ -188,9 +188,15 @@
           <span lang="ar" class="arabic-subtitle">الدروس</span>
         </div>
 
+        <div class="lessons-tabs">
+          <button class="lessons-tab active" data-filter="all">Все уроки</button>
+          <button class="lessons-tab" data-filter="kids">Фикх для детей</button>
+          <button class="lessons-tab" data-filter="general">Разные темы</button>
+        </div>
+
         <div class="lessons-preview__grid">
 
-          <div class="lesson-preview-card">
+          <div class="lesson-preview-card" data-category="kids">
             <div class="lesson-preview-card__badge">Для детей</div>
             <div class="lesson-preview-card__video">
               <iframe
@@ -208,7 +214,7 @@
             </div>
           </div>
 
-          <div class="lesson-preview-card">
+          <div class="lesson-preview-card" data-category="kids">
             <div class="lesson-preview-card__badge">Для детей</div>
             <div class="lesson-preview-card__video">
               <iframe
@@ -226,7 +232,7 @@
             </div>
           </div>
 
-          <div class="lesson-preview-card">
+          <div class="lesson-preview-card" data-category="kids">
             <div class="lesson-preview-card__badge">Для детей</div>
             <div class="lesson-preview-card__video">
               <iframe
@@ -244,7 +250,25 @@
             </div>
           </div>
 
-          <div class="lesson-preview-card">
+          <div class="lesson-preview-card" data-category="kids">
+            <div class="lesson-preview-card__badge">Для детей</div>
+            <div class="lesson-preview-card__video">
+              <iframe
+                src="https://www.youtube.com/embed/-k7ttTvxp0M"
+                title="Фикх для детей — Коллективная молитва"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Фикх для детей — Коллективная молитва</h3>
+              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
+              <span class="lesson-preview-card__tag">Фикх · Дети</span>
+            </div>
+          </div>
+
+          <div class="lesson-preview-card" data-category="general">
             <div class="lesson-preview-card__badge">Новый урок</div>
             <div class="lesson-preview-card__video">
               <iframe
@@ -262,7 +286,7 @@
             </div>
           </div>
 
-          <div class="lesson-preview-card">
+          <div class="lesson-preview-card" data-category="general">
             <div class="lesson-preview-card__badge">Новый урок</div>
             <div class="lesson-preview-card__video">
               <iframe
@@ -275,7 +299,7 @@
             </div>
             <div class="lesson-preview-card__info">
               <h3>Уроки из суры «Аль-Баляд»</h3>
-              <p class="lesson-preview-card__teacher">Мухаммад Шамгоди</p>
+              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
               <span class="lesson-preview-card__tag">Тафсир</span>
             </div>
           </div>

@@ -369,3 +369,24 @@ document.addEventListener('DOMContentLoaded', function() {
     banner.classList.add('hidden');
   });
 });
+
+// LESSONS TABS FILTER
+const lessonsTabs = document.querySelectorAll('.lessons-tab');
+const lessonCards = document.querySelectorAll('.lesson-preview-card');
+
+lessonsTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    lessonsTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.dataset.filter;
+
+    lessonCards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});

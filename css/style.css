@@ -2877,3 +2877,63 @@ body::before {
     gap: 24px;
   }
 }
+
+/* LESSONS TABS */
+.lessons-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.lessons-tab {
+  background: transparent;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  color: #C9A96E;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.lessons-tab:hover {
+  border-color: #C9A96E;
+  background: rgba(201, 169, 110, 0.1);
+}
+
+.lessons-tab.active {
+  background: #C9A96E;
+  color: #2C1A10;
+  border-color: #C9A96E;
+  font-weight: 700;
+}
+
+.lesson-preview-card.hidden {
+  display: none;
+}
+
+/* МОБИЛЬНЫЙ СЛАЙДЕР */
+@media (max-width: 767px) {
+  .lessons-preview__grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .lessons-preview__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lesson-preview-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    min-width: 280px;
+  }
+}
