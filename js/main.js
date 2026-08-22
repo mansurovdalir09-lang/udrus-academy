@@ -370,18 +370,39 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// LESSONS TABS FILTER
-const lessonsTabs = document.querySelectorAll('.lessons-tab');
-const lessonCards = document.querySelectorAll('.lesson-preview-card');
+// LESSONS TABS FILTER (только главная страница)
+if (document.querySelector('#lessons-preview')) {
+  const lessonsTabs = document.querySelectorAll('.lessons-tab');
+  const lessonCards = document.querySelectorAll('.lesson-preview-card');
 
-lessonsTabs.forEach(tab => {
+  lessonsTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      lessonsTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filter = tab.dataset.filter;
+
+      lessonCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+}
+
+// LESSONS PAGE TABS
+const lessonsPageTabs = document.querySelectorAll('#lessons-page-tabs .lessons-tab');
+const lessonsPageCards = document.querySelectorAll('.lessons-page-grid .lesson-preview-card');
+
+lessonsPageTabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    lessonsTabs.forEach(t => t.classList.remove('active'));
+    lessonsPageTabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
-
     const filter = tab.dataset.filter;
-
-    lessonCards.forEach(card => {
+    lessonsPageCards.forEach(card => {
       if (filter === 'all' || card.dataset.category === filter) {
         card.classList.remove('hidden');
       } else {

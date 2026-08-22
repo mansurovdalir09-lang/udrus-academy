@@ -2937,3 +2937,41 @@ body::before {
     min-width: 280px;
   }
 }
+
+/* ============================
+   СТРАНИЦА УРОКОВ (lessons.html)
+   ============================ */
+.lessons-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .lessons-page-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* сбрасываем правила мобильного слайдера главной страницы */
+  .lessons-page-grid .lesson-preview-card {
+    flex: none;
+    min-width: 0;
+  }
+
+  .lessons-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+
+  .lessons-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lessons-tabs .lessons-tab {
+    flex: 0 0 auto;
+  }
+}
