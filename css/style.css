@@ -2943,9 +2943,15 @@ body::before {
    ============================ */
 .lessons-page-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  /* auto-fill, а не auto-fit: при фильтре по категории карточки скрываются
+     через display:none, и с auto-fit единственная видимая карточка
+     растягивалась на всю ширину сетки */
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 30px;
   margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 767px) {
