@@ -494,15 +494,6 @@ p {
   background: var(--color-bg);
 }
 
-.hero__bg-pattern {
-  position: absolute;
-  inset: 0;
-  opacity: 0.05;
-  background-image: url('../images/pattern-islamic.svg');
-  background-size: 200px 200px;
-  animation: patternRotate 120s linear infinite;
-}
-
 .hero__content {
   position: relative;
   z-index: 2;
@@ -1934,18 +1925,6 @@ body::before {
   transition: width 0.1s ease-out;
 }
 
-/* Decorative waves overlay */
-.section-decor-waves {
-  position: absolute;
-  inset: 0;
-  background-image: url('../images/decor-waves.svg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.25;
-  pointer-events: none;
-  z-index: 0;
-}
-
 @media (max-width: 900px) {
   .certificates__inner {
     grid-template-columns: 1fr;
@@ -2961,6 +2940,110 @@ body::before {
 
 @media (prefers-reduced-motion: reduce) {
   .directions__panel.is-entering {
+    animation: none;
+  }
+}
+
+
+/* ============================
+   HERO — рамка страницы рукописи
+   ============================ */
+.hero__frame {
+  position: absolute;
+  z-index: -1;
+  top: -56px;
+  bottom: -48px;
+  left: max(-8px, calc((100% - 880px) / 2));
+  right: max(-8px, calc((100% - 880px) / 2));
+  pointer-events: none;
+}
+
+.hero__frame-box {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(201, 169, 110, 0.35); /* taste-skill-ignore: рамка рукописи — знак бренда */
+  border-radius: 2px;
+  animation: heroFrameOpen 1.2s cubic-bezier(0.65, 0, 0.35, 1) 0.2s both;
+}
+
+.hero__rule {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  height: 1px; /* taste-skill-ignore: разлиновка страницы */
+  background: var(--color-gold);
+  opacity: 0.08;
+}
+.hero__rule:nth-child(1) { top: 16%; }
+.hero__rule:nth-child(2) { top: 30%; }
+.hero__rule:nth-child(3) { top: 44%; }
+.hero__rule:nth-child(4) { top: 58%; }
+.hero__rule:nth-child(5) { top: 72%; }
+.hero__rule:nth-child(6) { top: 86%; }
+
+.hero__corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
+}
+.hero__corner--tl { top: -4px; left: -4px; }
+.hero__corner--tr { top: -4px; right: -4px; }
+.hero__corner--bl { bottom: -4px; left: -4px; }
+.hero__corner--br { bottom: -4px; right: -4px; }
+
+.hero__margin {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  font-family: var(--font-arabic-deco);
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-gold);
+  opacity: 0.5;
+  direction: rtl;
+  animation: heroMarginWrite 1.8s cubic-bezier(0.33, 1, 0.68, 1) 1.3s both;
+}
+.hero__margin--left {
+  right: 100%;
+  margin-right: 36px;
+  transform: translate(50%, -50%) rotate(-90deg);
+}
+.hero__margin--right {
+  left: 100%;
+  margin-left: 36px;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+@keyframes heroFrameOpen {
+  from { clip-path: inset(50% 50% 50% 50%); }
+  to   { clip-path: inset(-6px -6px -6px -6px); }
+}
+
+@keyframes heroMarginWrite {
+  from { clip-path: inset(-4px -4px -4px 100%); }
+  to   { clip-path: inset(-4px -4px -4px -4px); }
+}
+
+@media (max-width: 1239px) {
+  .hero__margin { display: none; }
+}
+
+@media (max-width: 767px) {
+  .hero__frame {
+    top: -28px;
+    bottom: -32px;
+    left: -6px;
+    right: -6px;
+  }
+  .hero__rule { left: 20px; right: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__frame-box,
+  .hero__margin {
     animation: none;
   }
 }

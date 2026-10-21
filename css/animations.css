@@ -62,11 +62,6 @@
 }
 
 /* --- 6. Islamic Pattern Background Rotation --- */
-@keyframes patternRotate {
-  from { transform: rotate(0deg) scale(1.05); }
-  to   { transform: rotate(360deg) scale(1.05); }
-}
-
 /* --- 7. Scroll Bounce (scroll indicator) --- */
 @keyframes scrollBounce {
   0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
@@ -157,10 +152,6 @@
   }
 
   .arabic-float {
-    animation: none;
-  }
-
-  .hero__bg-pattern {
     animation: none;
   }
 }
