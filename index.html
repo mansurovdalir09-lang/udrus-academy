@@ -160,122 +160,323 @@
           <span lang="ar" translate="no" class="arabic-subtitle">الدروس</span>
         </div>
 
-        <div class="lessons-tabs">
-          <button class="lessons-tab active" data-filter="all">Все уроки</button>
-          <button class="lessons-tab" data-filter="kids">Фикх для детей</button>
-          <button class="lessons-tab" data-filter="general">Разные темы</button>
+        <div class="directions" data-directions>
+          <div class="directions__tabs" role="tablist" aria-label="Направления уроков">
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-kids" aria-controls="dir-panel-kids" aria-selected="true" tabindex="0">
+              <span class="directions__name">Фикх для детей</span>
+              <span class="directions__ar" lang="ar" translate="no">فقه الأطفال</span>
+              <span class="directions__count">4 урока</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-aqeeda" aria-controls="dir-panel-aqeeda" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Основы веры</span>
+              <span class="directions__ar" lang="ar" translate="no">أصول الإيمان</span>
+              <span class="directions__count">8 уроков</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-ilm" aria-controls="dir-panel-ilm" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Требование знания</span>
+              <span class="directions__ar" lang="ar" translate="no">طلب العلم</span>
+              <span class="directions__count">6 уроков</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-quran" aria-controls="dir-panel-quran" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Коран</span>
+              <span class="directions__ar" lang="ar" translate="no">القرآن</span>
+              <span class="directions__count">1 урок</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-ramadan" aria-controls="dir-panel-ramadan" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Рамадан</span>
+              <span class="directions__ar" lang="ar" translate="no">رمضان</span>
+              <span class="directions__count">6 уроков</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-hajj" aria-controls="dir-panel-hajj" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Хадж</span>
+              <span class="directions__ar" lang="ar" translate="no">الحج</span>
+              <span class="directions__count">4 урока</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-misc" aria-controls="dir-panel-misc" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Разные темы</span>
+              <span class="directions__ar" lang="ar" translate="no">دروس متنوعة</span>
+              <span class="directions__count">6 уроков</span>
+            </button>
+          </div>
+          <div class="directions__panels">
+            <div class="directions__panel" role="tabpanel" id="dir-panel-kids" aria-labelledby="dir-tab-kids" tabindex="0">
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/vq6o_wXVHiY" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Фикх для детей — Молитва #1</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/1ZMt82UzCyw" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Фикх для детей — Молитва #2</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/odyPOCgyPaI" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Фикх для детей — Молитва #3</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/-k7ttTvxp0M" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Фикх для детей — Коллективная молитва</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-aqeeda" aria-labelledby="dir-tab-aqeeda" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/jsY20rxEHEo" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Основы веры — Вера в Аллаха</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/K-FLJCTKwHk" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Основы веры — Вера в ангелов</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/aT4ec7Ui8ZY" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Основы веры — Вера в писания</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Mb63CAbzzWk" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Основы веры — Вера в посланников</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/l7kBu_zNlcw" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Основы веры — Вера в Судный день</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/bp_6X3tyN1k" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٦</span>
+                    <span class="directions__title">Основы веры — Вера в Предопределение</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/yVLNu2nwEM4" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٧</span>
+                    <span class="directions__title">Упрощённая акыда 1 — Доказательство существования Аллаха</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/GKnNHNaJK4A" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٨</span>
+                    <span class="directions__title">Упрощённая акыда 2 — Вера в Господство Аллаха</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-ilm" aria-labelledby="dir-tab-ilm" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/9iCQ-WH2KSQ" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 1</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/gEyxA9F7sZg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 2</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/CI-tTUFiRWA" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 3</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/QtFq2A0QMys" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 4</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Gdk5Kls0V5A" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 5</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Gdk5Kls0V5A" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٦</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 6</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-quran" aria-labelledby="dir-tab-quran" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/IU-Etd6MBMY" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Как полюбить Коран</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-ramadan" aria-labelledby="dir-tab-ramadan" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/z-T996zkEwE" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Провизия Рамадана — Вступление</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/VBKMJHBYdlk" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Провизия Рамадана — Столпы и условия поста</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/ZIlDtNqgK3w" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Провизия Рамадана — Желательные действия и что портит пост</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/MfzhG_ntEBs" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Провизия Рамадана — Кому можно отпускать пост</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/jwXMkJY__VA" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Провизия Рамадана — Итикяф</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/aRLrsVLoBO0" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٦</span>
+                    <span class="directions__title">Провизия Рамадана — Закят Аль-Фитр / Праздничная молитва</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-hajj" aria-labelledby="dir-tab-hajj" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/zWboCXGuPOg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Уроки Хаджа — Урок 1</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/KPJ9XjmDs5M" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Уроки Хаджа — Урок 2</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/WR4DfqdL3bg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Наставление в долине Мина</span>
+                    <span class="directions__teacher">Акрам Губденский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Kac4MvwQ5Cc" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Наставление в долине Мина</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-misc" aria-labelledby="dir-tab-misc" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/zhWKqZOFzcg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Книга Аллаха</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/7CPAvUNI5bQ" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Подготовка к Ахира</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/tT4pQZQkzCQ" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Отказ от роскоши</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/1RVpq5jthzY" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Контроль своей речи</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/qx9dCoi5hDw" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Ответственность слов</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/A1VBdH2x3CI" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٦</span>
+                    <span class="directions__title">Уроки из суры «Аль-Баляд»</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
 
-        <div class="lessons-preview__grid">
-
-          <div class="lesson-preview-card" data-category="kids">
-            <div class="lesson-preview-card__badge">Для детей</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/vq6o_wXVHiY"
-                title="Фикх для детей — Молитва #1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Фикх для детей — Молитва #1</h3>
-              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
-              <span class="lesson-preview-card__tag">Фикх · Дети</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="kids">
-            <div class="lesson-preview-card__badge">Для детей</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/1ZMt82UzCyw"
-                title="Фикх для детей — Молитва #2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Фикх для детей — Молитва #2</h3>
-              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
-              <span class="lesson-preview-card__tag">Фикх · Дети</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="kids">
-            <div class="lesson-preview-card__badge">Для детей</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/odyPOCgyPaI"
-                title="Фикх для детей — Молитва #3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Фикх для детей — Молитва #3</h3>
-              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
-              <span class="lesson-preview-card__tag">Фикх · Дети</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="kids">
-            <div class="lesson-preview-card__badge">Для детей</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/-k7ttTvxp0M"
-                title="Фикх для детей — Коллективная молитва"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Фикх для детей — Коллективная молитва</h3>
-              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
-              <span class="lesson-preview-card__tag">Фикх · Дети</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="general">
-            <div class="lesson-preview-card__badge">Новый урок</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/qx9dCoi5hDw"
-                title="Ответственность слов"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Ответственность слов</h3>
-              <p class="lesson-preview-card__teacher">Мухаммад Шамгоди</p>
-              <span class="lesson-preview-card__tag">Этика · Адаб</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="general">
-            <div class="lesson-preview-card__badge">Новый урок</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/A1VBdH2x3CI"
-                title="Уроки из суры «Аль-Баляд»"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Уроки из суры «Аль-Баляд»</h3>
-              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
-              <span class="lesson-preview-card__tag">Тафсир</span>
-            </div>
-          </div>
-
+        <div class="directions__more">
+          <a href="lessons.html" class="btn btn-outline">Все уроки →</a>
         </div>
       </div>
     </section>
