@@ -513,3 +513,12 @@ lessonsPageTabs.forEach(tab => {
     root.classList.add('is-visible');
   }
 })();
+
+// ЯНДЕКС.МЕТРИКА: цели — переходы в Telegram и на YouTube (один общий обработчик)
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href]');
+  if (!a || typeof window.ym !== 'function') return;
+  const href = a.getAttribute('href');
+  if (/^https?:\/\/(t\.me|telegram\.me)\//i.test(href)) window.ym(113719707, 'reachGoal', 'tg_click');
+  else if (/^https?:\/\/(www\.)?(youtube\.com|youtu\.be)\//i.test(href)) window.ym(113719707, 'reachGoal', 'yt_click');
+});
