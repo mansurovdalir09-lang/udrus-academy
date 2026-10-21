@@ -229,7 +229,7 @@ p {
   text-transform: uppercase;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
   min-height: 48px;
 }
 
@@ -243,7 +243,6 @@ p {
   background: var(--color-gold-light);
   border-color: var(--color-gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201,169,110,0.3);
 }
 
 .btn-outline {
@@ -255,7 +254,6 @@ p {
 .btn-outline:hover {
   background: rgba(201,169,110,0.1);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201,169,110,0.15);
 }
 
 .btn-group {
@@ -419,7 +417,7 @@ p {
   width: 24px;
   height: 2px;
   background: var(--color-gold);
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
   transform-origin: center;
 }
 
@@ -450,7 +448,7 @@ p {
   z-index: 999;
   transform: translateY(-10px);
   opacity: 0;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .nav__mobile.open {
@@ -668,13 +666,12 @@ p {
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-lg);
   padding: clamp(24px, 3vw, 36px);
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .bento-card:hover {
   border-color: rgba(201,169,110,0.4);
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(201,169,110,0.08);
 }
 
 .bento-card--wide {
@@ -855,7 +852,7 @@ p {
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-md);
   padding: 28px;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
   display: flex;
   flex-direction: column;
   min-height: 420px;
@@ -865,7 +862,6 @@ p {
   border-color: rgba(201,169,110,0.4);
   border-top-color: var(--color-gold-light);
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(201,169,110,0.12);
 }
 
 .lesson-card__arabic {
@@ -1015,7 +1011,7 @@ p {
   color: var(--color-gold);
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1127,12 +1123,11 @@ p {
   border-radius: var(--radius-md);
   padding: 32px 24px;
   text-align: center;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .teacher-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 64px rgba(201,169,110,0.15);
   border-color: rgba(201,169,110,0.4);
 }
 
@@ -1149,7 +1144,6 @@ p {
 
 .teacher-card:hover .teacher-card__photo {
   border-color: var(--color-gold);
-  box-shadow: 0 0 20px rgba(201,169,110,0.25);
 }
 
 .teacher-card__photo img {
@@ -1253,7 +1247,7 @@ p {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .hifz-card:hover {
@@ -1306,7 +1300,7 @@ p {
   display: flex;
   align-items: center;
   gap: 20px;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .archive-card:hover {
@@ -1537,7 +1531,6 @@ p {
   background: #1a8bbf;
   border-color: #1a8bbf;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(34,158,217,0.3);
 }
 
 .btn-youtube {
@@ -1550,7 +1543,6 @@ p {
   background: #cc0000;
   border-color: #cc0000;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255,0,0,0.3);
 }
 
 .btn-instagram {
@@ -1562,7 +1554,6 @@ p {
 .btn-instagram:hover {
   opacity: 0.9;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(220,39,67,0.3);
 }
 
 /* ============================
@@ -1685,7 +1676,7 @@ p {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .footer__social-links a:hover {
@@ -1752,7 +1743,7 @@ p {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .filter-tab:hover,
@@ -1773,13 +1764,12 @@ p {
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   padding: 28px;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .archive-full-card:hover {
   border-color: rgba(201,169,110,0.4);
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(201,169,110,0.1);
 }
 
 .archive-full-card__header {
@@ -1900,12 +1890,11 @@ p {
   border-radius: var(--radius-md);
   padding: 32px 24px;
   text-align: center;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
 }
 
 .direction-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(201,169,110,0.12);
   border-color: rgba(201,169,110,0.4);
 }
 
@@ -1998,7 +1987,6 @@ body::before {
   background: linear-gradient(90deg, #C9A96E, #E8C98A, #C9A96E);
   z-index: 10000;
   transition: width 0.1s ease-out;
-  box-shadow: 0 0 10px rgba(201,169,110,0.5);
 }
 
 /* Decorative waves overlay */
@@ -2319,14 +2307,13 @@ body::before {
   border-left: 4px solid #C9A96E;
   border-radius: 0 12px 12px 0;
   padding: 32px 28px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .seminar-lesson-card:hover {
   border-color: #C9A96E;
-  box-shadow: 0 0 20px rgba(201, 169, 110, 0.2);
   transform: translateY(-4px);
 }
 
@@ -2401,7 +2388,6 @@ body::before {
 
 .seminar-lesson-card--locked:hover {
   transform: none;
-  box-shadow: none;
 }
 
 .seminar-lesson-card__locked-body {
@@ -2638,7 +2624,6 @@ body::before {
   transform: translateY(12px);
   transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s;
   pointer-events: none;
-  box-shadow: 0 4px 16px rgba(201,169,110,0.35);
 }
 .scroll-top-btn.visible {
   opacity: 1;
@@ -2688,7 +2673,6 @@ body::before {
 
 .lesson-preview-card:hover {
   border-color: #C9A96E;
-  box-shadow: 0 8px 30px rgba(201, 169, 110, 0.15);
   transform: translateY(-4px);
 }
 
