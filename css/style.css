@@ -1461,14 +1461,14 @@ p {
 }
 
 .btn-telegram {
-  background: #229ED9;
-  border-color: #229ED9;
+  background: #1B7AB0; /* затемнённый синий Telegram: белый текст 4.7:1 (WCAG AA) */
+  border-color: #1B7AB0;
   color: #fff;
 }
 
 .btn-telegram:hover {
-  background: #1a8bbf;
-  border-color: #1a8bbf;
+  background: #166897;
+  border-color: #166897;
   transform: translateY(-2px);
 }
 
@@ -2434,7 +2434,6 @@ body::before {
 .footer__legal {
   margin-top: 8px;
   font-size: 0.8rem;
-  opacity: 0.6;
   display: flex;
   align-items: center;
   justify-content: center;

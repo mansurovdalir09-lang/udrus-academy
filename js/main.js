@@ -301,10 +301,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================
   const scrollTopBtn = document.getElementById('scrollTopBtn');
   if (scrollTopBtn) {
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-      scrollTopBtn.setAttribute('aria-hidden', window.scrollY <= 400 ? 'true' : 'false');
-    }, { passive: true });
+    const syncScrollTop = () => {
+      const hidden = window.scrollY <= 400;
+      scrollTopBtn.classList.toggle('visible', !hidden);
+      scrollTopBtn.setAttribute('aria-hidden', hidden ? 'true' : 'false');
+      scrollTopBtn.tabIndex = hidden ? -1 : 0; // скрытая кнопка не должна ловить Tab
+    };
+    syncScrollTop();
+    window.addEventListener('scroll', syncScrollTop, { passive: true });
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
     });
