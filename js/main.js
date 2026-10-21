@@ -470,3 +470,46 @@ lessonsPageTabs.forEach(tab => {
     });
   });
 });
+
+// ЛЕНТА ОБЛОЖЕК: дублируем набор для бесшовной прокрутки, крутим только когда лента на экране
+(function initCovers() {
+  const root = document.querySelector('[data-covers]');
+  if (!root) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const tracks = Array.from(root.querySelectorAll('.covers__track'));
+
+  function build() {
+    tracks.forEach(track => {
+      track.querySelectorAll('[data-clone]').forEach(el => el.remove());
+      if (reduceMotion) return;
+      const originals = Array.from(track.children);
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      const setWidth = originals.reduce((w, li) => w + li.getBoundingClientRect().width + gap, 0);
+      if (!setWidth) return;
+      // копий столько, чтобы лента всегда была шире экрана на один набор
+      const copies = Math.ceil(window.innerWidth / setWidth) + 1;
+      for (let c = 0; c < copies; c++) {
+        originals.forEach(li => {
+          const clone = li.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          clone.dataset.clone = '';
+          clone.querySelectorAll('a').forEach(a => { a.tabIndex = -1; });
+          track.appendChild(clone);
+        });
+      }
+      track.style.setProperty('--covers-shift', setWidth + 'px');
+    });
+  }
+
+  build();
+  let resizeTimer;
+  window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(build, 250); });
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      root.classList.toggle('is-visible', entries[0].isIntersecting);
+    }).observe(root);
+  } else {
+    root.classList.add('is-visible');
+  }
+})();

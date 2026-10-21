@@ -3041,3 +3041,140 @@ body::before {
     animation: none;
   }
 }
+
+
+/* ============================
+   ЛЕНТА ОБЛОЖЕК (главная, под уроками)
+   ============================ */
+.covers {
+  margin-top: clamp(48px, 6vw, 80px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.covers__row {
+  overflow: hidden;
+}
+
+.covers__track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: coversScroll var(--covers-speed, 60s) linear infinite;
+  animation-play-state: paused;
+}
+
+.covers__row--reverse .covers__track {
+  --covers-speed: 72s;
+  animation-direction: reverse;
+}
+
+.covers.is-visible .covers__track {
+  animation-play-state: running;
+}
+
+.covers .covers__row:hover .covers__track,
+.covers .covers__row:focus-within .covers__track {
+  animation-play-state: paused;
+}
+
+@keyframes coversScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--covers-shift, 50%))); }
+}
+
+.covers__item {
+  flex: 0 0 auto;
+  width: clamp(260px, 26vw, 380px);
+}
+
+.covers__link {
+  position: relative;
+  display: block;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.covers__link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.covers__link:hover img {
+  transform: scale(1.03);
+}
+
+.covers__link:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+.covers__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px;
+  background: rgba(26, 15, 10, 0.88);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.covers__link:hover .covers__caption,
+.covers__link:focus-visible .covers__caption {
+  opacity: 1;
+  transform: none;
+}
+
+.covers__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.covers__teacher {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+}
+
+/* на телефоне подпись видна всегда — наведения нет */
+@media (hover: none), (max-width: 767px) {
+  .covers__caption {
+    position: static;
+    opacity: 1;
+    transform: none;
+    background: var(--color-surface);
+  }
+}
+
+/* без движения: ленты стоят, обычная сетка */
+@media (prefers-reduced-motion: reduce) {
+  .covers__row {
+    overflow: visible;
+  }
+  .covers__track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .covers__item[aria-hidden="true"] {
+    display: none;
+  }
+}
