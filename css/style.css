@@ -2185,12 +2185,6 @@ body::before {
     scroll-snap-align: start;
   }
 
-  .seminar-cta .btn {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
-  }
 }
 
 /* Small mobile */
@@ -2446,81 +2440,6 @@ body::before {
   }
 }
 
-/* ============================================================
-   SEMINAR BANNER — Афиша на главной странице
-   ============================================================ */
-
-.seminar-hero {
-  background: linear-gradient(135deg, #2C1A10 0%, #3a2418 100%);
-  padding: 60px 20px;
-  text-align: center;
-  border-top: 2px solid #C9A96E;
-  border-bottom: 2px solid #C9A96E;
-  margin: 40px 0;
-}
-
-.seminar-badge {
-  display: inline-block;
-  background: rgba(201, 169, 110, 0.2);
-  border: 1px solid #C9A96E;
-  color: #C9A96E;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
-}
-
-.seminar-title-ar {
-  font-family: 'Amiri', serif;
-  font-style: italic;
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  color: #C9A96E;
-  margin: 20px 0;
-  font-weight: 400;
-}
-
-.seminar-title-ru {
-  font-size: clamp(1.5rem, 6vw, 2.5rem);
-  color: white;
-  margin: 15px 0 30px 0;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.seminar-info {
-  max-width: 600px;
-  margin: 30px auto;
-  color: #e0d5c7;
-  line-height: 1.8;
-  font-size: 1rem;
-}
-
-.seminar-info p {
-  margin: 10px 0;
-}
-
-.seminar-cta {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .seminar-cta {
-    flex-direction: row;
-  }
-}
-
 @media (max-width: 767px) {
   /* HERO */
   .hero {
@@ -2548,22 +2467,6 @@ body::before {
   }
   .hero__subtitle {
     margin-bottom: 0;
-  }
-
-  /* СЕМИНАР */
-  .seminar-hero {
-    padding: 40px 15px;
-    margin: 20px 0;
-    border-top: 2px solid #C9A96E;
-    border-bottom: 2px solid #C9A96E;
-  }
-  .seminar-cta {
-    flex-direction: column;
-  }
-  .seminar-cta .btn {
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
   }
 
   /* ДИСЦИПЛИНЫ */
@@ -2595,25 +2498,6 @@ body::before {
     order: 1;
     text-align: left;
   }
-}
-
-/* ============================
-   PULSE DOT — живая точка семинара
-   ============================ */
-.pulse-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: #C9A96E;
-  border-radius: 50%;
-  margin-left: 6px;
-  vertical-align: middle;
-  animation: pulse-dot 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.4; transform: scale(0.7); }
 }
 
 /* ============================
