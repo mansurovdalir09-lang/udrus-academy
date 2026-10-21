@@ -205,14 +205,6 @@ p {
 }
 
 /* --- Gold Gradient Divider --- */
-.gold-divider {
-  width: 100%;
-  height: 2px;
-  background: var(--color-gold);
-  margin: 0;
-  opacity: 0.6;
-}
-
 /* --- Buttons --- */
 .btn {
   display: inline-flex;
@@ -435,7 +427,6 @@ p {
   right: 0;
   background: var(--color-bg);
   padding: 24px clamp(16px, 4vw, 60px);
-  border-bottom: 1px solid rgba(201,169,110,0.15);
   flex-direction: column;
   gap: 4px;
   z-index: 999;
@@ -458,7 +449,6 @@ p {
   text-transform: uppercase;
   color: var(--color-text-muted);
   padding: 14px 0;
-  border-bottom: 1px solid rgba(201,169,110,0.08);
   transition: color var(--transition-base);
 }
 
@@ -650,7 +640,6 @@ p {
 
 .bento-card {
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: clamp(24px, 3vw, 36px);
   transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
@@ -833,7 +822,6 @@ p {
   flex: 0 0 320px;
   scroll-snap-align: start;
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
   border-top: 3px solid var(--color-gold);
   border-radius: var(--radius-md);
   padding: 28px;
@@ -927,7 +915,6 @@ p {
   gap: 12px;
   margin-top: auto;
   padding-top: 16px;
-  border-top: 1px solid rgba(201,169,110,0.15);
 }
 
 .lesson-card__schedule-tag {
@@ -935,7 +922,8 @@ p {
   align-items: center;
   padding: 8px 14px;
   background: rgba(201,169,110,0.1);
-  border: 1px solid rgba(201,169,110,0.3);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   border-radius: 999px;
   color: var(--color-gold);
   font-size: 0.85rem;
@@ -963,7 +951,8 @@ p {
 
 .lesson-card__tag {
   background: rgba(201,169,110,0.1);
-  border: 1px solid rgba(201,169,110,0.25);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   color: var(--color-gold);
   font-size: 0.75rem;
   font-weight: 600;
@@ -992,7 +981,8 @@ p {
   height: 48px;
   border-radius: 50%;
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   color: var(--color-gold);
   font-size: 1.2rem;
   cursor: pointer;
@@ -1023,7 +1013,6 @@ p {
 
 .schedule__day-card {
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -1048,7 +1037,6 @@ p {
   align-items: flex-start;
   gap: 12px;
   padding: 12px 20px;
-  border-bottom: 1px solid rgba(201,169,110,0.06);
   transition: background var(--transition-base);
 }
 
@@ -1104,7 +1092,6 @@ p {
 
 .teacher-card {
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   padding: 32px 24px;
   text-align: center;
@@ -1152,7 +1139,8 @@ p {
 .teacher-card__badge {
   display: inline-block;
   background: rgba(201,169,110,0.12);
-  border: 1px solid rgba(201,169,110,0.3);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   color: var(--color-gold);
   font-size: 0.75rem;
   font-weight: 600;
@@ -1197,7 +1185,8 @@ p {
 .hifz-preview__content .section-tag {
   display: inline-block;
   background: rgba(201,169,110,0.1);
-  border: 1px solid rgba(201,169,110,0.25);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   color: var(--color-gold);
   font-size: 0.75rem;
   font-weight: 700;
@@ -1226,7 +1215,6 @@ p {
 
 .hifz-card {
   background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(201,169,110,0.15);
   border-radius: var(--radius-sm);
   padding: 20px;
   display: flex;
@@ -1276,7 +1264,6 @@ p {
 
 .archive-card {
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   text-decoration: none;
   color: inherit;
@@ -1399,7 +1386,6 @@ p {
   padding: clamp(30px, 4vw, 50px);
   border-radius: 24px;
   background: var(--color-surface);
-  border: 1px solid rgba(201, 169, 110, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1414,7 +1400,6 @@ p {
   content: '';
   position: absolute;
   inset: 6px;
-  border: 1px solid rgba(201,169,110,0.15);
   border-radius: calc(var(--radius-md) - 4px);
   pointer-events: none;
 }
@@ -1444,14 +1429,6 @@ p {
   font-size: 0.85rem;
   color: var(--color-text-muted);
   margin-bottom: 20px;
-}
-
-.certificate-mock__divider {
-  width: 80px;
-  height: 1px;
-  background: var(--color-gold);
-  margin: 0 auto 16px;
-  opacity: 0.5;
 }
 
 .certificate-mock__name {
@@ -1544,7 +1521,6 @@ p {
    ============================ */
 .footer {
   background: var(--color-bg);
-  border-top: 1px solid rgba(201,169,110,0.1);
   padding: 48px 0 48px;
 }
 
@@ -1654,7 +1630,8 @@ p {
   height: 40px;
   border-radius: 50%;
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1669,7 +1646,6 @@ p {
 }
 
 .footer__bottom {
-  border-top: 1px solid rgba(201,169,110,0.08);
   padding-top: 32px;
   padding-bottom: 16px;
   display: flex;
@@ -1717,8 +1693,8 @@ p {
   padding: 8px 20px;
   min-height: 44px;
   border-radius: 100px;
-  border: 1px solid rgba(201,169,110,0.25);
-  background: transparent;
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   color: var(--color-text-muted);
   font-family: var(--font-heading);
   font-size: 0.8rem;
@@ -1744,7 +1720,6 @@ p {
 
 .archive-full-card {
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   padding: 28px;
   transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
@@ -1775,7 +1750,8 @@ p {
 
 .archive-full-card__count {
   background: rgba(201,169,110,0.1);
-  border: 1px solid rgba(201,169,110,0.25);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   color: var(--color-gold);
   font-size: 0.75rem;
   font-weight: 700;
@@ -1868,7 +1844,6 @@ p {
 
 .direction-card {
   background: var(--color-surface);
-  border: 1px solid var(--glass-border);
   border-top: 3px solid var(--color-gold);
   border-radius: var(--radius-md);
   padding: 32px 24px;
@@ -2284,7 +2259,6 @@ body::before {
 /* Lesson card */
 .seminar-lesson-card {
   background: var(--color-bg);
-  border: 1px solid rgba(201, 169, 110, 0.2);
   border-left: 4px solid #C9A96E;
   border-radius: 0 12px 12px 0;
   padding: 32px 28px;
@@ -2319,7 +2293,8 @@ body::before {
   font-size: 0.85rem;
   color: #C9A96E;
   text-decoration: none;
-  border: 1px solid rgba(201, 169, 110, 0.4);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   padding: 5px 12px;
   border-radius: 20px;
   transition: background 0.2s ease, color 0.2s ease;
@@ -2510,7 +2485,6 @@ body::before {
   width: calc(100% - 40px);
   max-width: 600px;
   background: #3a2418;
-  border: 1px solid rgba(201,169,110,0.3);
   border-radius: 12px;
   padding: 16px 20px;
   display: flex;
@@ -2569,7 +2543,6 @@ body::before {
 .breadcrumb-bar {
   padding: 14px 0;
   margin-top: 72px;
-  border-bottom: 1px solid rgba(201,169,110,0.15);
 }
 .breadcrumb-link {
   font-size: 0.85rem;
@@ -2645,7 +2618,6 @@ body::before {
 
 .lesson-preview-card {
   background: rgba(201, 169, 110, 0.05);
-  border: 1px solid rgba(201, 169, 110, 0.2);
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -2710,7 +2682,8 @@ body::before {
 .lesson-preview-card__tag {
   display: inline-block;
   background: rgba(201, 169, 110, 0.15);
-  border: 1px solid rgba(201, 169, 110, 0.3);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   color: #C9A96E;
   font-size: 0.8rem;
   padding: 4px 12px;
@@ -2737,7 +2710,8 @@ body::before {
 
 .lessons-tab {
   background: transparent;
-  border: 1px solid rgba(201, 169, 110, 0.3);
+  border: 0;
+  background-color: rgba(201,169,110,0.12);
   color: #C9A96E;
   padding: 8px 20px;
   border-radius: 20px;
