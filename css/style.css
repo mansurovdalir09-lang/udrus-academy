@@ -480,6 +480,7 @@ p {
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -717,10 +718,12 @@ p {
 
 .aqeedah__frame::before,
 .aqeedah__frame::after {
-  content: '❖';
+  content: '';
   position: absolute;
-  color: var(--color-gold);
-  font-size: 1.2rem;
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  transform: rotate(45deg);
   opacity: 0.5;
 }
 
@@ -1182,22 +1185,6 @@ p {
   align-items: center;
 }
 
-.hifz-preview__content .section-tag {
-  display: inline-block;
-  background: rgba(201,169,110,0.1);
-  border: 0;
-  background-color: rgba(201,169,110,0.12);
-  color: var(--color-gold);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 6px 16px;
-  border-radius: 100px;
-  font-family: var(--font-heading);
-  letter-spacing: 0.08em;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
 .hifz-preview__content h2 {
   margin-bottom: 16px;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
@@ -1214,7 +1201,7 @@ p {
 }
 
 .hifz-card {
-  background: rgba(255,255,255,0.02);
+  background: var(--color-bg);
   border-radius: var(--radius-sm);
   padding: 20px;
   display: flex;
@@ -2322,7 +2309,8 @@ body::before {
 }
 
 .lesson-timestamps .time {
-  font-family: monospace;
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
   font-weight: 700;
   color: #C9A96E;
   font-size: 0.9rem;
@@ -2617,10 +2605,10 @@ body::before {
 }
 
 .lesson-preview-card {
-  background: rgba(201, 169, 110, 0.05);
+  background: var(--color-surface);
   border-radius: 12px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
   position: relative;
 }
 
@@ -2717,7 +2705,7 @@ body::before {
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-family: inherit;
 }
 
