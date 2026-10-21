@@ -69,14 +69,9 @@
 }
 
 /* --- 8. Page Fade In (on load) --- */
-@keyframes pageFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.page-enter {
-  animation: pageFadeIn 0.5s ease forwards;
-}
+/* Плавное появление всей страницы (body от opacity 0) убрано: из-за него
+   браузер не фиксировал First Contentful Paint, и Lighthouse не мог
+   измерить главную (NO_FCP). Класс .page-enter оставлен в разметке. */
 
 /* --- 10. Fade Left (for stats/info blocks) --- */
 .fade-left {
@@ -179,10 +174,6 @@
   .hero__content > * {
     opacity: 1;
     transform: none;
-    animation: none;
-  }
-
-  .page-enter {
     animation: none;
   }
 
