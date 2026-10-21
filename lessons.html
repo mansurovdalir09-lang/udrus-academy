@@ -2,18 +2,19 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="images/logo-udrus-icon-gold.png">
   <link rel="apple-touch-icon" href="images/logo-udrus-icon-gold.png">
   <meta name="theme-color" content="#1A0F0A">
   <title>Уроки — UDRUS ACADEMY</title>
-  <meta name="description" content="Видеоуроки Академии UDRUS по шариатским наукам: Коран, требование знания, основы веры, Рамадан, Хадж и разные темы.">
+  <meta name="description" content="Видеоуроки Академии UDRUS по шариатским наукам: большие грехи, адаб, фикх для детей, основы веры, требование знания, Коран, Рамадан, хадж и разные темы.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="UDRUS ACADEMY">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:url" content="https://academy-udrus.ru/lessons.html">
   <meta property="og:title" content="Уроки — UDRUS ACADEMY">
-  <meta property="og:description" content="Видеоуроки Академии UDRUS по шариатским наукам: Коран, требование знания, основы веры, Рамадан, Хадж и разные темы.">
+  <meta property="og:description" content="Видеоуроки Академии UDRUS по шариатским наукам: большие грехи, адаб, фикх для детей, основы веры, требование знания, Коран, Рамадан, хадж и разные темы.">
   <meta property="og:image" content="https://academy-udrus.ru/images/logo-udrus-horizontal-gold.png">
   <meta property="og:image:width" content="722">
   <meta property="og:image:height" content="287">
@@ -56,9 +57,9 @@
   <!-- ============================
        NAVIGATION
        ============================ -->
-  <nav class="nav" id="mainNav" aria-label="Основная навигация">
+  <nav class="nav" id="mainNav" aria-label="Основная навигация" translate="no">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
+      <a href="index.html" class="nav__logo" translate="no">
         <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img" width="52" height="52">
         <div class="nav__logo-text">
           <span class="brand">UDRUS ACADEMY</span>
@@ -73,7 +74,6 @@
         <li><a href="archive.html">Архив</a></li>
         <li><a href="hifz.html">Школа Хифза</a></li>
         <li><a href="index.html#contacts">Контакты</a></li>
-        <li><a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a></li>
       </ul>
 
       <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav__cta">
@@ -89,14 +89,13 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <nav class="nav__mobile" id="mobileMenu" aria-label="Мобильное меню">
+  <nav class="nav__mobile" id="mobileMenu" aria-label="Мобильное меню" translate="no">
     <a href="index.html">Главная</a>
     <a href="lessons.html" class="active" aria-current="page">Уроки</a>
     <a href="index.html#schedule">Расписание</a>
     <a href="archive.html">Архив</a>
     <a href="hifz.html">Школа Хифза</a>
     <a href="index.html#contacts">Контакты</a>
-    <a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a>
     <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Telegram канал →</a>
   </nav>
 
@@ -108,7 +107,7 @@
     <section class="seminar-page-hero" aria-labelledby="heading-lessons-hero">
       <div class="container">
         <h2 id="heading-lessons-hero">УРОКИ</h2>
-        <span class="arabic-subtitle" lang="ar">الدروس</span>
+        <span class="arabic-subtitle" lang="ar" translate="no">الدروس</span>
         <p class="seminar-subtitle">Видеоуроки по шариатским наукам</p>
       </div>
     </section>
@@ -122,6 +121,9 @@
         <!-- Табы категорий -->
         <div class="lessons-tabs" id="lessons-page-tabs" role="group" aria-label="Фильтр по категориям">
           <button type="button" class="lessons-tab active" data-filter="all">Все уроки</button>
+          <button type="button" class="lessons-tab" data-filter="kabair">Большие грехи</button>
+          <button type="button" class="lessons-tab" data-filter="adab">Адаб</button>
+          <button type="button" class="lessons-tab" data-filter="kids">Фикх для детей</button>
           <button type="button" class="lessons-tab" data-filter="quran">Коран</button>
           <button type="button" class="lessons-tab" data-filter="ilm">Требование знания</button>
           <button type="button" class="lessons-tab" data-filter="aqeeda">Основы веры</button>
@@ -132,6 +134,168 @@
 
         <!-- Сетка видео -->
         <div class="lessons-page-grid">
+
+          <!-- КАТЕГОРИЯ: БОЛЬШИЕ ГРЕХИ («Аль-Кабаир», имам аз-Захаби) -->
+          <div class="lesson-preview-card" data-category="kabair">
+            <div class="lesson-preview-card__badge">Большие грехи</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/L0bbAi3bmOc"
+                title="Большие грехи — Урок 1. Вступление" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Большие грехи — Урок 1. Вступление</h3>
+              <p class="lesson-preview-card__teacher">Файзудин Казанищенский</p>
+              <span class="lesson-preview-card__tag">Большие грехи</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="kabair">
+            <div class="lesson-preview-card__badge">Большие грехи</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/f2eC_EEE398"
+                title="Большие грехи — Урок 2. Многобожие" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Большие грехи — Урок 2. Многобожие</h3>
+              <p class="lesson-preview-card__teacher">Файзудин Казанищенский</p>
+              <span class="lesson-preview-card__tag">Большие грехи</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="kabair">
+            <div class="lesson-preview-card__badge">Большие грехи</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/TVdyKzFrDMs"
+                title="Большие грехи — Урок 3. Убийство" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Большие грехи — Урок 3. Убийство</h3>
+              <p class="lesson-preview-card__teacher">Файзудин Казанищенский</p>
+              <span class="lesson-preview-card__tag">Большие грехи</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="kabair">
+            <div class="lesson-preview-card__badge">Большие грехи</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/QPBAppoiY-o"
+                title="Большие грехи — Урок 4. Колдовство" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Большие грехи — Урок 4. Колдовство</h3>
+              <p class="lesson-preview-card__teacher">Файзудин Казанищенский</p>
+              <span class="lesson-preview-card__tag">Большие грехи</span>
+            </div>
+          </div>
+
+          <!-- КАТЕГОРИЯ: АДАБ -->
+          <div class="lesson-preview-card" data-category="adab">
+            <div class="lesson-preview-card__badge">Адаб</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/Cc5OKpEf668"
+                title="Важность выбора друзей" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Важность выбора друзей</h3>
+              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
+              <span class="lesson-preview-card__tag">Адаб</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="adab">
+            <div class="lesson-preview-card__badge">Адаб</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/i0vwkwU1SKg"
+                title="Стремление получить и сохранить знания" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Стремление получить и сохранить знания</h3>
+              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
+              <span class="lesson-preview-card__tag">Адаб</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="adab">
+            <div class="lesson-preview-card__badge">Адаб</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/b7Cjb1SLi68"
+                title="Правдивость в речи" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Правдивость в речи</h3>
+              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
+              <span class="lesson-preview-card__tag">Адаб</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="adab">
+            <div class="lesson-preview-card__badge">Адаб</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/Fp3kGEgJMoc"
+                title="Важность сохранения знаний" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Важность сохранения знаний</h3>
+              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
+              <span class="lesson-preview-card__tag">Адаб</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="adab">
+            <div class="lesson-preview-card__badge">Адаб</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/AV_I8eDNiz0"
+                title="Ценность времени" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Ценность времени</h3>
+              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
+              <span class="lesson-preview-card__tag">Адаб</span>
+            </div>
+          </div>
+
+          <!-- КАТЕГОРИЯ: ФИКХ ДЛЯ ДЕТЕЙ -->
+          <div class="lesson-preview-card" data-category="kids">
+            <div class="lesson-preview-card__badge">Для детей</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/vq6o_wXVHiY"
+                title="Фикх для детей — Молитва #1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Фикх для детей — Молитва #1</h3>
+              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
+              <span class="lesson-preview-card__tag">Фикх · Дети</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="kids">
+            <div class="lesson-preview-card__badge">Для детей</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/1ZMt82UzCyw"
+                title="Фикх для детей — Омовение #2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Фикх для детей — Омовение #2</h3>
+              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
+              <span class="lesson-preview-card__tag">Фикх · Дети</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="kids">
+            <div class="lesson-preview-card__badge">Для детей</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/odyPOCgyPaI"
+                title="Фикх для детей — Молитва #3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Фикх для детей — Молитва #3</h3>
+              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
+              <span class="lesson-preview-card__tag">Фикх · Дети</span>
+            </div>
+          </div>
+          <div class="lesson-preview-card" data-category="kids">
+            <div class="lesson-preview-card__badge">Для детей</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/-k7ttTvxp0M"
+                title="Фикх для детей — Коллективная молитва" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Фикх для детей — Коллективная молитва</h3>
+              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
+              <span class="lesson-preview-card__tag">Фикх · Дети</span>
+            </div>
+          </div>
 
           <!-- КАТЕГОРИЯ: КОРАН -->
           <div class="lesson-preview-card" data-category="quran">
@@ -468,6 +632,32 @@
           </div>
 
 
+          <div class="lesson-preview-card" data-category="misc">
+            <div class="lesson-preview-card__badge">Разные темы</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/qx9dCoi5hDw"
+                title="Ответственность слов" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Ответственность слов</h3>
+              <p class="lesson-preview-card__teacher">Мухаммад Шамгоди</p>
+              <span class="lesson-preview-card__tag">Разные темы</span>
+            </div>
+          </div>
+
+          <div class="lesson-preview-card" data-category="misc">
+            <div class="lesson-preview-card__badge">Разные темы</div>
+            <div class="lesson-preview-card__video">
+              <iframe src="https://www.youtube.com/embed/A1VBdH2x3CI"
+                title="Уроки из суры «Аль-Баляд»" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="lesson-preview-card__info">
+              <h3>Уроки из суры «Аль-Баляд»</h3>
+              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
+              <span class="lesson-preview-card__tag">Тафсир</span>
+            </div>
+          </div>
+
           <!-- КАТЕГОРИЯ: ХАДЖ -->
           <div class="lesson-preview-card" data-category="hajj">
             <div class="lesson-preview-card__badge">Хадж</div>
@@ -535,18 +725,18 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <a href="index.html" class="nav__logo" style="text-decoration:none;">
-            <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img" loading="lazy" width="52" height="52">
+          <a href="index.html" class="nav__logo" translate="no" style="text-decoration:none;">
+            <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img" loading="lazy" width="52" height="52" decoding="async">
             <div class="nav__logo-text">
               <span class="brand">UDRUS ACADEMY</span>
               <span class="tagline">Онлайн академия</span>
             </div>
           </a>
-          <div class="footer__brand-arabic footer__arabic-subtitle" lang="ar">أكاديمية ادرس</div>
+          <div class="footer__brand-arabic footer__arabic-subtitle" lang="ar" translate="no">أكاديمية ادرس</div>
           <p>Онлайн-академия шариатских наук для русскоязычных мусульман</p>
         </div>
 
-        <nav class="footer__nav" aria-label="Навигация сайта">
+        <nav class="footer__nav" aria-label="Навигация сайта" translate="no">
           <div class="footer__nav-title">Навигация</div>
           <a href="index.html">Главная</a>
           <a href="archive.html">Архив лекций</a>
@@ -585,6 +775,6 @@
     Подробнее — в <a href="privacy.html">Политике конфиденциальности</a>.</p>
     <button class="cookie-banner__btn" id="cookieAccept" type="button">Принять</button>
   </div>
-  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх" aria-hidden="true">↑</button>
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх" aria-hidden="true" tabindex="-1">↑</button>
 </body>
 </html>

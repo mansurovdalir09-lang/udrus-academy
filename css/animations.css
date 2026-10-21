@@ -20,36 +20,18 @@
 .fade-up-delay-4 { transition-delay: 0.4s; }
 .fade-up-delay-5 { transition-delay: 0.5s; }
 
-/* --- 2. Gold Shimmer on headings --- */
+/* --- 2. Gold heading (бывший shimmer, без градиента в тексте) --- */
 .gold-shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--color-gold) 0%,
-    var(--color-gold-light) 30%,
-    #fff8e7 50%,
-    var(--color-gold-light) 70%,
-    var(--color-gold) 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 4s linear infinite;
-}
-
-@keyframes shimmer {
-  0%   { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  color: var(--color-gold);
 }
 
 /* --- 3. Card Hover (used via JS/CSS) --- */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .card-hover:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 64px rgba(201, 169, 110, 0.18);
 }
 
 /* --- 4. Kinetic Text (hero letters) --- */
@@ -80,11 +62,6 @@
 }
 
 /* --- 6. Islamic Pattern Background Rotation --- */
-@keyframes patternRotate {
-  from { transform: rotate(0deg) scale(1.05); }
-  to   { transform: rotate(360deg) scale(1.05); }
-}
-
 /* --- 7. Scroll Bounce (scroll indicator) --- */
 @keyframes scrollBounce {
   0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
@@ -92,24 +69,9 @@
 }
 
 /* --- 8. Page Fade In (on load) --- */
-@keyframes pageFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.page-enter {
-  animation: pageFadeIn 0.5s ease forwards;
-}
-
-/* --- 9. Pulse glow for CTA buttons --- */
-@keyframes pulseGold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 169, 110, 0); }
-  50%       { box-shadow: 0 0 0 10px rgba(201, 169, 110, 0); }
-}
-
-.btn-pulse {
-  animation: pulseGold 2.5s ease-in-out infinite;
-}
+/* Плавное появление всей страницы (body от opacity 0) убрано: из-за него
+   браузер не фиксировал First Contentful Paint, и Lighthouse не мог
+   измерить главную (NO_FCP). Класс .page-enter оставлен в разметке. */
 
 /* --- 10. Fade Left (for stats/info blocks) --- */
 .fade-left {
@@ -182,14 +144,9 @@
 @media (max-width: 767px) {
   .card-hover:hover {
     transform: none;
-    box-shadow: none;
   }
 
   .arabic-float {
-    animation: none;
-  }
-
-  .hero__bg-pattern {
     animation: none;
   }
 }
@@ -217,10 +174,6 @@
   .hero__content > * {
     opacity: 1;
     transform: none;
-    animation: none;
-  }
-
-  .page-enter {
     animation: none;
   }
 

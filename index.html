@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="images/logo-udrus-icon-gold.png">
   <link rel="apple-touch-icon" href="images/logo-udrus-icon-gold.png">
@@ -63,9 +64,9 @@
   <!-- ============================
        NAVIGATION
        ============================ -->
-  <nav class="nav" id="mainNav" aria-label="Основная навигация">
+  <nav class="nav" id="mainNav" aria-label="Основная навигация" translate="no">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
+      <a href="index.html" class="nav__logo" translate="no">
         <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img" width="52" height="52">
         <div class="nav__logo-text">
           <span class="brand">UDRUS ACADEMY</span>
@@ -80,7 +81,6 @@
         <li><a href="archive.html">Архив</a></li>
         <li><a href="hifz.html">Школа Хифза</a></li>
         <li><a href="#contacts">Контакты</a></li>
-        <li><a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a></li>
       </ul>
 
       <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav__cta">
@@ -96,14 +96,13 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <nav class="nav__mobile" id="mobileMenu" aria-label="Мобильное меню">
+  <nav class="nav__mobile" id="mobileMenu" aria-label="Мобильное меню" translate="no">
     <a href="index.html" class="active" aria-current="page">Главная</a>
     <a href="lessons.html">Уроки</a>
     <a href="#schedule">Расписание</a>
     <a href="archive.html">Архив</a>
     <a href="hifz.html">Школа Хифза</a>
     <a href="#contacts">Контакты</a>
-    <a href="seminar.html" class="nav__link nav__link--seminar">Семинар</a>
     <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Telegram канал →</a>
   </nav>
 
@@ -113,10 +112,17 @@
          SECTION 1 — HERO
          ============================ -->
     <section class="hero" id="hero" aria-labelledby="heroTitle">
-      <div class="hero__bg-pattern" aria-hidden="true"></div>
-      <div class="section-decor-waves" aria-hidden="true"></div>
-
       <div class="hero__content">
+        <div class="hero__frame" aria-hidden="true">
+          <div class="hero__frame-box">
+            <span class="hero__rule"></span><span class="hero__rule"></span><span class="hero__rule"></span>
+            <span class="hero__rule"></span><span class="hero__rule"></span><span class="hero__rule"></span>
+            <i class="hero__corner hero__corner--tl"></i><i class="hero__corner hero__corner--tr"></i>
+            <i class="hero__corner hero__corner--bl"></i><i class="hero__corner hero__corner--br"></i>
+          </div>
+          <p class="hero__margin hero__margin--left" lang="ar" translate="no">مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ</p>
+          <p class="hero__margin hero__margin--right" lang="ar" translate="no">الْعُلَمَاءُ وَرَثَةُ الْأَنْبِيَاءِ</p>
+        </div>
         <div class="hero__logo-wrap">
           <img src="images/logo-udrus-icon-gold.png" alt="UDRUS ACADEMY" width="160" height="157" style="width:160px;height:auto;">
         </div>
@@ -125,13 +131,13 @@
           АКАДЕМИЯ UDRUS
         </h1>
 
-        <span lang="ar" class="hero__arabic-title arabic-float">أكاديمية ادرس</span>
+        <span lang="ar" translate="no" class="hero__arabic-title arabic-float">أكاديمية ادرس</span>
 
         <p class="hero__subtitle">
           Онлайн-академия шариатских наук — студенты Саудовской Аравии
         </p>
 
-        <span lang="ar" class="hero__greeting">‏السلام عليكم ورحمة الله وبركاته</span>
+        <span lang="ar" translate="no" class="hero__greeting">‏السلام عليكم ورحمة الله وبركاته</span>
 
         <div class="btn-group hero__cta">
           <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-telegram">
@@ -152,159 +158,539 @@
     </section>
 
     <!-- ============================
-         АФИША СЕМИНАРА
-         ============================ -->
-    <section class="seminar-hero" id="active-seminar">
-      <div class="seminar-badge">НОВЫЙ СЕМИНАР</div>
-
-      <h2 class="seminar-title-ar" lang="ar">تزكية النفس</h2>
-
-      <h3 class="seminar-title-ru">ОЧИЩЕНИЕ ДУШИ</h3>
-
-      <div class="seminar-info">
-        <p><strong>Книга:</strong> «Очищение души» — шейх Абдурраззак аль-Бадр</p>
-        <p>Последовательное изучение книги по темам.<br>
-        После каждого урока — вопросы по материалу.<br>
-        В конце — итоговый экзамен.</p>
-        <p><strong>Старт:</strong> 15 августа</p>
-        <p><strong>Формат:</strong> онлайн (Telegram) · Участие бесплатно</p>
-        <p><strong>🎁 Подарки</strong> лучшим участникам итогового экзамена</p>
-      </div>
-
-      <div class="seminar-cta">
-        <a href="https://t.me/udrus_hifz" class="btn btn-primary" target="_blank" rel="noopener">
-          ПРИСОЕДИНИТЬСЯ В TELEGRAM →
-        </a>
-      </div>
-    </section>
-
-    <!-- ============================
          УРОКИ — ПРЕВЬЮ YOUTUBE
          ============================ -->
     <section class="section section-lessons-preview" id="lessons-preview">
       <div class="container">
         <div class="section-header fade-up">
           <h2 class="split-reveal">УРОКИ</h2>
-          <span lang="ar" class="arabic-subtitle">الدروس</span>
+          <span lang="ar" translate="no" class="arabic-subtitle">الدروس</span>
         </div>
 
-        <div class="lessons-tabs">
-          <button class="lessons-tab active" data-filter="all">Все уроки</button>
-          <button class="lessons-tab" data-filter="kids">Фикх для детей</button>
-          <button class="lessons-tab" data-filter="general">Разные темы</button>
+        <div class="directions" data-directions>
+          <div class="directions__tabs" role="tablist" aria-label="Направления уроков">
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-kabair" aria-controls="dir-panel-kabair" aria-selected="true" tabindex="0">
+              <span class="directions__name">Большие грехи</span>
+              <span class="directions__ar" lang="ar" translate="no">الكبائر</span>
+              <span class="directions__count">4 урока</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-adab" aria-controls="dir-panel-adab" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Адаб</span>
+              <span class="directions__ar" lang="ar" translate="no">الأدب</span>
+              <span class="directions__count">5 уроков</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-kids" aria-controls="dir-panel-kids" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Фикх для детей</span>
+              <span class="directions__ar" lang="ar" translate="no">فقه الأطفال</span>
+              <span class="directions__count">4 урока</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-aqeeda" aria-controls="dir-panel-aqeeda" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Основы веры</span>
+              <span class="directions__ar" lang="ar" translate="no">أصول الإيمان</span>
+              <span class="directions__count">8 уроков</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-ilm" aria-controls="dir-panel-ilm" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Требование знания</span>
+              <span class="directions__ar" lang="ar" translate="no">طلب العلم</span>
+              <span class="directions__count">6 уроков</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-quran" aria-controls="dir-panel-quran" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Коран</span>
+              <span class="directions__ar" lang="ar" translate="no">القرآن</span>
+              <span class="directions__count">1 урок</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-ramadan" aria-controls="dir-panel-ramadan" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Рамадан</span>
+              <span class="directions__ar" lang="ar" translate="no">رمضان</span>
+              <span class="directions__count">6 уроков</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-hajj" aria-controls="dir-panel-hajj" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Хадж</span>
+              <span class="directions__ar" lang="ar" translate="no">الحج</span>
+              <span class="directions__count">4 урока</span>
+            </button>
+            <button type="button" class="directions__tab" role="tab" id="dir-tab-misc" aria-controls="dir-panel-misc" aria-selected="false" tabindex="-1">
+              <span class="directions__name">Разные темы</span>
+              <span class="directions__ar" lang="ar" translate="no">دروس متنوعة</span>
+              <span class="directions__count">6 уроков</span>
+            </button>
+          </div>
+          <div class="directions__panels">
+            <div class="directions__panel" role="tabpanel" id="dir-panel-kabair" aria-labelledby="dir-tab-kabair" tabindex="0">
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/L0bbAi3bmOc" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Большие грехи — Урок 1. Вступление</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/f2eC_EEE398" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Большие грехи — Урок 2. Многобожие</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/TVdyKzFrDMs" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Большие грехи — Урок 3. Убийство</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/QPBAppoiY-o" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Большие грехи — Урок 4. Колдовство</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-adab" aria-labelledby="dir-tab-adab" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/Cc5OKpEf668" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Важность выбора друзей</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/i0vwkwU1SKg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Стремление получить и сохранить знания</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/b7Cjb1SLi68" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Правдивость в речи</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Fp3kGEgJMoc" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Важность сохранения знаний</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/AV_I8eDNiz0" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Ценность времени</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-kids" aria-labelledby="dir-tab-kids" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/vq6o_wXVHiY" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Фикх для детей — Молитва #1</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/1ZMt82UzCyw" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Фикх для детей — Омовение #2</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/odyPOCgyPaI" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Фикх для детей — Молитва #3</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/-k7ttTvxp0M" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Фикх для детей — Коллективная молитва</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-aqeeda" aria-labelledby="dir-tab-aqeeda" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/jsY20rxEHEo" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Основы веры — Вера в Аллаха</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/K-FLJCTKwHk" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Основы веры — Вера в ангелов</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/aT4ec7Ui8ZY" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Основы веры — Вера в писания</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Mb63CAbzzWk" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Основы веры — Вера в посланников</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/l7kBu_zNlcw" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Основы веры — Вера в Судный день</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/bp_6X3tyN1k" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٦</span>
+                    <span class="directions__title">Основы веры — Вера в Предопределение</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/yVLNu2nwEM4" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٧</span>
+                    <span class="directions__title">Упрощённая акыда 1 — Доказательство существования Аллаха</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/GKnNHNaJK4A" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٨</span>
+                    <span class="directions__title">Упрощённая акыда 2 — Вера в Господство Аллаха</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-ilm" aria-labelledby="dir-tab-ilm" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/9iCQ-WH2KSQ" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 1</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/gEyxA9F7sZg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 2</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/CI-tTUFiRWA" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 3</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/QtFq2A0QMys" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 4</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Gdk5Kls0V5A" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 5</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Gdk5Kls0V5A" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٦</span>
+                    <span class="directions__title">Ключи к успеху требующего знания — Урок 6</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-quran" aria-labelledby="dir-tab-quran" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/IU-Etd6MBMY" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Как полюбить Коран</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-ramadan" aria-labelledby="dir-tab-ramadan" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/z-T996zkEwE" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Провизия Рамадана — Вступление</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/VBKMJHBYdlk" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Провизия Рамадана — Столпы и условия поста</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/ZIlDtNqgK3w" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Провизия Рамадана — Желательные действия и что портит пост</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/MfzhG_ntEBs" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Провизия Рамадана — Кому можно отпускать пост</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/jwXMkJY__VA" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Провизия Рамадана — Итикяф</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/aRLrsVLoBO0" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٦</span>
+                    <span class="directions__title">Провизия Рамадана — Закят Аль-Фитр / Праздничная молитва</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-hajj" aria-labelledby="dir-tab-hajj" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/zWboCXGuPOg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Уроки Хаджа — Урок 1</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/KPJ9XjmDs5M" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Уроки Хаджа — Урок 2</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/WR4DfqdL3bg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Наставление в долине Мина</span>
+                    <span class="directions__teacher">Акрам Губденский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/Kac4MvwQ5Cc" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Наставление в долине Мина</span>
+                    <span class="directions__teacher">Рашид Кумукий</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div class="directions__panel" role="tabpanel" id="dir-panel-misc" aria-labelledby="dir-tab-misc" tabindex="0" hidden>
+              <ol class="directions__list" role="list">
+                <li class="directions__item">
+                  <a href="https://youtu.be/zhWKqZOFzcg" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">١</span>
+                    <span class="directions__title">Книга Аллаха</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/7CPAvUNI5bQ" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٢</span>
+                    <span class="directions__title">Подготовка к Ахира</span>
+                    <span class="directions__teacher">Файзудин Казанищенский</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/tT4pQZQkzCQ" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٣</span>
+                    <span class="directions__title">Отказ от роскоши</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/1RVpq5jthzY" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٤</span>
+                    <span class="directions__title">Контроль своей речи</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/qx9dCoi5hDw" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٥</span>
+                    <span class="directions__title">Ответственность слов</span>
+                    <span class="directions__teacher">Мухаммад Шамгоди</span>
+                  </a>
+                </li>
+                <li class="directions__item">
+                  <a href="https://youtu.be/A1VBdH2x3CI" target="_blank" rel="noopener noreferrer">
+                    <span class="directions__num" lang="ar" translate="no" aria-hidden="true">٦</span>
+                    <span class="directions__title">Уроки из суры «Аль-Баляд»</span>
+                    <span class="directions__teacher">Хасан Абу Марьям</span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
 
-        <div class="lessons-preview__grid">
-
-          <div class="lesson-preview-card" data-category="kids">
-            <div class="lesson-preview-card__badge">Для детей</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/vq6o_wXVHiY"
-                title="Фикх для детей — Молитва #1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Фикх для детей — Молитва #1</h3>
-              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
-              <span class="lesson-preview-card__tag">Фикх · Дети</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="kids">
-            <div class="lesson-preview-card__badge">Для детей</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/1ZMt82UzCyw"
-                title="Фикх для детей — Молитва #2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Фикх для детей — Молитва #2</h3>
-              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
-              <span class="lesson-preview-card__tag">Фикх · Дети</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="kids">
-            <div class="lesson-preview-card__badge">Для детей</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/odyPOCgyPaI"
-                title="Фикх для детей — Молитва #3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Фикх для детей — Молитва #3</h3>
-              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
-              <span class="lesson-preview-card__tag">Фикх · Дети</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="kids">
-            <div class="lesson-preview-card__badge">Для детей</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/-k7ttTvxp0M"
-                title="Фикх для детей — Коллективная молитва"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Фикх для детей — Коллективная молитва</h3>
-              <p class="lesson-preview-card__teacher">Рашид Кумукий</p>
-              <span class="lesson-preview-card__tag">Фикх · Дети</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="general">
-            <div class="lesson-preview-card__badge">Новый урок</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/qx9dCoi5hDw"
-                title="Ответственность слов"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Ответственность слов</h3>
-              <p class="lesson-preview-card__teacher">Мухаммад Шамгоди</p>
-              <span class="lesson-preview-card__tag">Этика · Адаб</span>
-            </div>
-          </div>
-
-          <div class="lesson-preview-card" data-category="general">
-            <div class="lesson-preview-card__badge">Новый урок</div>
-            <div class="lesson-preview-card__video">
-              <iframe
-                src="https://www.youtube.com/embed/A1VBdH2x3CI"
-                title="Уроки из суры «Аль-Баляд»"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
-            <div class="lesson-preview-card__info">
-              <h3>Уроки из суры «Аль-Баляд»</h3>
-              <p class="lesson-preview-card__teacher">Хасан Абу Марьям</p>
-              <span class="lesson-preview-card__tag">Тафсир</span>
-            </div>
-          </div>
-
+        <div class="directions__more">
+          <a href="lessons.html" class="btn btn-outline">Все уроки →</a>
         </div>
+      </div>
+
+      <div class="covers" data-covers aria-label="Видеоуроки академии">
+          <div class="covers__row">
+            <ul class="covers__track" role="list">
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/Cc5OKpEf668" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/adab-druzya.webp" alt="Важность выбора друзей — Хасан Абу Марьям" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Важность выбора друзей</span><span class="covers__teacher">Хасан Абу Марьям</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/vq6o_wXVHiY" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/kids-01.webp" alt="Фикх для детей · Молитва #1 — Рашид Кумукий" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Фикх для детей · Молитва #1</span><span class="covers__teacher">Рашид Кумукий</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/L0bbAi3bmOc" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/kabair-01.webp" alt="Большие грехи · Вступление — Файзудин Казанищенский" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Большие грехи · Вступление</span><span class="covers__teacher">Файзудин Казанищенский</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/MfzhG_ntEBs" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/ramadan-04.webp" alt="Провизия Рамадана · Кому можно отпускать пост — Мухаммад Шамгоди" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Провизия Рамадана · Кому можно отпускать пост</span><span class="covers__teacher">Мухаммад Шамгоди</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/b7Cjb1SLi68" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/adab-pravdivost.webp" alt="Правдивость в речи — Хасан Абу Марьям" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Правдивость в речи</span><span class="covers__teacher">Хасан Абу Марьям</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/9iCQ-WH2KSQ" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/ilm-01.webp" alt="Ключи к успеху требующего знания · Урок 1 — Файзудин Казанищенский" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Ключи к успеху требующего знания · Урок 1</span><span class="covers__teacher">Файзудин Казанищенский</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/TVdyKzFrDMs" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/kabair-03.webp" alt="Большие грехи · Убийство — Файзудин Казанищенский" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Большие грехи · Убийство</span><span class="covers__teacher">Файзудин Казанищенский</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/qx9dCoi5hDw" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/misc-otvetstvennost.webp" alt="Ответственность слов — Мухаммад Шамгоди" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Ответственность слов</span><span class="covers__teacher">Мухаммад Шамгоди</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/Kac4MvwQ5Cc" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/hajj-mina-rashid.webp" alt="Наставление в долине Мина — Рашид Кумукий" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Наставление в долине Мина</span><span class="covers__teacher">Рашид Кумукий</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/l7kBu_zNlcw" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/aqeeda-05.webp" alt="Основы веры · Вера в Судный день — Файзудин Казанищенский" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Основы веры · Вера в Судный день</span><span class="covers__teacher">Файзудин Казанищенский</span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="covers__row covers__row--reverse">
+            <ul class="covers__track" role="list">
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/f2eC_EEE398" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/kabair-02.webp" alt="Большие грехи · Многобожие — Файзудин Казанищенский" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Большие грехи · Многобожие</span><span class="covers__teacher">Файзудин Казанищенский</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/i0vwkwU1SKg" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/adab-stremlenie.webp" alt="Стремление получить и сохранить знания — Хасан Абу Марьям" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Стремление получить и сохранить знания</span><span class="covers__teacher">Хасан Абу Марьям</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/1ZMt82UzCyw" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/kids-02.webp" alt="Фикх для детей · Омовение #2 — Рашид Кумукий" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Фикх для детей · Омовение #2</span><span class="covers__teacher">Рашид Кумукий</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/zhWKqZOFzcg" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/misc-kniga-allaha.webp" alt="Книга Аллаха — Мухаммад Шамгоди" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Книга Аллаха</span><span class="covers__teacher">Мухаммад Шамгоди</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/Fp3kGEgJMoc" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/adab-sohranenie.webp" alt="Важность сохранения знаний — Хасан Абу Марьям" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Важность сохранения знаний</span><span class="covers__teacher">Хасан Абу Марьям</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/QPBAppoiY-o" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/kabair-04.webp" alt="Большие грехи · Колдовство — Файзудин Казанищенский" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Большие грехи · Колдовство</span><span class="covers__teacher">Файзудин Казанищенский</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/7CPAvUNI5bQ" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/misc-ahira.webp" alt="Подготовка к ахира — Файзудин Казанищенский" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Подготовка к ахира</span><span class="covers__teacher">Файзудин Казанищенский</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/WR4DfqdL3bg" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/hajj-mina-akram.webp" alt="Наставление в долине Мина — Акрам Губденский" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Наставление в долине Мина</span><span class="covers__teacher">Акрам Губденский</span></span>
+                </a>
+              </li>
+              <li class="covers__item">
+                <a class="covers__link" href="https://youtu.be/AV_I8eDNiz0" target="_blank" rel="noopener noreferrer">
+                  <img src="images/covers/adab-vremya.webp" alt="Ценность времени — Хасан Абу Марьям" width="640" height="360" loading="lazy" decoding="async">
+                  <span class="covers__caption"><span class="covers__title">Ценность времени</span><span class="covers__teacher">Хасан Абу Марьям</span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
       </div>
     </section>
 
@@ -315,14 +701,14 @@
       <div class="container">
         <div class="section-header fade-up">
           <h2 id="heading-about" class="split-reveal">О ПРОЕКТЕ</h2>
-          <span lang="ar" class="arabic-subtitle">عن المشروع</span>
+          <span lang="ar" translate="no" class="arabic-subtitle">عن المشروع</span>
         </div>
 
         <div class="bento-grid">
           <!-- Card 1: Wide — About -->
           <div class="bento-card bento-card--wide fade-up">
             <div class="bento-card__title">АКАДЕМИЯ UDRUS</div>
-            <p lang="ar" class="bento-card__text" style="font-family: var(--font-arabic); direction: rtl; color: var(--color-gold); font-style: italic; margin-bottom: 12px;">‏السلام عليكم ورحمة الله وبركاته</p>
+            <p lang="ar" translate="no" class="bento-card__text" style="font-family: var(--font-arabic); direction: rtl; color: var(--color-gold); font-style: italic; margin-bottom: 12px;">‏السلام عليكم ورحمة الله وبركاته</p>
             <p class="bento-card__text">
               Добро пожаловать в онлайн-академию UDRUS!
             </p>
@@ -366,7 +752,7 @@
 
           <!-- Card 5: Arabic quote -->
           <div class="bento-card bento-card--wide fade-up fade-up-delay-4">
-            <p lang="ar" class="bento-card__arabic-quote">
+            <p lang="ar" translate="no" class="bento-card__arabic-quote">
               «طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ»
             </p>
             <p class="bento-card__text" style="text-align:center; margin-top:12px; font-size:0.85rem;">
@@ -377,7 +763,6 @@
       </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- ============================
          SECTION 3 — НАША АКЫДА
@@ -386,7 +771,7 @@
       <div class="container">
         <div class="section-header fade-up">
           <h2 id="heading-aqeedah" class="split-reveal">НАШЕ ВЕРОУБЕЖДЕНИЕ</h2>
-          <span lang="ar" class="arabic-subtitle">عقيدتنا</span>
+          <span lang="ar" translate="no" class="arabic-subtitle">عقيدتنا</span>
         </div>
 
         <div class="aqeedah__inner">
@@ -413,22 +798,22 @@
             </p>
             <div class="aqeedah__scholars-title">Учёные, которые ушли из жизни:</div>
             <ul class="scholars-grid scholars-list" role="list">
-              <li>Шейх Ибн Баз <span lang="ar" class="arabic-dua">رحمه الله</span></li>
-              <li>Шейх Ибн Усеймин <span lang="ar" class="arabic-dua">رحمه الله</span></li>
-              <li>Шейх аль-Альбани <span lang="ar" class="arabic-dua">رحمه الله</span></li>
+              <li>Шейх Ибн Баз <span lang="ar" translate="no" class="arabic-dua">رحمه الله</span></li>
+              <li>Шейх Ибн Усеймин <span lang="ar" translate="no" class="arabic-dua">رحمه الله</span></li>
+              <li>Шейх аль-Альбани <span lang="ar" translate="no" class="arabic-dua">رحمه الله</span></li>
             </ul>
 
             <div class="aqeedah__scholars-title" style="margin-top: 24px;">Из живущих учёных:</div>
             <ul class="scholars-grid scholars-list" role="list">
-              <li>Салих аль-Фаузан <span lang="ar" class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуррахман аль-Баррак <span lang="ar" class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуль-Азиз ар-Раджихи <span lang="ar" class="arabic-dua">حفظه الله</span></li>
-              <li>Салих Али Шейх <span lang="ar" class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуль-Карим аль-Худейр <span lang="ar" class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуль-Мухсин аль-Аббад <span lang="ar" class="arabic-dua">حفظه الله</span></li>
-              <li>Абдурраззак аль-Бадр <span lang="ar" class="arabic-dua">حفظه الله</span></li>
-              <li>Салих ас-Синди <span lang="ar" class="arabic-dua">حفظه الله</span></li>
-              <li>Абдуссалам аш-Шувей'ир <span lang="ar" class="arabic-dua">حفظه الله</span></li>
+              <li>Салих аль-Фаузан <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуррахман аль-Баррак <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуль-Азиз ар-Раджихи <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
+              <li>Салих Али Шейх <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуль-Карим аль-Худейр <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуль-Мухсин аль-Аббад <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдурраззак аль-Бадр <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
+              <li>Салих ас-Синди <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
+              <li>Абдуссалам аш-Шувей'ир <span lang="ar" translate="no" class="arabic-dua">حفظه الله</span></li>
             </ul>
 
             <p class="aqeedah__text" style="margin-top: 24px; font-style: italic;">
@@ -440,7 +825,6 @@
       </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- ============================
          SECTION 4 — УРОКИ (Horizontal scroll)
@@ -449,7 +833,7 @@
       <div class="container">
         <div class="section-header fade-up">
           <h2 id="heading-lessons" class="split-reveal">ДИСЦИПЛИНЫ</h2>
-          <span lang="ar" class="arabic-subtitle">المواد الدراسية</span>
+          <span lang="ar" translate="no" class="arabic-subtitle">المواد الدراسية</span>
         </div>
       </div>
 
@@ -458,11 +842,11 @@
 
           <!-- Card 1: Adab -->
           <div class="lesson-card">
-            <div lang="ar" class="lesson-card__arabic">الأدب</div>
+            <div lang="ar" translate="no" class="lesson-card__arabic">الأدب</div>
             <div class="lesson-card__title">Адаб</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/hasan.png" alt="Хасан Абу Марьям" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/hasan.png" alt="Хасан Абу Марьям" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Хасан Абу Марьям</div>
@@ -474,18 +858,18 @@
               и поведения согласно Сунне Пророка ﷺ.
             </p>
             <div class="lesson-card__footer">
-              <span class="lesson-card__schedule-tag">Четверг 16:00</span>
+              <span class="lesson-card__schedule-tag">Пятница 17:30</span>
               <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta" aria-label="Смотреть уроки по Адабу в Telegram">Смотреть →</a>
             </div>
           </div>
 
           <!-- Card 2: Fiqh -->
           <div class="lesson-card">
-            <div lang="ar" class="lesson-card__arabic">الفقه</div>
+            <div lang="ar" translate="no" class="lesson-card__arabic">الفقه</div>
             <div class="lesson-card__title">Фикх</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/rashid.png" alt="Рашид Кумукий" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/rashid.png" alt="Рашид Кумукий" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Рашид Кумукий</div>
@@ -497,18 +881,18 @@
               Имама Ахмада ибн Ханбала.
             </p>
             <div class="lesson-card__footer">
-              <span class="lesson-card__schedule-tag">Четверг 16:15</span>
+              <span class="lesson-card__schedule-tag">В архиве</span>
               <a href="fiqh.html" class="lesson-card__cta" aria-label="Слушать уроки по Фикху">Слушать уроки →</a>
             </div>
           </div>
 
           <!-- Card 3: Mustalah -->
           <div class="lesson-card">
-            <div lang="ar" class="lesson-card__arabic">مصطلح الحديث</div>
+            <div lang="ar" translate="no" class="lesson-card__arabic">مصطلح الحديث</div>
             <div class="lesson-card__title">Мусталях аль-Хадис</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/qurban.png" alt="Курбан Абу Бакр" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/qurban.png" alt="Курбан Абу Бакр" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Курбан Абу Бакр</div>
@@ -520,18 +904,18 @@
               и методология мухаддисов.
             </p>
             <div class="lesson-card__footer">
-              <span class="lesson-card__schedule-tag">Четверг</span>
+              <span class="lesson-card__schedule-tag">В архиве</span>
               <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta" aria-label="Смотреть уроки по Мусталях аль-Хадис в Telegram">Смотреть →</a>
             </div>
           </div>
 
           <!-- Card 4: Aqeedah -->
           <div class="lesson-card">
-            <div lang="ar" class="lesson-card__arabic">العقيدة</div>
+            <div lang="ar" translate="no" class="lesson-card__arabic">العقيدة</div>
             <div class="lesson-card__title">Акыда</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/shankiti.png" alt="Муслим Шанкыти" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/shankiti.png" alt="Муслим Шанкыти" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Муслим Шанкыти</div>
@@ -543,18 +927,18 @@
               основы веры, опровержение заблуждений.
             </p>
             <div class="lesson-card__footer">
-              <span class="lesson-card__schedule-tag">Четверг 17:15</span>
+              <span class="lesson-card__schedule-tag">В архиве</span>
               <a href="aqeedah.html" class="lesson-card__cta" aria-label="Слушать уроки по Акыде">Слушать уроки →</a>
             </div>
           </div>
 
           <!-- Card 5: Nahw -->
           <div class="lesson-card">
-            <div lang="ar" class="lesson-card__arabic">النحو</div>
+            <div lang="ar" translate="no" class="lesson-card__arabic">النحو</div>
             <div class="lesson-card__title">Нахву</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/shamgodi.png" alt="Мухаммад Шамгоди" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/shamgodi.png" alt="Мухаммад Шамгоди" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Мухаммад Шамгоди</div>
@@ -566,18 +950,18 @@
               Аджуррумийя и другие труды.
             </p>
             <div class="lesson-card__footer">
-              <span class="lesson-card__schedule-tag">Суббота 16:00</span>
+              <span class="lesson-card__schedule-tag">Пт и Сб 16:00</span>
               <a href="https://t.me/udrus_academy" target="_blank" rel="noopener noreferrer" class="lesson-card__cta" aria-label="Смотреть уроки по Нахву в Telegram">Смотреть →</a>
             </div>
           </div>
 
           <!-- Card 6: Usul al-Fiqh -->
           <div class="lesson-card">
-            <div lang="ar" class="lesson-card__arabic">أصول الفقه</div>
+            <div lang="ar" translate="no" class="lesson-card__arabic">أصول الفقه</div>
             <div class="lesson-card__title">Усуль аль-Фикх</div>
             <div class="lesson-card__teacher">
               <div class="lesson-card__avatar">
-                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/abumuaz.png" alt="Абу Муаз ад-Дагестани" onerror="this.src='images/teachers/avatar-placeholder.png'">
+                <img class="lesson-card__teacher-photo" loading="lazy" width="48" height="48" src="images/teachers/abumuaz.png" alt="Абу Муаз ад-Дагестани" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
               </div>
               <div>
                 <div class="lesson-card__teacher-name">Абу Муаз ад-Дагестани</div>
@@ -603,7 +987,6 @@
       </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- ============================
          SECTION 5 — РАСПИСАНИЕ
@@ -612,40 +995,44 @@
       <div class="container">
         <div class="section-header fade-up">
           <h2 id="heading-schedule" class="split-reveal">РАСПИСАНИЕ УРОКОВ</h2>
-          <span lang="ar" class="arabic-subtitle">جدول الدروس</span>
+          <span lang="ar" translate="no" class="arabic-subtitle">جدول الدروس</span>
         </div>
 
         <div class="schedule__days fade-up">
 
-          <!-- Thursday -->
           <div class="schedule__day-card">
-            <div class="schedule__day-header">Четверг</div>
+            <div class="schedule__day-header">Вторник</div>
             <div class="schedule__day-body">
               <div class="schedule__lesson">
-                <time class="schedule__time" datetime="16:30">16:30</time>
+                <time class="schedule__time" datetime="21:00">21:00</time>
                 <div class="schedule__lesson-info">
-                  <div class="schedule__lesson-name">Ханбалитский Фикх</div>
-                  <div class="schedule__teacher">Рашид Кумукий</div>
-                </div>
-              </div>
-              <div class="schedule__lesson">
-                <time class="schedule__time" datetime="17:30">17:30</time>
-                <div class="schedule__lesson-info">
-                  <div class="schedule__lesson-name">Акыда</div>
-                  <div class="schedule__teacher">Муслим Шанкыти</div>
+                  <div class="schedule__lesson-name">Шафиитский фикх</div>
+                  <div class="schedule__teacher">Мухаммад Шамгоди</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Friday -->
+          <div class="schedule__day-card">
+            <div class="schedule__day-header">Среда</div>
+            <div class="schedule__day-body">
+              <div class="schedule__lesson">
+                <time class="schedule__time" datetime="19:30">19:30</time>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Упрощённая акыда</div>
+                  <div class="schedule__teacher">Рашид Кумукий</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="schedule__day-card">
             <div class="schedule__day-header">Пятница</div>
             <div class="schedule__day-body">
               <div class="schedule__lesson">
-                <time class="schedule__time" datetime="13:30">13:30</time>
+                <time class="schedule__time" datetime="16:00">16:00</time>
                 <div class="schedule__lesson-info">
-                  <div class="schedule__lesson-name">Шафиитский Фикх</div>
+                  <div class="schedule__lesson-name">Нахву (Катр ан-нада)</div>
                   <div class="schedule__teacher">Мухаммад Шамгоди</div>
                 </div>
               </div>
@@ -656,32 +1043,51 @@
                   <div class="schedule__teacher">Хасан Абу Марьям</div>
                 </div>
               </div>
+              <div class="schedule__lesson">
+                <time class="schedule__time" datetime="21:00">21:00</time>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Шафиитский фикх</div>
+                  <div class="schedule__teacher">Мухаммад Шамгоди</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Saturday -->
           <div class="schedule__day-card">
             <div class="schedule__day-header">Суббота</div>
             <div class="schedule__day-body">
               <div class="schedule__lesson">
-                <time class="schedule__time" datetime="13:30">13:30</time>
+                <time class="schedule__time" datetime="16:00">16:00</time>
                 <div class="schedule__lesson-info">
-                  <div class="schedule__lesson-name">Шафиитский Фикх</div>
+                  <div class="schedule__lesson-name">Нахву (Катр ан-нада)</div>
                   <div class="schedule__teacher">Мухаммад Шамгоди</div>
                 </div>
               </div>
               <div class="schedule__lesson">
-                <time class="schedule__time" datetime="16:30">16:30</time>
+                <time class="schedule__time" datetime="17:00">17:00</time>
                 <div class="schedule__lesson-info">
-                  <div class="schedule__lesson-name">Нахву</div>
-                  <div class="schedule__teacher">Мухаммад Шамгоди</div>
-                </div>
-              </div>
-              <div class="schedule__lesson">
-                <time class="schedule__time" datetime="17:30">17:30</time>
-                <div class="schedule__lesson-info">
-                  <div class="schedule__lesson-name">Усуль Фикх</div>
+                  <div class="schedule__lesson-name">Усуль фикх</div>
                   <div class="schedule__teacher">Абу Муаз ад-Дагестани</div>
+                </div>
+              </div>
+              <div class="schedule__lesson">
+                <time class="schedule__time" datetime="21:00">21:00</time>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Шафиитский фикх</div>
+                  <div class="schedule__teacher">Мухаммад Шамгоди</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule__day-card">
+            <div class="schedule__day-header">Воскресенье</div>
+            <div class="schedule__day-body">
+              <div class="schedule__lesson">
+                <time class="schedule__time" datetime="21:00">21:00</time>
+                <div class="schedule__lesson-info">
+                  <div class="schedule__lesson-name">Большие грехи</div>
+                  <div class="schedule__teacher">Файзудин Казанищенский</div>
                 </div>
               </div>
             </div>
@@ -701,7 +1107,6 @@
       </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- ============================
          SECTION 6 — ПРЕПОДАВАТЕЛИ
@@ -710,14 +1115,14 @@
       <div class="container">
         <div class="section-header fade-up">
           <h2 id="heading-teachers" class="split-reveal">НАШИ УСТАЗЫ</h2>
-          <span lang="ar" class="arabic-subtitle">أساتذتنا</span>
+          <span lang="ar" translate="no" class="arabic-subtitle">أساتذتنا</span>
         </div>
 
         <div class="teachers__grid">
 
           <div class="teacher-card fade-up">
             <div class="teacher-card__photo">
-              <img src="images/teachers/rashid.png" alt="Рашид Кумукий" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/rashid.png" alt="Рашид Кумукий" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
             </div>
             <h3 class="teacher-card__name">Рашид Кумукий</h3>
             <span class="teacher-card__badge">Фикх ханбалитский</span>
@@ -725,7 +1130,7 @@
 
           <div class="teacher-card fade-up fade-up-delay-1">
             <div class="teacher-card__photo">
-              <img src="images/teachers/shamgodi.png" alt="Мухаммад Шамгоди" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/shamgodi.png" alt="Мухаммад Шамгоди" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
             </div>
             <h3 class="teacher-card__name">Мухаммад Шамгоди</h3>
             <span class="teacher-card__badge">Нахву · Фикх шафиитский</span>
@@ -733,7 +1138,7 @@
 
           <div class="teacher-card fade-up fade-up-delay-2">
             <div class="teacher-card__photo">
-              <img src="images/teachers/shankiti.png" alt="Муслим Шанкыти" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/shankiti.png" alt="Муслим Шанкыти" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
             </div>
             <h3 class="teacher-card__name">Муслим Шанкыти</h3>
             <span class="teacher-card__badge">Акыда</span>
@@ -741,7 +1146,7 @@
 
           <div class="teacher-card fade-up fade-up-delay-3">
             <div class="teacher-card__photo">
-              <img src="images/teachers/qurban.png" alt="Курбан Абу Бакр" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/qurban.png" alt="Курбан Абу Бакр" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
             </div>
             <h3 class="teacher-card__name">Курбан Абу Бакр</h3>
             <span class="teacher-card__badge">Мусталях · Сделки</span>
@@ -749,7 +1154,7 @@
 
           <div class="teacher-card fade-up fade-up-delay-4">
             <div class="teacher-card__photo">
-              <img src="images/teachers/hasan.png" alt="Хасан Абу Марьям" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/hasan.png" alt="Хасан Абу Марьям" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
             </div>
             <h3 class="teacher-card__name">Хасан Абу Марьям</h3>
             <span class="teacher-card__badge">Адаб</span>
@@ -757,7 +1162,7 @@
 
           <div class="teacher-card fade-up fade-up-delay-5">
             <div class="teacher-card__photo">
-              <img src="images/teachers/abumuaz.png" alt="Абу Муаз ад-Дагестани" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/abumuaz.png" alt="Абу Муаз ад-Дагестани" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
             </div>
             <h3 class="teacher-card__name">Абу Муаз ад-Дагестани</h3>
             <span class="teacher-card__badge">Усуль аль-Фикх</span>
@@ -765,7 +1170,7 @@
 
           <div class="teacher-card fade-up">
             <div class="teacher-card__photo">
-              <img src="images/teachers/faizudin.png" alt="Файзудин Казанищенский" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'">
+              <img src="images/teachers/faizudin.png" alt="Файзудин Казанищенский" loading="lazy" width="140" height="140" onerror="this.src='images/teachers/avatar-placeholder.png'" decoding="async">
             </div>
             <h3 class="teacher-card__name">Файзудин Казанищенский</h3>
             <span class="teacher-card__badge">Основы веры</span>
@@ -775,7 +1180,6 @@
       </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- ============================
          SECTION 7 — ШКОЛА ПРОВИЗИИ ХАФИЗА
@@ -784,10 +1188,9 @@
       <div class="container">
         <div class="hifz-preview__inner">
           <div class="hifz-preview__content fade-left">
-            <span class="section-tag">Отдельная школа</span>
-            <div lang="ar" class="hifz-preview__arabic-deco" aria-hidden="true">التحفيظ</div>
+            <div lang="ar" translate="no" class="hifz-preview__arabic-deco" aria-hidden="true">التحفيظ</div>
             <h2 id="heading-hifz-preview" class="gold-shimmer">ШКОЛА ХИФЗА UDRUS</h2>
-            <span lang="ar" style="font-family: var(--font-arabic); font-size: 1.5rem; color: var(--color-gold); direction: rtl; display: block; margin-bottom: 16px;">مدرسة التحفيظ</span>
+            <span lang="ar" translate="no" style="font-family: var(--font-arabic); font-size: 1.5rem; color: var(--color-gold); direction: rtl; display: block; margin-bottom: 16px;">مدرسة التحفيظ</span>
             <p>
               Специализированная школа для изучения арабского языка, чтения Корана и заучивания матнов.
               Индивидуальный и групповой форматы обучения.
@@ -822,7 +1225,6 @@
       </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- ============================
          SECTION 8 — АРХИВ ЛЕКЦИЙ (превью)
@@ -831,7 +1233,7 @@
       <div class="container">
         <div class="section-header fade-up">
           <h2 id="heading-archive" class="split-reveal">АРХИВ ЛЕКЦИЙ</h2>
-          <span lang="ar" class="arabic-subtitle">أرشيف الدروس</span>
+          <span lang="ar" translate="no" class="arabic-subtitle">أرشيف الدروس</span>
         </div>
 
         <div class="archive-grid">
@@ -875,7 +1277,6 @@
       </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- ============================
          SECTION 9 — СЕРТИФИКАТЫ
@@ -884,7 +1285,7 @@
       <div class="container">
         <div class="section-header fade-up">
           <h2 id="heading-certificates">СЕРТИФИКАТЫ</h2>
-          <span lang="ar" class="arabic-subtitle">شهادات</span>
+          <span lang="ar" translate="no" class="arabic-subtitle">شهادات</span>
         </div>
 
         <div class="certificates__inner">
@@ -915,7 +1316,6 @@
             <div class="certificate-mock__badge"><svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A0F0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
             <div class="certificate-mock__title">UDRUS ACADEMY</div>
             <div class="certificate-mock__subtitle">Академия шариатских наук</div>
-            <div class="certificate-mock__divider"></div>
             <div class="certificate-mock__name">
               شهادة إتمام الدورة
             </div>
@@ -924,7 +1324,6 @@
       </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- ============================
          SECTION 10 — CTA / КОНТАКТЫ
@@ -963,18 +1362,18 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <a href="index.html" class="nav__logo" style="text-decoration:none;">
-            <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img" loading="lazy" width="52" height="52">
+          <a href="index.html" class="nav__logo" translate="no" style="text-decoration:none;">
+            <img src="images/logo-udrus-icon-gold.png" alt="UDRUS Academy" class="nav__logo-img" loading="lazy" width="52" height="52" decoding="async">
             <div class="nav__logo-text">
               <span class="brand">UDRUS ACADEMY</span>
               <span class="tagline">Онлайн академия</span>
             </div>
           </a>
-          <div class="footer__brand-arabic footer__arabic-subtitle" lang="ar">أكاديمية ادرس</div>
+          <div class="footer__brand-arabic footer__arabic-subtitle" lang="ar" translate="no">أكاديمية ادرس</div>
           <p>Онлайн-академия шариатских наук для русскоязычных мусульман</p>
         </div>
 
-        <nav class="footer__nav" aria-label="Навигация сайта">
+        <nav class="footer__nav" aria-label="Навигация сайта" translate="no">
           <div class="footer__nav-title">Навигация</div>
           <a href="index.html">Главная</a>
           <a href="archive.html">Архив лекций</a>
@@ -1023,6 +1422,6 @@
     Подробнее — в <a href="privacy.html">Политике конфиденциальности</a>.</p>
     <button class="cookie-banner__btn" id="cookieAccept" type="button">Принять</button>
   </div>
-  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх" aria-hidden="true">↑</button>
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх" aria-hidden="true" tabindex="-1">↑</button>
 </body>
 </html>

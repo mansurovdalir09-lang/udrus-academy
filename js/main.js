@@ -301,10 +301,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================
   const scrollTopBtn = document.getElementById('scrollTopBtn');
   if (scrollTopBtn) {
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-      scrollTopBtn.setAttribute('aria-hidden', window.scrollY <= 400 ? 'true' : 'false');
-    }, { passive: true });
+    const syncScrollTop = () => {
+      const hidden = window.scrollY <= 400;
+      scrollTopBtn.classList.toggle('visible', !hidden);
+      scrollTopBtn.setAttribute('aria-hidden', hidden ? 'true' : 'false');
+      scrollTopBtn.tabIndex = hidden ? -1 : 0; // скрытая кнопка не должна ловить Tab
+    };
+    syncScrollTop();
+    window.addEventListener('scroll', syncScrollTop, { passive: true });
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
     });
@@ -370,28 +374,83 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// LESSONS TABS FILTER (только главная страница)
-if (document.querySelector('#lessons-preview')) {
-  const lessonsTabs = document.querySelectorAll('.lessons-tab');
-  const lessonCards = document.querySelectorAll('.lesson-preview-card');
+// УРОКИ ПО НАПРАВЛЕНИЯМ (главная): вкладки + автопереключение
+(function initDirections() {
+  const root = document.querySelector('[data-directions]');
+  if (!root) return;
+  const tabs = Array.from(root.querySelectorAll('[role="tab"]'));
+  const tablist = root.querySelector('[role="tablist"]');
+  const INTERVAL = 4200;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let current = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true');
+  let timer = null;
+  let stopped = reduceMotion;
+  let visible = false;
 
-  lessonsTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      lessonsTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+  function select(index, { focus = false, animate = true } = {}) {
+    if (index === current) return;
+    const prev = tabs[current];
+    const next = tabs[index];
+    prev.setAttribute('aria-selected', 'false');
+    prev.tabIndex = -1;
+    document.getElementById(prev.getAttribute('aria-controls')).hidden = true;
+    next.setAttribute('aria-selected', 'true');
+    next.tabIndex = 0;
+    const panel = document.getElementById(next.getAttribute('aria-controls'));
+    panel.hidden = false;
+    if (animate && !reduceMotion) {
+      panel.classList.remove('is-entering');
+      void panel.offsetWidth;
+      panel.classList.add('is-entering');
+    }
+    // на телефоне вкладки в горизонтальной ленте: держим активную в поле зрения
+    if (tablist.scrollWidth > tablist.clientWidth) {
+      tablist.scrollTo({ left: next.offsetLeft - 16, behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    if (focus) next.focus();
+    current = index;
+  }
 
-      const filter = tab.dataset.filter;
+  function stopAuto() {
+    stopped = true;
+    clearInterval(timer);
+    timer = null;
+  }
 
-      lessonCards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+  function syncAuto() {
+    if (stopped || !visible || document.hidden) {
+      clearInterval(timer);
+      timer = null;
+    } else if (!timer) {
+      timer = setInterval(() => select((current + 1) % tabs.length), INTERVAL);
+    }
+  }
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => { stopAuto(); select(i); });
+    tab.addEventListener('keydown', e => {
+      let to = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') to = (i + 1) % tabs.length;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') to = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === 'Home') to = 0;
+      if (e.key === 'End') to = tabs.length - 1;
+      if (to === null) return;
+      e.preventDefault();
+      stopAuto();
+      select(to, { focus: true });
     });
   });
-}
+  // прокрутка ленты вкладок пальцем тоже считается выбором пользователя
+  tablist.addEventListener('touchstart', stopAuto, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
+      syncAuto();
+    }, { rootMargin: '0px 0px -25% 0px' }).observe(root);
+  }
+  document.addEventListener('visibilitychange', syncAuto);
+})();
 
 // LESSONS PAGE TABS
 const lessonsPageTabs = document.querySelectorAll('#lessons-page-tabs .lessons-tab');
@@ -411,3 +470,46 @@ lessonsPageTabs.forEach(tab => {
     });
   });
 });
+
+// ЛЕНТА ОБЛОЖЕК: дублируем набор для бесшовной прокрутки, крутим только когда лента на экране
+(function initCovers() {
+  const root = document.querySelector('[data-covers]');
+  if (!root) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const tracks = Array.from(root.querySelectorAll('.covers__track'));
+
+  function build() {
+    tracks.forEach(track => {
+      track.querySelectorAll('[data-clone]').forEach(el => el.remove());
+      if (reduceMotion) return;
+      const originals = Array.from(track.children);
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      const setWidth = originals.reduce((w, li) => w + li.getBoundingClientRect().width + gap, 0);
+      if (!setWidth) return;
+      // копий столько, чтобы лента всегда была шире экрана на один набор
+      const copies = Math.ceil(window.innerWidth / setWidth) + 1;
+      for (let c = 0; c < copies; c++) {
+        originals.forEach(li => {
+          const clone = li.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          clone.dataset.clone = '';
+          clone.querySelectorAll('a').forEach(a => { a.tabIndex = -1; });
+          track.appendChild(clone);
+        });
+      }
+      track.style.setProperty('--covers-shift', setWidth + 'px');
+    });
+  }
+
+  build();
+  let resizeTimer;
+  window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(build, 250); });
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      root.classList.toggle('is-visible', entries[0].isIntersecting);
+    }).observe(root);
+  } else {
+    root.classList.add('is-visible');
+  }
+})();
