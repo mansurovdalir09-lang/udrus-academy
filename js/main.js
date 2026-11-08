@@ -471,6 +471,24 @@ lessonsPageTabs.forEach(tab => {
   });
 });
 
+// Переход с главной: lessons.html?cat=kabair#v-ID — открыть раздел и показать нужный урок
+(function openLessonFromLink() {
+  if (!lessonsPageTabs.length) return;
+  const cat = new URLSearchParams(location.search).get('cat');
+  const tab = cat && document.querySelector(`#lessons-page-tabs .lessons-tab[data-filter="${CSS.escape(cat)}"]`);
+  if (tab) tab.click();
+  const id = decodeURIComponent(location.hash.slice(1));
+  const card = id && document.getElementById(id);
+  if (!card) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // ждём раскладку сетки после фильтра, затем прокручиваем к карточке
+  requestAnimationFrame(() => {
+    card.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+    card.classList.add('is-target');
+    setTimeout(() => card.classList.remove('is-target'), 2600);
+  });
+})();
+
 // ЛЕНТА ОБЛОЖЕК: дублируем набор для бесшовной прокрутки, крутим только когда лента на экране
 (function initCovers() {
   const root = document.querySelector('[data-covers]');

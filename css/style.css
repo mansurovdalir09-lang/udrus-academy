@@ -2693,6 +2693,13 @@ body::before {
   display: none;
 }
 
+/* урок, на который перешли с главной */
+.lesson-preview-card { scroll-margin-top: 110px; }
+.lesson-preview-card.is-target {
+  box-shadow: 0 0 0 3px var(--color-gold), 0 0 40px rgba(201, 169, 110, 0.35);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
 /* ============================
    СТРАНИЦА УРОКОВ (lessons.html)
    ============================ */
